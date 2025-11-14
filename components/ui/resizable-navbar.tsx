@@ -284,7 +284,7 @@ export const NavbarLogo = () => {
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal"
     >
       <Image
-        src={!isDark ? "/logoHPPM.png" : "/logo-white.png"}
+        src={!isDark ? "/logoHPPM.png" : "/logoHPPMW.png"}
         alt="HPPM Logo"
         width={150}
         height={150}
