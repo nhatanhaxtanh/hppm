@@ -40,6 +40,7 @@ export function Header() {
         <NavBody>
           <NavbarLogo />
           <NavItems items={navItems} />
+          <ThemeToggleButton className="relative z-50 h-8 w-8" />
         </NavBody>
 
         <MobileNav>
