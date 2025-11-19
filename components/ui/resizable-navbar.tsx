@@ -108,7 +108,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         minWidth: "800px",
       }}
       className={cn(
-        "relative z-60 mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start bg-white/60 px-4 py-2 backdrop-blur-md lg:flex dark:bg-neutral-950/50",
+        "relative z-60 mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start bg-transparent px-6 py-8 backdrop-blur-md lg:flex dark:bg-transparent",
         visible && "bg-white/80 dark:bg-neutral-950/80",
         className
       )}
@@ -133,14 +133,9 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
         className
       )}
     >
-      {items.map((item, idx) =>
-        item.submenu ? (
-          <MenuItem
-            key={`menu-${idx}`}
-            setActive={setActive}
-            active={active}
-            item={item.name}
-          >
+      {items.map((item, idx) => {
+        const navElement = item.submenu ? (
+          <MenuItem setActive={setActive} active={active} item={item.name}>
             {item.submenu}
           </MenuItem>
         ) : (
@@ -150,7 +145,6 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
               setActive(null);
             }}
             onClick={onItemClick}
-            key={`link-${idx}`}
             href={item.link}
             className="relative px-4 py-2"
           >
@@ -158,7 +152,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
               {hovered === idx && (
                 <motion.div
                   layoutId="hovered"
-                  className="z-0 h-full w-full rounded-full bg-gray-300 dark:bg-neutral-700"
+                  className="z-0 h-full w-full rounded-full bg-white dark:bg-white"
                 />
               )}
             </div>
@@ -167,8 +161,19 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
               {item.name}
             </span>
           </a>
-        )
-      )}
+        );
+
+        return (
+          <React.Fragment key={`nav-item-${idx}`}>
+            {navElement}
+            {idx === 1 && (
+              <div className="relative hidden items-center px-4 py-2 lg:flex">
+                <NavbarLogo className="mr-0 px-0 py-0" imageSize={160} />
+              </div>
+            )}
+          </React.Fragment>
+        );
+      })}
     </motion.div>
   );
 };
@@ -193,7 +198,7 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
         damping: 50,
       }}
       className={cn(
-        "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-white/60 px-0 py-2 backdrop-blur-md lg:hidden dark:bg-neutral-950/50",
+        "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-3 py-4 backdrop-blur-md lg:hidden dark:bg-transparent",
         visible && "bg-white/80 dark:bg-neutral-950/80",
         className
       )}
@@ -257,7 +262,13 @@ export const MobileNavToggle = ({
   );
 };
 
-export const NavbarLogo = () => {
+export const NavbarLogo = ({
+  className,
+  imageSize = 150,
+}: {
+  className?: string;
+  imageSize?: number;
+}) => {
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -265,12 +276,14 @@ export const NavbarLogo = () => {
     setMounted(true);
   }, []);
 
+  const containerClasses = cn(
+    "relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal",
+    className
+  );
+
   if (!mounted) {
     return (
-      <Link
-        href="/"
-        className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal"
-      >
+      <Link href="/" className={containerClasses}>
         <Skeleton className="h-[45px] w-[45px] rounded-full" />
         <Skeleton className="h-6 w-24 rounded-md" />
       </Link>
@@ -280,15 +293,12 @@ export const NavbarLogo = () => {
   const isDark = resolvedTheme === "dark";
 
   return (
-    <Link
-      href="/"
-      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal"
-    >
+    <Link href="/" className={containerClasses}>
       <Image
         src={!isDark ? "/logoHPPM.png" : "/logoHPPMW.png"}
         alt="HPPM Logo"
-        width={150}
-        height={150}
+        width={imageSize}
+        height={imageSize}
       />
     </Link>
   );

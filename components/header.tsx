@@ -10,8 +10,6 @@ import {
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
-import { ThemeToggleButton } from "./theme-toggle-button";
-
 export function Header() {
   const navItems = [
     {
@@ -38,16 +36,13 @@ export function Header() {
     <div className="relative w-full">
       <Navbar>
         <NavBody>
-          <NavbarLogo />
           <NavItems items={navItems} />
-          <ThemeToggleButton className="relative z-50 h-8 w-8" />
         </NavBody>
 
         <MobileNav>
           <MobileNavHeader>
             <NavbarLogo />
-            <div className="flex justify-between gap-6">
-              <ThemeToggleButton className="relative z-50 h-8 w-8" />
+            <div className="ml-auto flex items-center gap-6">
               <MobileNavToggle
                 isOpen={isMobileMenuOpen}
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
