@@ -1,7 +1,6 @@
 import { HeroSection } from "@/components/blocks/hero-section-5";
 import { Feature108 } from "@/components/blocks/shadcnblocks-com-feature108";
-import { Hero45 } from "@/components/blocks/shadcnblocks-com-hero45";
-import { HandHelping, Layout, Pointer, Users, Zap } from "lucide-react";
+import { HandHelping, Users, Zap } from "lucide-react";
 
 const demoData = {
   badge: "shadcnblocks.com",
