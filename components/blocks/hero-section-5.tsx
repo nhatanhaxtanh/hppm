@@ -72,7 +72,14 @@ export function HeroSection() {
               </div>
             </div>
             <div className="absolute inset-0 overflow-hidden">
-              <Carousel className="size-full" opts={{ loop: true }}>
+              <div className="size-full md:hidden">
+                <img
+                  src={heroSlides[0].src}
+                  alt={heroSlides[0].alt}
+                  className="size-full rounded-[inherit] object-cover"
+                />
+              </div>
+              <Carousel className="hidden size-full md:block" opts={{ loop: true }}>
                 <CarouselContent className="h-full">
                   {heroSlides.map((slide) => (
                     <CarouselItem key={slide.id} className="h-full">
