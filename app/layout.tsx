@@ -4,6 +4,7 @@ import { Header } from "@/components/header";
 import "./globals.css";
 import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
+import Snowfall from "@/components/snowfall-background";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,9 +37,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          {children}
-          <Footer />
+          <Snowfall className="flex flex-1 w-full items-center justify-center">
+            <Header />
+            {children}
+            <Footer />
+          </Snowfall>
         </ThemeProvider>
       </body>
     </html>
