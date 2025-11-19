@@ -170,9 +170,9 @@ export default function SnowfallBackground({
       <canvas
         ref={canvasRef}
         className={`absolute inset-0 pointer-events-none ${className}`}
-        style={{ zIndex: 0 }}
+        style={{ zIndex: 20 }}
       />
-      <div className="z-10">{children}</div>
+      <div className="relative z-0">{children}</div>
     </div>
   );
 }

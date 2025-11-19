@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Snowfall from "@/components/snowfall-background";
 import {
   Carousel,
@@ -13,16 +14,22 @@ export default function Home() {
   return (
     <div className="flex h-screen w-screen items-center justify-center bg-white dark:bg-black">
       <Snowfall className="flex h-screen w-screen items-center justify-center">
-        <Carousel className="h-screen w-screen">
-          <CarouselContent className="h-screen">
+        <Carousel className="h-[75vh] w-[80vw] max-w-5xl">
+          <CarouselContent className="h-full">
             {Array.from({ length: 5 }).map((_, index) => (
-              <CarouselItem key={index} className="h-screen pl-0">
-                <div className="flex h-screen w-screen">
-                  <Card className="h-screen w-screen border-none bg-transparent shadow-none">
-                    <CardContent className="flex h-full w-full items-center justify-center p-6">
-                      <span className="text-4xl font-semibold">
-                        {index + 1}
-                      </span>
+              <CarouselItem key={index} className="h-full pl-0">
+                <div className="flex h-full w-full">
+                  <Card className="h-full w-full border-none bg-transparent shadow-none">
+                    <CardContent className="flex h-full w-full items-center justify-center p-0">
+                      <div className="relative h-full w-full">
+                        <Image
+                          src="/building.jpg"
+                          alt={`Building slide ${index + 1}`}
+                          fill
+                          className="object-cover"
+                          priority={index === 0}
+                        />
+                      </div>
                     </CardContent>
                   </Card>
                 </div>
