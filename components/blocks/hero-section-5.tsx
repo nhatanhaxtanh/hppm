@@ -37,13 +37,13 @@ export function HeroSection() {
         <section className="relative left-1/2 w-screen -translate-x-1/2">
           <div className="relative py-24 md:pb-32 lg:pb-36 lg:pt-67">
             <div className="relative z-10 mx-auto flex max-w-7xl flex-col px-6 lg:block lg:px-12">
-              <div className="mx-auto max-w-xl rounded-3xl border border-white/20 bg-black/50 p-6 text-center text-white backdrop-blur-sm lg:ml-0 lg:max-w-3xl lg:text-left dark:border-white/10 dark:bg-black/40 dark:text-white">
+              <div className="mx-auto max-w-xl rounded-3xl border border-white/20 bg-white/40 p-6 text-center text-black backdrop-blur-sm lg:ml-0 lg:max-w-3xl lg:text-left dark:border-white/10 dark:bg-black/40 dark:text-white">
                 <h1 className="mt-6 max-w-2xl text-balance text-5xl md:text-6xl lg:mt-12 xl:text-7xl">
-                  Build 10x Faster with NS
+                  Quản lý bất động sản chuyên nghiệp
                 </h1>
                 <p className="mt-8 max-w-2xl text-balance text-lg">
-                  Highly customizable components for building modern websites
-                  and applications you mean it.
+                  Từ chung cư đến khu thương mại, chúng tôi tối ưu vận hành, giữ
+                  tài sản luôn sinh lời và nâng trải nghiệm cư dân.
                 </p>
 
                 <div className="mt-12 flex flex-col items-center justify-center gap-2 sm:flex-row lg:justify-start">
@@ -53,7 +53,7 @@ export function HeroSection() {
                     className="h-12 rounded-full pl-5 pr-3 text-base"
                   >
                     <Link href="#link">
-                      <span className="text-nowrap">Start Building</span>
+                      <span className="text-nowrap">Nhận tư vấn</span>
                       <ChevronRight className="ml-1" />
                     </Link>
                   </Button>
@@ -65,7 +65,7 @@ export function HeroSection() {
                     className="h-12 rounded-full px-5 text-base hover:bg-zinc-950/5 dark:hover:bg-white/5"
                   >
                     <Link href="#link">
-                      <span className="text-nowrap">Request a demo</span>
+                      <span className="text-nowrap">Tìm hiểu dịch vụ</span>
                     </Link>
                   </Button>
                 </div>
