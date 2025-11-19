@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen w-full flex-col bg-white dark:bg-black">
       <HeroSection />
-      <Feature108 />;
+      <Feature108 />
     </main>
   );
 }
