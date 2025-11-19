@@ -31,18 +31,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Snowfall className="flex flex-1 w-full items-center justify-center">
-            <Header />
-            {children}
-            <Footer />
-          </Snowfall>
-        </ThemeProvider>
+        <Snowfall className="flex flex-1 w-full items-center justify-center">
+          <Header />
+          {children}
+          <Footer />
+        </Snowfall>
       </body>
     </html>
   );
