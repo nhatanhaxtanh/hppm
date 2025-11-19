@@ -35,7 +35,7 @@ export function HeroSection() {
     <>
       <main className="overflow-x-hidden">
         <section className="relative left-1/2 w-screen -translate-x-1/2">
-          <div className="relative min-h-128 py-24 md:min-h-152 md:pb-32 lg:min-h-176 lg:pb-36 lg:pt-67">
+          <div className="relative min-h-192 py-28 md:min-h-224 md:pb-36 lg:min-h-240 lg:pb-40 lg:pt-67">
             <div className="relative z-10 mx-auto flex max-w-7xl flex-col px-6 lg:block lg:px-12">
               <div className="mx-auto max-w-xl rounded-3xl border border-white/20 bg-white/40 p-6 text-center text-black backdrop-blur-sm lg:ml-0 lg:max-w-3xl lg:text-left dark:border-white/10 dark:bg-black/40 dark:text-white">
                 <h1 className="mt-6 max-w-2xl text-balance text-5xl md:text-6xl lg:mt-12 xl:text-7xl">
@@ -71,7 +71,7 @@ export function HeroSection() {
                 </div>
               </div>
             </div>
-            <div className="absolute inset-y-0 left-1/2 w-screen -translate-x-1/2 overflow-hidden">
+            <div className="absolute inset-0 overflow-hidden">
               <Carousel className="size-full" opts={{ loop: true }}>
                 <CarouselContent className="h-full">
                   {heroSlides.map((slide) => (
