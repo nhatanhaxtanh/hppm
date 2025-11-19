@@ -108,7 +108,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         minWidth: "800px",
       }}
       className={cn(
-        "relative z-60 mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start bg-transparent px-6 py-8 backdrop-blur-md lg:flex dark:bg-transparent",
+        "relative z-60 mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start bg-transparent px-6 py-10 backdrop-blur-md lg:flex dark:bg-transparent",
         visible && "bg-white/80 dark:bg-neutral-950/80",
         className
       )}
@@ -129,7 +129,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
         setActive(null);
       }}
       className={cn(
-        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-6 text-base font-medium text-neutral-600 transition-colors duration-200 hover:text-neutral-900 lg:flex dark:text-neutral-300 dark:hover:text-white",
+        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-6 text-base font-medium text-black transition-colors duration-200 hover:text-neutral-900 lg:flex dark:text-neutral-300 dark:hover:text-white",
         className
       )}
     >
@@ -168,7 +168,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
             {navElement}
             {idx === 1 && (
               <div className="relative hidden items-center px-4 py-2 lg:flex">
-                <NavbarLogo className="mr-0 px-0 py-0" imageSize={160} />
+                <NavbarLogo className="mr-0 px-0 py-0" imageSize={200} />
               </div>
             )}
           </React.Fragment>
