@@ -1,38 +1,46 @@
 'use client';
-import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect';
+import React, { useCallback, useState } from 'react';
+import { FlipWords } from '@/components/ui/flip-words';
+import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
+
 export default function Page() {
-    const words = [
-        {
-            text: 'Build',
-        },
-        {
-            text: 'awesome',
-        },
-        {
-            text: 'apps',
-        },
-        {
-            text: 'with',
-        },
-        {
-            text: 'Aceternity.',
-            className: 'text-blue-500 dark:text-blue-500',
-        },
-    ];
+    const router = useRouter();
+    const [leave, setLeave] = useState(false);
+
+    const words = ['hiệu quả', 'chuẩn mực', 'bền vững'];
+
+    const goHome = useCallback(() => {
+        setLeave(true);
+        setTimeout(() => router.push('/home'), 1100);
+    }, [router]);
+
     return (
-        <div className="flex h-[40rem] flex-col items-center justify-center">
-            <p className="text-xs text-neutral-600 sm:text-base dark:text-neutral-200">
-                The road to freedom starts from here
-            </p>
-            <TypewriterEffectSmooth words={words} />
-            <div className="flex flex-col space-y-4 space-x-0 md:flex-row md:space-y-0 md:space-x-4">
-                <button className="h-10 w-40 rounded-xl border border-transparent bg-black text-sm text-white dark:border-white">
-                    Join now
-                </button>
-                <button className="h-10 w-40 rounded-xl border border-black bg-white text-sm text-black">
-                    Signup
-                </button>
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            className="relative flex h-[40rem] items-center justify-center overflow-hidden px-4"
+            animate={leave ? { y: 120, opacity: 0 } : { y: 0, opacity: 1 }}
+            transition={{ duration: 2.0, ease: [0.22, 1, 0.36, 1] }}
+        >
+            <div className="text-3xl font-medium text-neutral-700 sm:text-4xl md:text-5xl dark:text-neutral-300">
+                <span
+                    className="font-extrabold tracking-wide text-sky-500 dark:text-sky-400"
+                    style={{
+                        textShadow:
+                            '0 0 18px rgba(56,189,248,0.30), 0 0 40px rgba(56,189,248,0.16)',
+                    }}
+                >
+                    HPPM
+                </span>{' '}
+                <span className="opacity-80">— quản lý vận hành</span>{' '}
+                <FlipWords
+                    words={words}
+                    duration={1200}
+                    className="font-semibold text-neutral-900 dark:text-white"
+                    onComplete={goHome}
+                    loop={false}
+                />
             </div>
-        </div>
+        </motion.div>
     );
 }
