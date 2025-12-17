@@ -111,7 +111,7 @@ export function DropdownNavigation({
                                     )}
 
                                     {active && (
-                                        <span className="bg-foreground/30 absolute -bottom-1 left-1/2 h-[2px] w-6 -translate-x-1/2 rounded-full" />
+                                        <span className="bg-foreground/30 absolute -bottom-1 left-1/2 h-0.5 w-6 -translate-x-1/2 rounded-full" />
                                     )}
                                 </button>
                             ) : (
@@ -144,7 +144,7 @@ export function DropdownNavigation({
                                     )}
 
                                     {active && (
-                                        <span className="bg-foreground/30 absolute -bottom-1 left-1/2 h-[2px] w-6 -translate-x-1/2 rounded-full" />
+                                        <span className="bg-foreground/30 absolute -bottom-1 left-1/2 h-0.5 w-6 -translate-x-1/2 rounded-full" />
                                     )}
                                 </Link>
                             )}

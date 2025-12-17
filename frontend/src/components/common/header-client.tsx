@@ -70,7 +70,7 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                         >
                             <div
                                 className={cn(
-                                    'relative h-12 w-[220px] md:h-14 md:w-[260px]',
+                                    'relative h-12 w-55 md:h-14 md:w-65',
                                 )}
                             >
                                 <Image
@@ -139,7 +139,7 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                                         >
                                             <div
                                                 className={cn(
-                                                    'relative h-12 w-[220px] md:h-14 md:w-[260px]',
+                                                    'relative h-12 w-55 md:h-14 md:w-55',
                                                 )}
                                             >
                                                 <Image
