@@ -22,4 +22,5 @@ export type NavItem = {
 export type DropdownNavigationProps = {
     navItems: NavItem[];
     className?: string;
+    isScrolled?: boolean;
 };
