@@ -1,5 +1,7 @@
 import HeroInteractive from '@/components/ui/interactive-selector';
+import AboutSection from '@/components/ui/about';
 import ExperienceFeatures from '@/components/ui/parallax-scroll-feature-section';
+
 export default function HomePage() {
     const sections = Array.from({ length: 10 }).map((_, i) => ({
         id: i + 1,
@@ -18,6 +20,7 @@ export default function HomePage() {
             <section className="w-full">
                 <HeroInteractive />
                 <ExperienceFeatures />
+                <AboutSection />
             </section>
             <main
                 id="main"
