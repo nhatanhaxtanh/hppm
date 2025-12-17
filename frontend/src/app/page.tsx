@@ -1,5 +1,5 @@
 'use client';
-import React, { useCallback, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { FlipWords } from '@/components/ui/flip-words';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
