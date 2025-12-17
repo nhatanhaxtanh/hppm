@@ -12,7 +12,8 @@ export function DropdownNavigation({
     navItems,
     className,
     isScrolled = false,
-}: DropdownNavigationProps & { isScrolled?: boolean }) {
+    wrap = false,
+}: DropdownNavigationProps & { isScrolled?: boolean; wrap?: boolean }) {
     const pathname = usePathname();
 
     const [openId, setOpenId] = useState<number | null>(null);
@@ -84,8 +85,15 @@ export function DropdownNavigation({
                                     onFocus={() => setOpenId(item.id)}
                                     onBlur={() => closeMenu()}
                                 >
-                                    <span>{item.label}</span>
-
+                                    <span
+                                        className={cn(
+                                            'leading-tight',
+                                            'md:max-lg:break-word md:max-lg:max-w-22 md:max-lg:whitespace-normal',
+                                            'lg:whitespace-nowrap',
+                                        )}
+                                    >
+                                        {item.label}
+                                    </span>
                                     <ChevronDown
                                         className={cn(
                                             'h-4 w-4 transition-transform duration-300',

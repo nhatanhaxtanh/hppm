@@ -95,14 +95,19 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                             </Link>
                         </motion.div>
 
-                        <div className="absolute left-1/2 hidden -translate-x-1/2 md:flex md:pl-24 lg:pl-32">
+                        <div className="hidden flex-1 justify-center px-6 md:flex lg:hidden">
                             <DropdownNavigation
                                 navItems={navItems}
                                 isScrolled={isScrolled}
-                                className={cn(
-                                    'transition-all duration-300',
-                                    isScrolled ? 'rounded-2xl px-2 py-1' : '',
-                                )}
+                                wrap
+                                className={cn('max-w-full')}
+                            />
+                        </div>
+
+                        <div className="absolute left-1/2 hidden -translate-x-1/2 lg:flex">
+                            <DropdownNavigation
+                                navItems={navItems}
+                                isScrolled={isScrolled}
                             />
                         </div>
 
