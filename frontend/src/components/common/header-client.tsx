@@ -9,6 +9,7 @@ import type { NavItem } from '@/lib/service/navbar';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, ArrowUp, ChevronDown, Settings } from 'lucide-react';
+import { ThemeToggleButton } from './theme-toggle';
 import { motion } from 'framer-motion';
 
 export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
@@ -105,6 +106,17 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                             />
                         </div>
 
+                        <div className="hidden items-center gap-2 md:flex">
+                            <ThemeToggleButton
+                                className={cn(
+                                    'h-10 w-10',
+                                    isScrolled
+                                        ? 'border-border/60 bg-background/70 hover:bg-accent/60 backdrop-blur'
+                                        : 'border-border bg-background/40 hover:bg-accent/60',
+                                )}
+                            />
+                        </div>
+
                         <Sheet
                             open={isMobileOpen}
                             onOpenChange={setIsMobileOpen}
@@ -135,7 +147,7 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                                 className="w-87.5 p-0 sm:w-100"
                             >
                                 <div className="flex h-full flex-col">
-                                    <div className="from-background to-accent/10 flex items-center justify-center border-b bg-linear-to-r p-6">
+                                    <div className="from-background to-accent/10 flex items-center justify-between gap-6 border-b bg-linear-to-r p-6">
                                         <Link
                                             href="/"
                                             className="flex items-center"
@@ -162,6 +174,12 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                                                 />
                                             </div>
                                         </Link>
+                                        <ThemeToggleButton
+                                            className={cn(
+                                                'h-10 w-10',
+                                                'border-border bg-background/70 hover:bg-accent/60 backdrop-blur',
+                                            )}
+                                        />
                                     </div>
 
                                     <div className="flex-1 overflow-y-auto">
