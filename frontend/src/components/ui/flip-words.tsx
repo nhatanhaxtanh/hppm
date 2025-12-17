@@ -1,4 +1,5 @@
 'use client';
+
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
@@ -63,17 +64,20 @@ export const FlipWords = ({
                 key={currentWord}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ type: 'spring', stiffness: 100, damping: 12 }}
+                transition={{ type: 'spring', stiffness: 140, damping: 14 }}
                 exit={{
                     opacity: 0,
-                    y: -40,
-                    x: 40,
+                    y: -24,
+                    x: 24,
                     filter: 'blur(8px)',
-                    scale: 1.6,
+                    scale: 1.2,
                     position: 'absolute',
                 }}
                 className={cn(
-                    'relative z-10 inline-block px-2 text-left text-neutral-900 dark:text-neutral-100',
+                    // ✅ responsive-friendly: không khóa wrap toàn bộ dòng, giữ baseline ổn định
+                    'relative z-10 inline-flex px-1 align-baseline sm:px-2',
+                    'min-h-[1.2em] leading-tight break-keep',
+                    'text-left text-neutral-900 dark:text-neutral-100',
                     className,
                 )}
             >
@@ -83,7 +87,7 @@ export const FlipWords = ({
                         initial={{ opacity: 0, y: 10, filter: 'blur(8px)' }}
                         animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                         transition={{ delay: wordIndex * 0.22, duration: 0.28 }}
-                        className="inline-block whitespace-nowrap"
+                        className="inline-block"
                     >
                         {word.split('').map((letter, letterIndex) => (
                             <motion.span

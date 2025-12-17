@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { DropdownNavigation } from '@/components/ui/dropdown-navigation';
 import type { NavItem } from '@/lib/service/navbar';
@@ -23,15 +23,6 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
     }, []);
 
     const navbarHeight = isScrolled ? 'h-14' : 'h-16 md:h-18 lg:h-20';
-
-    const topLinks = useMemo(
-        () => navItems.filter((x) => x.link && !x.subMenus?.length),
-        [navItems],
-    );
-    const dropdownGroups = useMemo(
-        () => navItems.filter((x) => x.subMenus?.length),
-        [navItems],
-    );
 
     return (
         <>
@@ -85,7 +76,7 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                                 aria-label="HPPM Home"
                                 className="flex items-center md:static md:mr-0 md:translate-x-0"
                             >
-                                <div className="relative flex h-11 w-[180px] items-center sm:h-12 sm:w-[200px] md:h-14 md:w-55">
+                                <div className="relative flex h-11 w-45 items-center sm:h-12 sm:w-50 md:h-14 md:w-55">
                                     <Image
                                         src="/logoHPPM.png"
                                         alt="HPPM"

@@ -1,4 +1,5 @@
 'use client';
+
 import { useCallback, useState } from 'react';
 import { FlipWords } from '@/components/ui/flip-words';
 import { motion } from 'framer-motion';
@@ -22,24 +23,28 @@ export default function Page() {
             animate={leave ? { y: 120, opacity: 0 } : { y: 0, opacity: 1 }}
             transition={{ duration: 2.0, ease: [0.22, 1, 0.36, 1] }}
         >
-            <div className="text-3xl font-medium text-neutral-700 sm:text-4xl md:text-5xl dark:text-neutral-300">
-                <span
-                    className="font-extrabold tracking-wide text-blue-800 dark:text-blue-500"
-                    style={{
-                        textShadow:
-                            '0 0 18px rgba(56,189,248,0.30), 0 0 40px rgba(56,189,248,0.16)',
-                    }}
-                >
-                    HPPM
-                </span>{' '}
-                <span className="opacity-80">— quản lý vận hành</span>{' '}
-                <FlipWords
-                    words={words}
-                    duration={1200}
-                    className="font-semibold text-neutral-900 dark:text-white"
-                    onComplete={goHome}
-                    loop={false}
-                />
+            <div className="text-neutral-700 dark:text-neutral-300">
+                <div className="flex flex-wrap items-baseline justify-center gap-x-2 gap-y-2 text-2xl font-medium sm:text-4xl md:text-5xl">
+                    <span
+                        className="font-extrabold tracking-wide text-blue-800 dark:text-blue-500"
+                        style={{
+                            textShadow:
+                                '0 0 18px rgba(56,189,248,0.30), 0 0 40px rgba(56,189,248,0.16)',
+                        }}
+                    >
+                        HPPM
+                    </span>
+
+                    <span className="opacity-80">— quản lý vận hành</span>
+
+                    <FlipWords
+                        words={words}
+                        duration={1000}
+                        className="font-semibold text-neutral-900 dark:text-white"
+                        onComplete={goHome}
+                        loop={false}
+                    />
+                </div>
             </div>
         </motion.div>
     );
