@@ -11,7 +11,7 @@ import { cn } from '@/lib/utils';
 
 export const FlipWords = ({
     words,
-    duration = 1400,
+    duration = 1200,
     className,
     onComplete,
     loop = false,
