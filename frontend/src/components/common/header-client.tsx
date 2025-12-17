@@ -104,7 +104,7 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                             />
                         </div>
 
-                        <div className="absolute left-1/2 hidden -translate-x-1/2 lg:flex">
+                        <div className="absolute left-1/2 ml-10 hidden -translate-x-1/2 lg:flex">
                             <DropdownNavigation
                                 navItems={navItems}
                                 isScrolled={isScrolled}
@@ -112,14 +112,29 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                         </div>
 
                         <div className="hidden items-center gap-2 md:flex">
-                            <ThemeToggleButton
-                                className={cn(
-                                    'h-10 w-10',
-                                    isScrolled
-                                        ? 'border-border/60 bg-background/70 hover:bg-accent/60 backdrop-blur'
-                                        : 'border-border bg-background/40 hover:bg-accent/60',
-                                )}
-                            />
+                            <motion.div
+                                layout
+                                className="shrink-0"
+                                transition={{
+                                    type: 'spring',
+                                    stiffness: 220,
+                                    damping: 28,
+                                    mass: 0.9,
+                                }}
+                                animate={{
+                                    x: isScrolled ? 10 : 0,
+                                    scale: isScrolled ? 0.96 : 1,
+                                }}
+                            >
+                                <ThemeToggleButton
+                                    className={cn(
+                                        'h-10 w-10',
+                                        isScrolled
+                                            ? 'border-border/60 bg-background/70 hover:bg-accent/60 backdrop-blur'
+                                            : 'border-border bg-background/40 hover:bg-accent/60',
+                                    )}
+                                />
+                            </motion.div>
                         </div>
 
                         <Sheet
@@ -351,7 +366,7 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                     aria-label="Back to top"
                 >
                     <ArrowUp className="h-4 w-4" />
-                    Top
+                    Về đầu trang
                 </button>
             )}
         </>
