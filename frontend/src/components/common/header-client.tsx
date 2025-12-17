@@ -60,7 +60,9 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                 >
                     <div
                         className={cn(
-                            'relative flex w-full items-center justify-between transition-all duration-300',
+                            'relative flex w-full items-center justify-between',
+                            'px-3 sm:px-4',
+                            'transition-all duration-300',
                             navbarHeight,
                         )}
                     >
@@ -74,16 +76,16 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                                 mass: 0.9,
                             }}
                             animate={{
-                                x: isScrolled ? 0 : 18,
+                                x: 0,
                                 scale: isScrolled ? 0.96 : 1,
                             }}
                         >
                             <Link
                                 href="/"
                                 aria-label="HPPM Home"
-                                className="mr-10 flex items-center lg:mr-16"
+                                className="flex items-center md:static md:mr-0 md:translate-x-0"
                             >
-                                <div className="relative h-12 w-55 md:h-14 md:w-55">
+                                <div className="relative flex h-11 w-[180px] items-center sm:h-12 sm:w-[200px] md:h-14 md:w-55">
                                     <Image
                                         src="/logoHPPM.png"
                                         alt="HPPM"
@@ -92,10 +94,9 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                                         quality={100}
                                         sizes="(max-width: 768px) 220px, 260px"
                                         className={cn(
-                                            'origin-left object-contain',
+                                            'origin-left object-contain drop-shadow-sm',
+                                            'absolute top-5 right-0.75',
                                             'scale-x-[1.05] scale-y-[0.85]',
-                                            'translate-y-px',
-                                            'drop-shadow-sm',
                                         )}
                                     />
                                 </div>
@@ -143,7 +144,7 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                                 className="w-87.5 p-0 sm:w-100"
                             >
                                 <div className="flex h-full flex-col">
-                                    <div className="from-background to-accent/10 flex items-center justify-between border-b bg-linear-to-r p-6">
+                                    <div className="from-background to-accent/10 flex items-center justify-center border-b bg-linear-to-r p-6">
                                         <Link
                                             href="/"
                                             className="flex items-center"
@@ -178,127 +179,137 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                                             aria-label="Mobile"
                                         >
                                             <div className="space-y-3">
-                                                {topLinks.map((item) => (
-                                                    <Link
-                                                        key={item.id}
-                                                        href={item.link ?? '/'}
-                                                        onClick={() =>
-                                                            setIsMobileOpen(
-                                                                false,
-                                                            )
-                                                        }
-                                                        className="hover:bg-accent/60 hover:border-border/50 flex items-center justify-between rounded-xl border border-transparent px-4 py-4 font-semibold transition-all duration-200"
-                                                    >
-                                                        <span>
-                                                            {item.label}
-                                                        </span>
-                                                    </Link>
-                                                ))}
+                                                {navItems.map((item) => {
+                                                    const hasSub =
+                                                        !!item.subMenus?.length;
 
-                                                {dropdownGroups.map((group) => (
-                                                    <details
-                                                        key={group.id}
-                                                        className="group"
-                                                    >
-                                                        <summary className="hover:from-accent/50 hover:to-accent/30 hover:border-border/50 flex cursor-pointer items-center justify-between rounded-xl border border-transparent px-4 py-4 transition-all duration-200 hover:bg-linear-to-r">
-                                                            <div className="flex items-center space-x-3">
-                                                                <div className="bg-primary/10 flex h-8 w-8 items-center justify-center rounded-lg">
-                                                                    <Settings className="text-primary h-4 w-4" />
-                                                                </div>
-                                                                <span className="font-semibold">
-                                                                    {
-                                                                        group.label
-                                                                    }
+                                                    if (!hasSub) {
+                                                        return (
+                                                            <Link
+                                                                key={item.id}
+                                                                href={
+                                                                    item.link ??
+                                                                    '/'
+                                                                }
+                                                                onClick={() =>
+                                                                    setIsMobileOpen(
+                                                                        false,
+                                                                    )
+                                                                }
+                                                                className="hover:bg-accent/60 hover:border-border/50 flex items-center justify-between rounded-xl border border-transparent px-4 py-4 font-semibold transition-all duration-200"
+                                                            >
+                                                                <span>
+                                                                    {item.label}
                                                                 </span>
-                                                            </div>
-                                                            <ChevronDown className="text-muted-foreground h-4 w-4 transition-transform group-open:rotate-180" />
-                                                        </summary>
+                                                            </Link>
+                                                        );
+                                                    }
 
-                                                        <div className="mt-3 space-y-3 pl-2">
-                                                            {group.subMenus?.map(
-                                                                (
-                                                                    sub,
-                                                                    subIdx,
-                                                                ) => (
-                                                                    <div
-                                                                        key={
-                                                                            sub.title
+                                                    return (
+                                                        <details
+                                                            key={item.id}
+                                                            className="group"
+                                                        >
+                                                            <summary className="hover:from-accent/50 hover:to-accent/30 hover:border-border/50 flex cursor-pointer items-center justify-between rounded-xl border border-transparent px-4 py-4 transition-all duration-200 hover:bg-linear-to-r">
+                                                                <div className="flex items-center space-x-3">
+                                                                    <div className="bg-primary/10 flex h-8 w-8 items-center justify-center rounded-lg">
+                                                                        <Settings className="text-primary h-4 w-4" />
+                                                                    </div>
+                                                                    <span className="font-semibold">
+                                                                        {
+                                                                            item.label
                                                                         }
-                                                                        className="space-y-2"
-                                                                    >
-                                                                        <div className="text-muted-foreground px-2 text-xs font-semibold tracking-wider uppercase">
-                                                                            {
+                                                                    </span>
+                                                                </div>
+                                                                <ChevronDown className="text-muted-foreground h-4 w-4 transition-transform group-open:rotate-180" />
+                                                            </summary>
+
+                                                            <div className="mt-3 space-y-3 pl-2">
+                                                                {item.subMenus?.map(
+                                                                    (
+                                                                        sub,
+                                                                        subIdx,
+                                                                    ) => (
+                                                                        <div
+                                                                            key={
                                                                                 sub.title
                                                                             }
-                                                                        </div>
+                                                                            className="space-y-2"
+                                                                        >
+                                                                            <div className="text-muted-foreground px-2 text-xs font-semibold tracking-wider uppercase">
+                                                                                {
+                                                                                    sub.title
+                                                                                }
+                                                                            </div>
 
-                                                                        <div className="space-y-2">
-                                                                            {sub.items.map(
-                                                                                (
-                                                                                    it,
-                                                                                    idx,
-                                                                                ) => {
-                                                                                    const Icon =
-                                                                                        it.icon;
-                                                                                    return (
-                                                                                        <Link
-                                                                                            key={
-                                                                                                it.label
-                                                                                            }
-                                                                                            href={
-                                                                                                it.href ??
-                                                                                                '/'
-                                                                                            }
-                                                                                            onClick={() =>
-                                                                                                setIsMobileOpen(
-                                                                                                    false,
-                                                                                                )
-                                                                                            }
-                                                                                            className="hover:bg-accent/60 group animate-in fade-in slide-in-from-left-2 flex items-start space-x-3 rounded-xl px-4 py-3 text-sm transition-all duration-200"
-                                                                                            style={{
-                                                                                                animationDelay: `${(subIdx * 6 + idx) * 60}ms`,
-                                                                                            }}
-                                                                                        >
-                                                                                            <div
-                                                                                                className={cn(
-                                                                                                    'border-border flex h-8 w-8 items-center justify-center rounded-lg border transition-colors',
-                                                                                                    it.iconBg ??
-                                                                                                        'bg-background',
-                                                                                                    'group-hover:brightness-95',
-                                                                                                )}
+                                                                            <div className="space-y-2">
+                                                                                {sub.items.map(
+                                                                                    (
+                                                                                        it,
+                                                                                        idx,
+                                                                                    ) => {
+                                                                                        const Icon =
+                                                                                            it.icon;
+                                                                                        return (
+                                                                                            <Link
+                                                                                                key={
+                                                                                                    it.label
+                                                                                                }
+                                                                                                href={
+                                                                                                    it.href ??
+                                                                                                    '/'
+                                                                                                }
+                                                                                                onClick={() =>
+                                                                                                    setIsMobileOpen(
+                                                                                                        false,
+                                                                                                    )
+                                                                                                }
+                                                                                                className="hover:bg-accent/60 group animate-in fade-in slide-in-from-left-2 flex items-start space-x-3 rounded-xl px-4 py-3 text-sm transition-all duration-200"
+                                                                                                style={{
+                                                                                                    animationDelay: `${(subIdx * 6 + idx) * 60}ms`,
+                                                                                                }}
                                                                                             >
-                                                                                                <Icon
+                                                                                                <div
                                                                                                     className={cn(
-                                                                                                        'h-4 w-4',
-                                                                                                        it.iconColor ??
-                                                                                                            'text-foreground',
+                                                                                                        'border-border flex h-8 w-8 items-center justify-center rounded-lg border transition-colors',
+                                                                                                        it.iconBg ??
+                                                                                                            'bg-background',
+                                                                                                        'group-hover:brightness-95',
                                                                                                     )}
-                                                                                                />
-                                                                                            </div>
+                                                                                                >
+                                                                                                    <Icon
+                                                                                                        className={cn(
+                                                                                                            'h-4 w-4',
+                                                                                                            it.iconColor ??
+                                                                                                                'text-foreground',
+                                                                                                        )}
+                                                                                                    />
+                                                                                                </div>
 
-                                                                                            <div className="min-w-0">
-                                                                                                <div className="text-foreground group-hover:text-primary font-medium transition-colors">
-                                                                                                    {
-                                                                                                        it.label
-                                                                                                    }
+                                                                                                <div className="min-w-0">
+                                                                                                    <div className="text-foreground group-hover:text-primary font-medium transition-colors">
+                                                                                                        {
+                                                                                                            it.label
+                                                                                                        }
+                                                                                                    </div>
+                                                                                                    <div className="text-muted-foreground line-clamp-2 text-xs">
+                                                                                                        {
+                                                                                                            it.description
+                                                                                                        }
+                                                                                                    </div>
                                                                                                 </div>
-                                                                                                <div className="text-muted-foreground line-clamp-2 text-xs">
-                                                                                                    {
-                                                                                                        it.description
-                                                                                                    }
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </Link>
-                                                                                    );
-                                                                                },
-                                                                            )}
+                                                                                            </Link>
+                                                                                        );
+                                                                                    },
+                                                                                )}
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                ),
-                                                            )}
-                                                        </div>
-                                                    </details>
-                                                ))}
+                                                                    ),
+                                                                )}
+                                                            </div>
+                                                        </details>
+                                                    );
+                                                })}
                                             </div>
                                         </nav>
                                     </div>

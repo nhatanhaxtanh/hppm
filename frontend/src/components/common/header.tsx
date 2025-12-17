@@ -124,17 +124,8 @@ export const NAV_ITEMS: NavItem[] = [
             },
         ],
     },
-
     {
         id: 3,
-        label: 'Bảo trì tòa nhà',
-        link: '/bao-tri-toa-nha',
-        iconTop: Wrench,
-    },
-    { id: 4, label: 'Khách hàng', link: '/khach-hang', iconTop: Handshake },
-
-    {
-        id: 5,
         label: 'Thông tin công ty',
         subMenus: [
             {
@@ -144,7 +135,7 @@ export const NAV_ITEMS: NavItem[] = [
                         label: 'Liên hệ',
                         description: 'Gửi yêu cầu, nhận tư vấn nhanh',
                         icon: Phone,
-                        href: '/thong-tin-cong-ty/lien-he',
+                        href: '/info/contact',
                         iconBg: 'bg-lime-50',
                         iconColor: 'text-lime-700',
                     },
@@ -152,7 +143,7 @@ export const NAV_ITEMS: NavItem[] = [
                         label: 'Tin tức sự kiện',
                         description: 'Cập nhật hoạt động & thông báo mới',
                         icon: Newspaper,
-                        href: '/thong-tin-cong-ty/tin-tuc-su-kien',
+                        href: '/info/events',
                         iconBg: 'bg-slate-50',
                         iconColor: 'text-slate-700',
                     },
@@ -160,9 +151,8 @@ export const NAV_ITEMS: NavItem[] = [
             },
         ],
     },
-
     {
-        id: 6,
+        id: 4,
         label: 'Dự án',
         subMenus: [
             {
@@ -172,7 +162,7 @@ export const NAV_ITEMS: NavItem[] = [
                         label: 'Các dự án thực hiện',
                         description: 'Những dự án tiêu biểu HPPM đã triển khai',
                         icon: FolderKanban,
-                        href: '/du-an',
+                        href: '/projects',
                         iconBg: 'bg-fuchsia-50',
                         iconColor: 'text-fuchsia-700',
                     },
@@ -180,6 +170,13 @@ export const NAV_ITEMS: NavItem[] = [
             },
         ],
     },
+    {
+        id: 5,
+        label: 'Bảo trì tòa nhà',
+        link: '/maintain',
+        iconTop: Wrench,
+    },
+    { id: 6, label: 'Khách hàng', link: '/customer', iconTop: Handshake },
 ];
 export function Header() {
     return <HeaderClient navItems={NAV_ITEMS} />;
