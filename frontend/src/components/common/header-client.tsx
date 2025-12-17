@@ -9,6 +9,7 @@ import type { NavItem } from '@/lib/service/navbar';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, ArrowUp, ChevronDown, Settings } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -63,34 +64,45 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                             navbarHeight,
                         )}
                     >
-                        <Link
-                            href="/"
-                            className="flex items-center"
-                            aria-label="HPPM Home"
+                        <motion.div
+                            layout
+                            className="shrink-0"
+                            transition={{
+                                type: 'spring',
+                                stiffness: 220,
+                                damping: 28,
+                                mass: 0.9,
+                            }}
+                            animate={{
+                                x: isScrolled ? 0 : 18,
+                                scale: isScrolled ? 0.96 : 1,
+                            }}
                         >
-                            <div
-                                className={cn(
-                                    'relative h-12 w-55 md:h-14 md:w-65',
-                                )}
+                            <Link
+                                href="/"
+                                aria-label="HPPM Home"
+                                className="mr-10 flex items-center lg:mr-16"
                             >
-                                <Image
-                                    src="/logoHPPM.png"
-                                    alt="HPPM"
-                                    fill
-                                    priority
-                                    quality={100}
-                                    sizes="(max-width: 768px) 220px, 260px"
-                                    className={cn(
-                                        'origin-left object-contain',
-                                        'scale-x-[1.05] scale-y-[0.85]',
-                                        'translate-y-px',
-                                        'drop-shadow-sm',
-                                    )}
-                                />
-                            </div>
-                        </Link>
+                                <div className="relative h-12 w-55 md:h-14 md:w-55">
+                                    <Image
+                                        src="/logoHPPM.png"
+                                        alt="HPPM"
+                                        fill
+                                        priority
+                                        quality={100}
+                                        sizes="(max-width: 768px) 220px, 260px"
+                                        className={cn(
+                                            'origin-left object-contain',
+                                            'scale-x-[1.05] scale-y-[0.85]',
+                                            'translate-y-px',
+                                            'drop-shadow-sm',
+                                        )}
+                                    />
+                                </div>
+                            </Link>
+                        </motion.div>
 
-                        <div className="absolute left-1/2 hidden -translate-x-1/2 md:flex">
+                        <div className="absolute left-1/2 hidden -translate-x-1/2 md:flex md:pl-24 lg:pl-32">
                             <DropdownNavigation
                                 navItems={navItems}
                                 isScrolled={isScrolled}
