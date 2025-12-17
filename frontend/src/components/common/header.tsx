@@ -1,222 +1,186 @@
 import HeaderClient from './header-client';
 import type { NavItem } from '@/lib/service/navbar';
 import {
-    Cpu,
-    Globe,
-    Eye,
-    Shield,
-    Rocket,
-    Box,
-    Search,
-    Palette,
-    BookOpen,
-    FileText,
+    Building2,
+    Users,
+    Target,
+    Network,
+    Image as ImageIcon,
+    BadgeCheck,
+    AppWindow,
+    Home,
+    Hotel,
+    Building,
+    Wrench,
+    Handshake,
+    Phone,
     Newspaper,
+    FolderKanban,
 } from 'lucide-react';
 
-const NAV_ITEMS: NavItem[] = [
+export const NAV_ITEMS: NavItem[] = [
     {
         id: 1,
-        label: 'Products',
+        label: 'Giới thiệu',
         subMenus: [
             {
-                title: 'DX Platform',
+                title: 'Về HPPM',
                 items: [
                     {
-                        label: 'Previews',
-                        description: 'Helping teams ship 6× faster',
-                        icon: Cpu,
-                        href: '/products/previews',
+                        label: 'Giới thiệu công ty',
+                        description: 'Tổng quan về HPPM và năng lực cốt lõi',
+                        icon: Building2,
+                        href: '/intro',
+                        iconBg: 'bg-blue-50',
+                        iconColor: 'text-blue-600',
                     },
                     {
-                        label: 'AI',
-                        description: 'Powering breakthroughs',
-                        icon: Search,
-                        href: '/products/ai',
-                    },
-                ],
-            },
-            {
-                title: 'Managed Infrastructure',
-                items: [
-                    {
-                        label: 'Rendering',
-                        description: 'Fast, scalable, and reliable',
-                        icon: Globe,
-                        href: '/products/rendering',
+                        label: 'Ban lãnh đạo công ty',
+                        description:
+                            'Đội ngũ lãnh đạo và định hướng phát triển',
+                        icon: Users,
+                        href: '/intro/leaders',
+                        iconBg: 'bg-indigo-50',
+                        iconColor: 'text-indigo-600',
                     },
                     {
-                        label: 'Observability',
-                        description: 'Trace every step',
-                        icon: Eye,
-                        href: '/products/observability',
+                        label: 'Mục tiêu HPPM',
+                        description: 'Tầm nhìn, sứ mệnh và giá trị cốt lõi',
+                        icon: Target,
+                        href: '/intro/target',
+                        iconBg: 'bg-emerald-50',
+                        iconColor: 'text-emerald-600',
                     },
                     {
-                        label: 'Security',
-                        description: 'Scale without compromising',
-                        icon: Shield,
-                        href: '/products/security',
-                    },
-                ],
-            },
-            {
-                title: 'Open Source',
-                items: [
-                    {
-                        label: 'Next.js',
-                        description: 'The native Next.js platform',
-                        icon: Rocket,
-                        href: '/products/nextjs',
+                        label: 'Cơ cấu tổ chức',
+                        description: 'Sơ đồ tổ chức và các phòng ban',
+                        icon: Network,
+                        href: '/intro/organization',
+                        iconBg: 'bg-amber-50',
+                        iconColor: 'text-amber-700',
                     },
                     {
-                        label: 'Turborepo',
-                        description: 'Speed with Enterprise scale',
-                        icon: Box,
-                        href: '/products/turborepo',
+                        label: 'Hình ảnh công ty',
+                        description: 'Văn hoá doanh nghiệp & hoạt động nổi bật',
+                        icon: ImageIcon,
+                        href: '/intro/images',
+                        iconBg: 'bg-pink-50',
+                        iconColor: 'text-pink-600',
                     },
                     {
-                        label: 'AI SDK',
-                        description: 'The AI Toolkit for TypeScript',
-                        icon: Palette,
-                        href: '/products/ai-sdk',
+                        label: 'Lý do nên chọn HPPM',
+                        description: 'Cam kết chất lượng & lợi thế cạnh tranh',
+                        icon: BadgeCheck,
+                        href: '/intro/why',
+                        iconBg: 'bg-violet-50',
+                        iconColor: 'text-violet-600',
                     },
                 ],
             },
         ],
     },
+
     {
         id: 2,
-        label: 'Solutions',
+        label: 'Dịch vụ',
         subMenus: [
             {
-                title: 'Use Cases',
+                title: 'Giải pháp',
                 items: [
                     {
-                        label: 'AI Apps',
-                        description: 'Deploy at the speed of AI',
-                        icon: Cpu,
-                        href: '/solutions/ai-apps',
+                        label: 'Phần mềm quản lý',
+                        description: 'Tối ưu vận hành, báo cáo, quy trình',
+                        icon: AppWindow,
+                        href: '/services/programs',
+                        iconBg: 'bg-cyan-50',
+                        iconColor: 'text-cyan-700',
                     },
                     {
-                        label: 'Composable Commerce',
-                        description: 'Power storefronts that convert',
-                        icon: Box,
-                        href: '/solutions/commerce',
+                        label: 'Kinh doanh nhà ở',
+                        description: 'Quản lý cho thuê, cư dân, vận hành',
+                        icon: Home,
+                        href: '/services/locations',
+                        iconBg: 'bg-sky-50',
+                        iconColor: 'text-sky-700',
                     },
                     {
-                        label: 'Marketing Sites',
-                        description: 'Launch campaigns fast',
-                        icon: Rocket,
-                        href: '/solutions/marketing',
+                        label: 'Khách sạn nghỉ dưỡng',
+                        description:
+                            'Vận hành – dịch vụ – trải nghiệm khách hàng',
+                        icon: Hotel,
+                        href: '/services/hotel',
+                        iconBg: 'bg-rose-50',
+                        iconColor: 'text-rose-600',
                     },
                     {
-                        label: 'Multi-tenant Platforms',
-                        description: 'Scale apps with one codebase',
-                        icon: Globe,
-                        href: '/solutions/multi-tenant',
-                    },
-                    {
-                        label: 'Web Apps',
-                        description: 'Ship features, not infrastructure',
-                        icon: Search,
-                        href: '/solutions/web-apps',
-                    },
-                ],
-            },
-            {
-                title: 'Users',
-                items: [
-                    {
-                        label: 'Platform Engineers',
-                        description: 'Automate away repetition',
-                        icon: Cpu,
-                        href: '/solutions/platform-engineers',
-                    },
-                    {
-                        label: 'Design Engineers',
-                        description: 'Deploy for every idea',
-                        icon: Palette,
-                        href: '/solutions/design-engineers',
+                        label: 'Quản lý bất động sản',
+                        description: 'Quản trị tài sản, hợp đồng, bảo trì',
+                        icon: Building,
+                        href: '/services/estate',
+                        iconBg: 'bg-orange-50',
+                        iconColor: 'text-orange-700',
                     },
                 ],
             },
         ],
     },
+
     {
         id: 3,
-        label: 'Resources',
+        label: 'Bảo trì tòa nhà',
+        link: '/bao-tri-toa-nha',
+        iconTop: Wrench,
+    },
+    { id: 4, label: 'Khách hàng', link: '/khach-hang', iconTop: Handshake },
+
+    {
+        id: 5,
+        label: 'Thông tin công ty',
         subMenus: [
             {
-                title: 'Tools',
+                title: 'Thông tin',
                 items: [
                     {
-                        label: 'Resource Center',
-                        description: "Today's best practices",
-                        icon: BookOpen,
-                        href: '/resources',
+                        label: 'Liên hệ',
+                        description: 'Gửi yêu cầu, nhận tư vấn nhanh',
+                        icon: Phone,
+                        href: '/thong-tin-cong-ty/lien-he',
+                        iconBg: 'bg-lime-50',
+                        iconColor: 'text-lime-700',
                     },
                     {
-                        label: 'Marketplace',
-                        description: 'Extend and automate workflows',
-                        icon: Search,
-                        href: '/resources/marketplace',
-                    },
-                    {
-                        label: 'Templates',
-                        description: 'Jumpstart app development',
-                        icon: FileText,
-                        href: '/resources/templates',
-                    },
-                    {
-                        label: 'Guides',
-                        description: 'Find help quickly',
-                        icon: BookOpen,
-                        href: '/resources/guides',
-                    },
-                    {
-                        label: 'Partner Finder',
-                        description: 'Get help from solution partners',
-                        icon: Search,
-                        href: '/resources/partners',
-                    },
-                ],
-            },
-            {
-                title: 'Company',
-                items: [
-                    {
-                        label: 'Customers',
-                        description: 'Trusted by the best teams',
+                        label: 'Tin tức sự kiện',
+                        description: 'Cập nhật hoạt động & thông báo mới',
                         icon: Newspaper,
-                        href: '/company/customers',
-                    },
-                    {
-                        label: 'Blog',
-                        description: 'The latest posts and changes',
-                        icon: FileText,
-                        href: '/blog',
-                    },
-                    {
-                        label: 'Changelog',
-                        description: 'See what shipped',
-                        icon: BookOpen,
-                        href: '/changelog',
-                    },
-                    {
-                        label: 'Press',
-                        description: 'Read the latest news',
-                        icon: Newspaper,
-                        href: '/press',
+                        href: '/thong-tin-cong-ty/tin-tuc-su-kien',
+                        iconBg: 'bg-slate-50',
+                        iconColor: 'text-slate-700',
                     },
                 ],
             },
         ],
     },
-    { id: 4, label: 'Enterprise', link: '/enterprise' },
-    { id: 5, label: 'Docs', link: '/docs' },
-    { id: 6, label: 'Pricing', link: '/pricing' },
-];
 
+    {
+        id: 6,
+        label: 'Dự án',
+        subMenus: [
+            {
+                title: 'Danh mục',
+                items: [
+                    {
+                        label: 'Các dự án thực hiện',
+                        description: 'Những dự án tiêu biểu HPPM đã triển khai',
+                        icon: FolderKanban,
+                        href: '/du-an',
+                        iconBg: 'bg-fuchsia-50',
+                        iconColor: 'text-fuchsia-700',
+                    },
+                ],
+            },
+        ],
+    },
+];
 export function Header() {
     return <HeaderClient navItems={NAV_ITEMS} />;
 }

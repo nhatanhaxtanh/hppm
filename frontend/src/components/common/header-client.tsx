@@ -247,8 +247,21 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                                                                                                 animationDelay: `${(subIdx * 6 + idx) * 60}ms`,
                                                                                             }}
                                                                                         >
-                                                                                            <div className="bg-background border-border group-hover:bg-accent/40 flex h-8 w-8 items-center justify-center rounded-lg border transition-colors">
-                                                                                                <Icon className="h-4 w-4" />
+                                                                                            <div
+                                                                                                className={cn(
+                                                                                                    'border-border flex h-8 w-8 items-center justify-center rounded-lg border transition-colors',
+                                                                                                    it.iconBg ??
+                                                                                                        'bg-background',
+                                                                                                    'group-hover:brightness-95',
+                                                                                                )}
+                                                                                            >
+                                                                                                <Icon
+                                                                                                    className={cn(
+                                                                                                        'h-4 w-4',
+                                                                                                        it.iconColor ??
+                                                                                                            'text-foreground',
+                                                                                                    )}
+                                                                                                />
                                                                                             </div>
 
                                                                                             <div className="min-w-0">

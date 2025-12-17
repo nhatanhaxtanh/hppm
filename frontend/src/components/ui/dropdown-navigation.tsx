@@ -46,7 +46,7 @@ export function DropdownNavigation({
     return (
         <nav className={className} aria-label="Primary">
             <ul
-                className="relative flex items-center gap-1"
+                className="relative flex items-center gap-1 whitespace-nowrap"
                 onMouseLeave={() => {
                     setHoverId(null);
                     closeMenu();
@@ -222,13 +222,17 @@ function DropdownPanel({
                                                     className={cn(
                                                         'flex size-9 shrink-0 items-center justify-center rounded-md border',
                                                         'border-border text-foreground transition-all duration-200',
-                                                        'group-hover:bg-accent group-hover:text-accent-foreground',
+                                                        it.iconBg ??
+                                                            'bg-background',
+                                                        it.iconColor ??
+                                                            'text-foreground',
+                                                        'group-hover: brightness-95',
                                                     )}
                                                 >
                                                     <Icon className="h-5 w-5 transition-transform duration-200 group-hover:scale-110" />
                                                 </div>
 
-                                                <div className="leading-5">
+                                                <div className="w-60 leading-5">
                                                     <p className="text-foreground text-sm font-medium transition-colors duration-200">
                                                         {it.label}
                                                     </p>

@@ -5,6 +5,8 @@ export type SubMenuItem = {
     description: string;
     icon: React.ElementType;
     href?: string;
+    iconBg?: string;
+    iconColor?: string;
 };
 
 export type SubMenu = {
@@ -15,8 +17,10 @@ export type SubMenu = {
 export type NavItem = {
     id: number;
     label: string;
+    subMenus?: { title: string; items: SubMenuItem[] }[];
     link?: string;
-    subMenus?: SubMenu[];
+
+    iconTop?: React.ElementType;
 };
 
 export type DropdownNavigationProps = {
