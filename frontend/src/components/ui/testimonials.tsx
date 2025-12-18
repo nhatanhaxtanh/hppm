@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { Quote } from 'lucide-react';
 
 export interface Testimonial {
@@ -60,14 +60,14 @@ const TestimonialSection = ({
     testimonials,
     variant = 'profile',
 }: TestimonialSectionProps) => {
-    const containerVariants = {
+    const containerVariants: Variants = {
         hidden: {},
         visible: {
             transition: { staggerChildren: 0.12 },
         },
     };
 
-    const itemVariants = {
+    const itemVariants: Variants = {
         hidden: { opacity: 0, y: 18 },
         visible: {
             opacity: 1,
@@ -107,7 +107,7 @@ const TestimonialSection = ({
                                         <img
                                             src={t.imageSrc}
                                             alt={alt}
-                                            className="h-[260px] w-full object-cover sm:h-[280px]"
+                                            className="h-65 w-full object-cover sm:h-70"
                                             loading="lazy"
                                         />
                                     </div>
@@ -142,10 +142,10 @@ const TestimonialSection = ({
                                     <img
                                         src={t.imageSrc}
                                         alt={alt}
-                                        className="h-[320px] w-full object-cover sm:h-[360px]"
+                                        className="h-80 w-full object-cover sm:h-90"
                                         loading="lazy"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/40 to-transparent" />
+                                    <div className="absolute inset-0 bg-linear-to-t from-black/75 via-black/40 to-transparent" />
                                 </div>
 
                                 <figcaption className="absolute right-0 bottom-0 left-0 p-6 text-left text-white">
