@@ -121,7 +121,7 @@ export default function HeroInteractive() {
                     >
                         Vận hành tòa nhà chuẩn mực, minh bạch —{' '}
                         <Highlight className="text-neutral-900 dark:text-white">
-                            an&nbsp; tâm từ ngày đầu.
+                            an tâm từ ngày đầu.
                         </Highlight>
                     </motion.h1>
 
@@ -173,7 +173,7 @@ export default function HeroInteractive() {
                     <div
                         className={cn(
                             'border-border mx-auto flex w-full items-stretch overflow-hidden border bg-neutral-950',
-                            'h-[520px] max-w-[1680px]',
+                            'h-130 max-w-420',
                             'rounded-[32px]',
                             'shadow-[0_28px_100px_rgba(0,0,0,0.40)]',
                         )}
@@ -230,7 +230,7 @@ export default function HeroInteractive() {
                                     />
 
                                     <div className="pointer-events-none absolute inset-x-0 bottom-5 z-10 flex items-center gap-3 px-4">
-                                        <div className="flex h-[44px] max-w-[44px] min-w-[44px] items-center justify-center rounded-full border border-white/15 bg-black/40 backdrop-blur-md">
+                                        <div className="flex h-11 max-w-11 min-w-11 items-center justify-center rounded-full border border-white/15 bg-black/40 backdrop-blur-md">
                                             {option.icon}
                                         </div>
 

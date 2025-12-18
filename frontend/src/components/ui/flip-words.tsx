@@ -74,7 +74,6 @@ export const FlipWords = ({
                     position: 'absolute',
                 }}
                 className={cn(
-                    // ✅ responsive-friendly: không khóa wrap toàn bộ dòng, giữ baseline ổn định
                     'relative z-10 inline-flex px-1 align-baseline sm:px-2',
                     'min-h-[1.2em] leading-tight break-keep',
                     'text-left text-neutral-900 dark:text-neutral-100',
