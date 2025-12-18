@@ -51,10 +51,34 @@ const contactMethods = [
 ];
 
 const companyStats = [
-    { label: 'Thời gian phản hồi', value: '< 2 giờ', icon: Clock },
-    { label: 'Khách hàng toàn cầu', value: '500+', icon: Globe },
-    { label: 'Chuẩn bảo mật', value: 'SOC 2', icon: Shield },
-    { label: 'Tỉ lệ thành công', value: '99.9%', icon: Zap },
+    {
+        label: 'Thời gian phản hồi',
+        value: '< 2 giờ',
+        icon: Clock,
+        gradient:
+            'bg-linear-to-br from-indigo-500/15 to-blue-500/15 dark:from-indigo-500/30 dark:to-blue-500/20',
+    },
+    {
+        label: 'Khách hàng toàn cầu',
+        value: '500+',
+        icon: Globe,
+        gradient:
+            'bg-linear-to-br from-emerald-500/15 to-teal-500/15 dark:from-emerald-500/30 dark:to-teal-500/20',
+    },
+    {
+        label: 'Chuẩn bảo mật',
+        value: 'SOC 2',
+        icon: Shield,
+        gradient:
+            'bg-linear-to-br from-amber-500/15 to-orange-500/15 dark:from-amber-500/30 dark:to-orange-500/20',
+    },
+    {
+        label: 'Tỉ lệ thành công',
+        value: '99.9%',
+        icon: Zap,
+        gradient:
+            'bg-linear-to-br from-purple-500/15 to-rose-500/15 dark:from-purple-500/30 dark:to-rose-500/20',
+    },
 ];
 
 export function PremiumContact() {
@@ -221,11 +245,11 @@ export function PremiumContact() {
                             variants={fadeInUp}
                         >
                             <motion.div
-                                className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl border border-gray-100 bg-gray-50 text-gray-900 dark:border-white/20 dark:bg-linear-to-br dark:from-gray-500/20 dark:to-gray-700/20"
+                                className={`mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl border border-gray-100 text-gray-900 shadow-inner transition-colors dark:border-white/20 ${stat.gradient}`}
                                 whileHover={{ rotateY: 180 }}
                                 transition={{ duration: 0.6 }}
                             >
-                                <stat.icon className="h-6 w-6 text-gray-900 dark:text-white" />
+                                <stat.icon className="h-6 w-6 text-gray-900 transition-colors dark:text-white" />
                             </motion.div>
                             <div className="mb-1 text-2xl font-bold text-gray-900 dark:text-white">
                                 {stat.value}
