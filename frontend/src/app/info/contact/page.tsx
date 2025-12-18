@@ -1,7 +1,9 @@
-export default function ContactPage() {
+import { PremiumContact } from '@/components/ui/premium-contact';
+
+export default function Home() {
     return (
-        <div>
-            <h1>Hello</h1>
-        </div>
+        <main className="min-h-screen">
+            <PremiumContact />
+        </main>
     );
 }
