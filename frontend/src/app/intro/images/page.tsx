@@ -1,4 +1,4 @@
-export function ImagesPage() {
+export default function ImagesPage() {
     return (
         <div>
             <h1>Hello</h1>

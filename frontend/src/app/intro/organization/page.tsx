@@ -1,4 +1,4 @@
-export function OrganizationPage() {
+export default function OrganizationPage() {
     return (
         <div>
             <h1>Hello</h1>

@@ -1,4 +1,4 @@
-export function TargetPage() {
+export default function TargetPage() {
     return (
         <div>
             <h1>Hello</h1>
