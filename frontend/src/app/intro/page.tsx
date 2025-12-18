@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -274,7 +275,7 @@ export default function CompanyIntroduction() {
     return (
         <main className="bg-background text-foreground min-h-screen">
             {/* Hero Section */}
-            <section className="from-primary/5 via-background to-accent/5 relative overflow-hidden bg-gradient-to-br py-24 md:py-32">
+            <section className="from-primary/5 via-background to-accent/5 relative overflow-hidden bg-linear-to-br py-24 md:py-32">
                 <motion.div
                     className="relative z-10 mx-auto max-w-7xl px-6"
                     variants={staggerContainer}
@@ -301,9 +302,26 @@ export default function CompanyIntroduction() {
                                 Chuyên nghiệp
                             </span>
                             <br />
-                            <span className="from-blue-700 via-blue-800 to-blue-900 bg-gradient-to-r bg-clip-text text-transparent">
+                            <motion.span
+                                className="bg-linear-to-r from-blue-300 via-blue-600 to-blue-900 bg-clip-text text-transparent"
+                                animate={{
+                                    backgroundPosition: [
+                                        '0% 50%',
+                                        '100% 50%',
+                                        '0% 50%',
+                                    ],
+                                }}
+                                transition={{
+                                    duration: 5,
+                                    repeat: Number.POSITIVE_INFINITY,
+                                    ease: 'easeInOut',
+                                }}
+                                style={{
+                                    backgroundSize: '200% 200%',
+                                }}
+                            >
                                 trong từng dịch vụ
-                            </span>
+                            </motion.span>
                         </h1>
 
                         <p className="text-muted-foreground mx-auto max-w-3xl text-lg leading-relaxed text-pretty sm:text-xl md:text-2xl">
@@ -323,12 +341,12 @@ export default function CompanyIntroduction() {
                                 Khám phá dịch vụ
                                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                             </a>
-                            <a
-                                href="#contact"
+                            <Link
+                                href="/info/contact"
                                 className="border-border bg-background text-foreground hover:bg-accent inline-flex items-center gap-2 rounded-xl border-2 px-8 py-4 font-semibold transition-all"
                             >
                                 Liên hệ tư vấn
-                            </a>
+                            </Link>
                         </motion.div>
                     </motion.div>
 
@@ -339,9 +357,7 @@ export default function CompanyIntroduction() {
                     >
                         {companyStats.map((stat, index) => {
                             const colors =
-                                statIconStyles[
-                                    index % statIconStyles.length
-                                ];
+                                statIconStyles[index % statIconStyles.length];
                             return (
                                 <motion.div
                                     key={index}
@@ -431,7 +447,7 @@ export default function CompanyIntroduction() {
                                         </p>
                                     </div>
                                     <motion.div
-                                        className="from-primary/5 absolute inset-0 bg-gradient-to-br to-transparent opacity-0 transition-opacity group-hover:opacity-100"
+                                        className="from-primary/5 absolute inset-0 bg-linear-to-br to-transparent opacity-0 transition-opacity group-hover:opacity-100"
                                         initial={false}
                                     />
                                 </motion.div>
@@ -510,7 +526,7 @@ export default function CompanyIntroduction() {
                                         {method.value}
                                     </p>
                                     <motion.div
-                                        className="from-primary/5 absolute inset-0 bg-gradient-to-br to-transparent opacity-0 transition-opacity group-hover:opacity-100"
+                                        className="from-primary/5 absolute inset-0 bg-linear-to-br to-transparent opacity-0 transition-opacity group-hover:opacity-100"
                                         initial={false}
                                     />
                                 </motion.a>
@@ -521,7 +537,7 @@ export default function CompanyIntroduction() {
             </section>
 
             {/* CTA Section */}
-            <section className="from-primary/10 via-primary/5 to-background bg-gradient-to-br py-24">
+            <section className="from-primary/10 via-primary/5 to-background bg-linear-to-br py-24">
                 <motion.div
                     className="mx-auto max-w-4xl px-6 text-center"
                     initial={{ opacity: 0, y: 40 }}
@@ -537,13 +553,13 @@ export default function CompanyIntroduction() {
                         Liên hệ ngay để được tư vấn giải pháp quản lý phù hợp
                         nhất cho dự án của bạn
                     </p>
-                    <a
-                        href="mailto:operation@hppm.com"
+                    <Link
+                        href="/info/contact"
                         className="group bg-primary text-primary-foreground inline-flex items-center gap-2 rounded-xl px-10 py-5 text-lg font-semibold shadow-xl transition-all hover:scale-105 hover:shadow-2xl"
                     >
                         Gửi yêu cầu tư vấn
                         <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-                    </a>
+                    </Link>
                 </motion.div>
             </section>
         </main>
