@@ -3,6 +3,9 @@ import AboutSection from '@/components/ui/about';
 import ExperienceFeatures from '@/components/ui/parallax-scroll-feature-section';
 import TeamSection from '@/components/ui/testimonials';
 import ServicesAccordion from '@/components/ui/service-accordion';
+import FeaturedProjectsGrid from '@/components/ui/feature-project';
+import InsightsGrid from '@/components/ui/insight-grid';
+import ClientsInfiniteSlider from '@/components/ui/client-infinite-slider';
 export default function HomePage() {
     return (
         <>
@@ -12,6 +15,9 @@ export default function HomePage() {
                 <AboutSection />
                 <TeamSection />
                 <ServicesAccordion />
+                <FeaturedProjectsGrid />
+                <InsightsGrid />
+                <ClientsInfiniteSlider />
             </section>
         </>
     );

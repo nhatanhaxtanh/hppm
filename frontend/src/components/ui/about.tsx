@@ -1,6 +1,9 @@
 'use client';
+
+import Image from 'next/image';
+import Link from 'next/link';
 import { cn } from '@/lib/utils';
-import { ArrowRight, Users } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function AboutSection({ className }: { className?: string }) {
     return (
@@ -10,20 +13,7 @@ export default function AboutSection({ className }: { className?: string }) {
         >
             <div className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:py-20">
                 <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
-                    <div className="lg:col-span-6">
-                        <div className="border-border bg-muted relative overflow-hidden rounded-[28px] border shadow-[0_22px_80px_rgba(0,0,0,0.12)]">
-                            <img
-                                src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1600&q=80"
-                                alt="Hình ảnh minh hoạ khu dân cư và không gian sống hiện đại"
-                                className="h-80 w-full object-cover sm:h-[420px] lg:h-[520px]"
-                                loading="lazy"
-                            />
-
-                            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/25 via-black/10 to-transparent" />
-                        </div>
-                    </div>
-
-                    <div className="lg:col-span-6">
+                    <div className="order-1 lg:order-2 lg:col-span-6">
                         <h2
                             id="about-hppm-title"
                             className="text-foreground mt-3 text-3xl font-semibold tracking-tight sm:text-4xl"
@@ -31,7 +21,7 @@ export default function AboutSection({ className }: { className?: string }) {
                             Giới thiệu về HPPM
                         </h2>
 
-                        <div className="mt-3 h-1 w-24 rounded-full bg-gradient-to-r from-indigo-600 to-purple-300 dark:to-indigo-400" />
+                        <div className="mt-3 h-1 w-24 rounded-full bg-linear-to-r from-indigo-600 to-purple-300 dark:to-indigo-400" />
 
                         <div className="text-muted-foreground mt-6 space-y-4 text-base leading-relaxed">
                             <p>
@@ -64,8 +54,8 @@ export default function AboutSection({ className }: { className?: string }) {
                         </div>
 
                         <div className="mt-8 flex flex-wrap items-center gap-3">
-                            <a
-                                href="/gioi-thieu"
+                            <Link
+                                href="/intro"
                                 className={cn(
                                     'inline-flex items-center justify-center gap-2',
                                     'rounded-full px-6 py-2.5 text-sm leading-none font-semibold',
@@ -80,7 +70,24 @@ export default function AboutSection({ className }: { className?: string }) {
                             >
                                 <span>Xem thêm</span>
                                 <ArrowRight className="h-4 w-4" />
-                            </a>
+                            </Link>
+                        </div>
+                    </div>
+
+                    <div className="order-2 lg:order-1 lg:col-span-6">
+                        <div className="border-border bg-muted relative overflow-hidden rounded-[28px] border shadow-[0_22px_80px_rgba(0,0,0,0.12)]">
+                            <div className="relative h-80 w-full sm:h-105 lg:h-130">
+                                <Image
+                                    src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1600&q=80"
+                                    alt="Hình ảnh minh hoạ khu dân cư và không gian sống hiện đại"
+                                    fill
+                                    priority={false}
+                                    sizes="(max-width: 1024px) 100vw, 50vw"
+                                    className="object-cover"
+                                />
+                            </div>
+
+                            <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/25 via-black/10 to-transparent" />
                         </div>
                     </div>
                 </div>

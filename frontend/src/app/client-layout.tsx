@@ -1,4 +1,5 @@
 'use client';
+import { Footer } from '@/components/common/footer';
 import { Header } from '@/components/common/header';
 import { Toaster } from '@/components/ui/sonner';
 import { usePathname } from 'next/navigation';
@@ -19,6 +20,7 @@ export default function ClientLayout({
             {!hideLayout && <Header />}
             {children}
             <Toaster />
+            {!hideLayout && <Footer />}
         </>
     );
 }
