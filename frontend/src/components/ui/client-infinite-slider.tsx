@@ -2,38 +2,8 @@
 
 import { cn } from '@/lib/utils';
 import { InfiniteSlider } from '@/components/ui/infinite-slider';
-
-type Partner = {
-    name: string;
-    image: string;
-};
-
-const partners: Partner[] = [
-    {
-        name: 'Vingroup',
-        image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
-    },
-    {
-        name: 'Samsung',
-        image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80',
-    },
-    {
-        name: 'FPT',
-        image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
-    },
-    {
-        name: 'Viettel',
-        image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80',
-    },
-    {
-        name: 'Toyota',
-        image: 'https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=80',
-    },
-    {
-        name: 'Grab',
-        image: 'https://images.unsplash.com/photo-1556745757-8d76bdb6984b?auto=format&fit=crop&w=800&q=80',
-    },
-];
+import { Partner } from '@/lib/service/ui';
+import { partners } from '../../../constant/constant-data';
 
 export default function ClientsInfiniteSlider({
     className,

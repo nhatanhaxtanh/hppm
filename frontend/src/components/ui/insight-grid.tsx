@@ -3,58 +3,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, CalendarDays, User2 } from 'lucide-react';
-
 import { cn } from '@/lib/utils';
-
-type PostItem = {
-    id: string;
-    title: string;
-    excerpt: string;
-    date: string;
-    author: string;
-    href: string;
-    imageUrl: string;
-    imageAlt: string;
-};
-
-const posts: PostItem[] = [
-    {
-        id: '1',
-        title: 'Hình ảnh công ty HPPM tại các dự án',
-        excerpt:
-            'Những hình ảnh mà chúng tôi chia sẻ không chỉ là một tập hợp các hình ảnh đơn giản, mà chúng là biểu hiện của sự chăm sóc, quản lý [...]',
-        date: '08/04/2024',
-        author: 'HPPM',
-        href: '/bai-viet/hinh-anh-cong-ty-hppm',
-        imageUrl:
-            'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1800&q=80',
-        imageAlt: 'Hình ảnh minh hoạ đội ngũ làm việc tại dự án',
-    },
-    {
-        id: '2',
-        title: 'Phần mềm quản lý POMA — giải pháp vận hành toà nhà',
-        excerpt:
-            'POMA giúp quản lý vận hành tòa nhà tự động, minh bạch và dễ theo dõi. Một trong những cải tiến giúp nâng cao trải nghiệm cư dân [...]',
-        date: '14/11/2021',
-        author: 'HPPM',
-        href: '/bai-viet/phan-mem-quan-ly-poma',
-        imageUrl:
-            'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1800&q=80',
-        imageAlt: 'Hình ảnh minh hoạ màn hình ứng dụng / phần mềm quản lý',
-    },
-    {
-        id: '3',
-        title: 'Căn hộ nhanh bị xuống cấp phải làm sao?',
-        excerpt:
-            'Hệ thống kỹ thuật của mỗi tòa nhà theo thời gian sẽ có nhiều hỏng hóc khiến cư dân bất tiện. Cần quy trình kiểm soát và bảo trì chuẩn [...]',
-        date: '24/11/2021',
-        author: 'HPPM',
-        href: '/bai-viet/can-ho-xuong-cap',
-        imageUrl:
-            'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1800&q=80',
-        imageAlt: 'Hình ảnh minh hoạ kỹ thuật viên kiểm tra hệ thống',
-    },
-];
+import { posts } from '../../../constant/constant-data';
 
 export default function InsightsGrid({ className }: { className?: string }) {
     const jsonLd = {
