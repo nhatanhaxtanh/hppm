@@ -159,7 +159,6 @@ export function PremiumContact() {
 
     return (
         <section className="relative overflow-hidden bg-white py-32 text-gray-900 dark:bg-black dark:text-white">
-
             <motion.div
                 ref={containerRef}
                 className="relative z-10 mx-auto max-w-7xl px-6"
@@ -198,7 +197,7 @@ export function PremiumContact() {
                         variants={fadeInUp}
                     >
                         <span className="bg-linear-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent dark:from-white dark:to-white/80">
-                            Đồng hành
+                            Kết nối
                         </span>
                         <br />
                         <motion.span
@@ -219,7 +218,7 @@ export function PremiumContact() {
                                 backgroundSize: '200% 200%',
                             }}
                         >
-                            vận hành khu đô thị
+                            với chúng tôi
                         </motion.span>
                     </motion.h2>
 
@@ -461,9 +460,9 @@ export function PremiumContact() {
                                         Đã gửi thành công!
                                     </h3>
                                     <p className="mb-6 text-lg text-gray-600 dark:text-white/60">
-                                        Cảm ơn bạn đã tin tưởng. Ban quản lý
-                                        sẽ liên hệ để khảo sát dự án và thống
-                                        nhất lộ trình vận hành chi tiết.
+                                        Cảm ơn bạn đã tin tưởng. Ban quản lý sẽ
+                                        liên hệ để khảo sát dự án và thống nhất
+                                        lộ trình vận hành chi tiết.
                                     </p>
                                     <motion.button
                                         onClick={() => {
@@ -543,8 +542,8 @@ export function PremiumContact() {
                             </h4>
                             <p className="text-sm leading-relaxed text-gray-600 dark:text-white/80">
                                 Ban quản lý trực 24/7, phản hồi trong 2 giờ làm
-                                việc, cử đội trưởng khu cư dân khảo sát trong
-                                24 giờ và trình bày kế hoạch vận hành toàn diện
+                                việc, cử đội trưởng khu cư dân khảo sát trong 24
+                                giờ và trình bày kế hoạch vận hành toàn diện
                                 trong 7 ngày.
                             </p>
                         </motion.div>
