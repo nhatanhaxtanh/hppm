@@ -4,6 +4,7 @@ import ExperienceFeatures from '@/components/ui/parallax-scroll-feature-section'
 import TeamSection from '@/components/ui/testimonials';
 import ServicesAccordion from '@/components/ui/service-accordion';
 import FeaturedProjectsGrid from '@/components/ui/feature-project';
+import InsightsGrid from '@/components/ui/insight-grid';
 export default function HomePage() {
     return (
         <>
@@ -14,6 +15,7 @@ export default function HomePage() {
                 <TeamSection />
                 <ServicesAccordion />
                 <FeaturedProjectsGrid />
+                <InsightsGrid />
             </section>
         </>
     );
