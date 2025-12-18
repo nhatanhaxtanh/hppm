@@ -1,6 +1,6 @@
 'use client';
 import { cn } from '@/lib/utils';
-import { ArrowRight, Users } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function AboutSection({ className }: { className?: string }) {
     return (
@@ -15,11 +15,11 @@ export default function AboutSection({ className }: { className?: string }) {
                             <img
                                 src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1600&q=80"
                                 alt="Hình ảnh minh hoạ khu dân cư và không gian sống hiện đại"
-                                className="h-80 w-full object-cover sm:h-[420px] lg:h-[520px]"
+                                className="h-80 w-full object-cover sm:h-105 lg:h-130"
                                 loading="lazy"
                             />
 
-                            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/25 via-black/10 to-transparent" />
+                            <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/25 via-black/10 to-transparent" />
                         </div>
                     </div>
 
@@ -31,7 +31,7 @@ export default function AboutSection({ className }: { className?: string }) {
                             Giới thiệu về HPPM
                         </h2>
 
-                        <div className="mt-3 h-1 w-24 rounded-full bg-gradient-to-r from-indigo-600 to-purple-300 dark:to-indigo-400" />
+                        <div className="mt-3 h-1 w-24 rounded-full bg-linear-to-r from-indigo-600 to-purple-300 dark:to-indigo-400" />
 
                         <div className="text-muted-foreground mt-6 space-y-4 text-base leading-relaxed">
                             <p>
