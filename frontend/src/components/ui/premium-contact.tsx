@@ -23,58 +23,58 @@ import {
 const contactMethods = [
     {
         icon: Mail,
-        title: 'Gửi email',
-        description: 'Liên hệ qua email',
-        value: 'dhileepkumargm@21st.dev',
-        link: 'mailto:dhileepkumargm@gmail.com',
-        gradient: 'from-gray-500/20 to-gray-400/20',
+        title: 'Email ban quản lý',
+        description: 'Nhận đề xuất vận hành khu dân cư',
+        value: 'operation@hppm.com',
+        link: 'mailto:operation@hppm.com',
+        gradient: 'from-sky-500/30 to-blue-500/30',
         hoverColor: 'gray',
     },
     {
         icon: Phone,
-        title: 'Gọi cho chúng tôi',
-        description: 'Trò chuyện trực tiếp với đội ngũ',
-        value: '+1 (555) 123-4567',
-        link: 'tel:+15551234567',
-        gradient: 'from-gray-600/20 to-gray-500/20',
+        title: 'Hotline cư dân & chủ đầu tư',
+        description: 'Tiếp nhận yêu cầu 24/7 cho mọi dự án',
+        value: '1900 233 889',
+        link: 'tel:+1900233889',
+        gradient: 'from-emerald-500/30 to-teal-500/30',
         hoverColor: 'gray',
     },
     {
         icon: MapPin,
-        title: 'Đến thăm văn phòng',
-        description: 'Trụ sở chính của chúng tôi',
-        value: 'San Francisco, CA',
-        link: '#Europe, Middle East, and Africa (EMEA)',
-        gradient: 'from-gray-700/20 to-gray-600/20',
+        title: 'Trung tâm điều hành',
+        description: 'Gặp đội ngũ quản lý khu đô thị',
+        value: '72 Nguyễn Huệ, Q.1, TP.HCM',
+        link: '#office',
+        gradient: 'from-amber-500/30 to-orange-500/30',
         hoverColor: 'gray',
     },
 ];
 
 const companyStats = [
     {
-        label: 'Thời gian phản hồi',
-        value: '< 2 giờ',
+        label: 'Căn hộ & biệt thự đang phục vụ',
+        value: '18.000+',
         icon: Clock,
         gradient:
             'bg-linear-to-br from-indigo-500/15 to-blue-500/15 dark:from-indigo-500/30 dark:to-blue-500/20',
     },
     {
-        label: 'Khách hàng toàn cầu',
-        value: '500+',
+        label: 'Khu đô thị, chung cư, biệt thự',
+        value: '45+ dự án',
         icon: Globe,
         gradient:
             'bg-linear-to-br from-emerald-500/15 to-teal-500/15 dark:from-emerald-500/30 dark:to-teal-500/20',
     },
     {
-        label: 'Chuẩn bảo mật',
-        value: 'SOC 2',
+        label: 'Đội ngũ onsite & kỹ thuật',
+        value: '600+ nhân sự',
         icon: Shield,
         gradient:
             'bg-linear-to-br from-amber-500/15 to-orange-500/15 dark:from-amber-500/30 dark:to-orange-500/20',
     },
     {
-        label: 'Tỉ lệ thành công',
-        value: '99.9%',
+        label: 'Mức độ hài lòng cư dân',
+        value: '4.8/5',
         icon: Zap,
         gradient:
             'bg-linear-to-br from-purple-500/15 to-rose-500/15 dark:from-purple-500/30 dark:to-rose-500/20',
@@ -188,7 +188,7 @@ export function PremiumContact() {
                             <Sparkles className="h-4 w-4 text-amber-500 dark:text-indigo-300" />
                         </motion.div>
                         <span className="text-sm font-medium text-gray-700 dark:text-white/80">
-                            Kết nối ngay
+                            Ban quản lý khu dân cư
                         </span>
                         <div className="h-2 w-2 animate-pulse rounded-full bg-emerald-500 dark:bg-white" />
                     </motion.div>
@@ -198,7 +198,7 @@ export function PremiumContact() {
                         variants={fadeInUp}
                     >
                         <span className="bg-linear-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent dark:from-white dark:to-white/80">
-                            Kết nối
+                            Đồng hành
                         </span>
                         <br />
                         <motion.span
@@ -219,7 +219,7 @@ export function PremiumContact() {
                                 backgroundSize: '200% 200%',
                             }}
                         >
-                            cùng chúng tôi
+                            vận hành khu đô thị
                         </motion.span>
                     </motion.h2>
 
@@ -227,8 +227,10 @@ export function PremiumContact() {
                         className="mx-auto max-w-4xl text-xl leading-relaxed text-gray-600 sm:text-2xl dark:text-white/60"
                         variants={fadeInUp}
                     >
-                        Bạn đã sẵn sàng chuyển đổi doanh nghiệp với AI? Hãy chia
-                        sẻ mục tiêu để chúng tôi cùng bạn hiện thực hóa.
+                        Chúng tôi là đơn vị quản lý tòa nhà chuyên nghiệp cho
+                        chung cư, khu biệt thự và tổ hợp thương mại. Hãy mô tả
+                        hiện trạng vận hành, nhu cầu cư dân và mục tiêu trải
+                        nghiệm để chúng tôi thiết kế giải pháp phù hợp.
                     </motion.p>
                 </motion.div>
 
@@ -266,11 +268,12 @@ export function PremiumContact() {
                     <motion.div className="space-y-8" variants={fadeInUp}>
                         <div>
                             <h3 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">
-                                Gửi tin nhắn cho chúng tôi
+                                Chia sẻ nhu cầu quản lý tòa nhà
                             </h3>
                             <p className="text-lg text-gray-600 dark:text-white/60">
-                                Chia sẻ về dự án, chúng tôi sẽ phản hồi trong 24
-                                giờ.
+                                Cho chúng tôi biết loại dự án (chung cư, khu
+                                biệt thự, shophouse...), số lượng cư dân và kỳ
+                                vọng dịch vụ để được phản hồi trong 24 giờ.
                             </p>
                         </div>
 
@@ -360,7 +363,7 @@ export function PremiumContact() {
                                         <Building className="absolute top-1/2 left-3 h-5 w-5 -translate-y-1/2 transform text-gray-400 dark:text-white/40" />
                                         <input
                                             type="text"
-                                            placeholder="Công ty (không bắt buộc)"
+                                            placeholder="Loại tài sản / quy mô vận hành"
                                             value={formData.company}
                                             onChange={(e) =>
                                                 handleInputChange(
@@ -375,7 +378,7 @@ export function PremiumContact() {
                                     <div className="relative">
                                         <MessageSquare className="absolute top-4 left-3 h-5 w-5 text-gray-400 dark:text-white/40" />
                                         <textarea
-                                            placeholder="Chia sẻ về dự án của bạn..."
+                                            placeholder="Mô tả tình trạng tài sản, mục tiêu lợi nhuận, yêu cầu dịch vụ..."
                                             rows={6}
                                             value={formData.message}
                                             onChange={(e) =>
@@ -458,8 +461,9 @@ export function PremiumContact() {
                                         Đã gửi thành công!
                                     </h3>
                                     <p className="mb-6 text-lg text-gray-600 dark:text-white/60">
-                                        Cảm ơn bạn đã liên hệ. Chúng tôi sẽ phản
-                                        hồi trong vòng 24 giờ.
+                                        Cảm ơn bạn đã tin tưởng. Ban quản lý
+                                        sẽ liên hệ để khảo sát dự án và thống
+                                        nhất lộ trình vận hành chi tiết.
                                     </p>
                                     <motion.button
                                         onClick={() => {
@@ -538,9 +542,10 @@ export function PremiumContact() {
                                 Cam kết phản hồi nhanh
                             </h4>
                             <p className="text-sm leading-relaxed text-gray-600 dark:text-white/80">
-                                Chúng tôi luôn phản hồi trong vòng 2 giờ làm
-                                việc và sắp xếp cuộc gọi chi tiết trong 24 giờ
-                                để bàn bạc sâu về dự án của bạn.
+                                Ban quản lý trực 24/7, phản hồi trong 2 giờ làm
+                                việc, cử đội trưởng khu cư dân khảo sát trong
+                                24 giờ và trình bày kế hoạch vận hành toàn diện
+                                trong 7 ngày.
                             </p>
                         </motion.div>
                     </motion.div>
