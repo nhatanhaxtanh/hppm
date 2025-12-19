@@ -60,9 +60,8 @@ export default function TeamSection() {
     };
 
     return (
-        <main className="bg-background text-foreground min-h-screen">
-            {/* Hero Section */}
-            <section className="from-primary/5 via-background to-accent/5 relative overflow-hidden py-24 md:py-32">
+        <section className="bg-background text-foreground">
+            <div className="from-primary/5 via-background to-accent/5 relative overflow-hidden py-16 md:py-24">
                 <motion.div
                     className="relative z-10 mx-auto max-w-7xl px-6"
                     initial="hidden"
@@ -172,7 +171,7 @@ export default function TeamSection() {
                         </div>
                     </div>
                 </motion.div>
-            </section>
-        </main>
+            </div>
+        </section>
     );
 }
