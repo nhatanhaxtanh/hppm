@@ -54,5 +54,5 @@ CREATE INDEX IF NOT EXISTS idx_role_permission_permission_id ON role_permission 
 
 CREATE TABLE IF NOT EXISTS invalidated_token (
     id          VARCHAR(255) PRIMARY KEY,
-    expiry_time TIMESTAMP NULL
+    expiry_time DATE NULL
 );
