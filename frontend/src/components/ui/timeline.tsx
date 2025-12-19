@@ -1,7 +1,7 @@
 'use client';
-import { useScroll, useTransform, motion } from 'framer-motion';
 import type React from 'react';
-import { useEffect, useRef, useState } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
 
 interface TimelineEntry {
     title: string;
@@ -11,63 +11,66 @@ interface TimelineEntry {
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     const ref = useRef<HTMLDivElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
-    const [height, setHeight] = useState(0);
-
-    useEffect(() => {
-        if (ref.current) {
-            const rect = ref.current.getBoundingClientRect();
-            setHeight(rect.height);
-        }
-    }, [ref]);
-
     const { scrollYProgress } = useScroll({
         target: containerRef,
-        offset: ['start 10%', 'end 50%'],
+        offset: ['start center', 'end center'],
     });
 
-    const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
+    const heightTransform = useTransform(scrollYProgress, [0, 1], [0, 1]);
     const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
     return (
         <div
-            className="w-full bg-white font-sans md:px-10 dark:bg-neutral-950"
+            className="relative mx-auto w-full max-w-7xl px-6 py-20"
             ref={containerRef}
         >
-            <div ref={ref} className="relative mx-auto max-w-7xl pb-20">
+            <div ref={ref} className="relative">
                 {data.map((item, index) => (
                     <div
                         key={index}
-                        className="flex justify-start pt-10 md:gap-10 md:pt-40"
+                        className="mb-20 flex justify-start md:gap-10"
                     >
+                        {/* Left side - Year */}
                         <div className="sticky top-40 z-40 flex max-w-xs flex-col items-center self-start md:w-full md:flex-row lg:max-w-sm">
-                            <div className="absolute left-3 flex h-10 w-10 items-center justify-center rounded-full bg-white md:left-3 dark:bg-black">
-                                <div className="h-4 w-4 rounded-full border border-neutral-300 bg-neutral-200 p-2 dark:border-neutral-700 dark:bg-neutral-800" />
+                            <div className="bg-background absolute left-3 flex h-10 w-10 items-center justify-center rounded-full md:left-3">
+                                <div className="bg-primary h-4 w-4 rounded-full border-4 border-neutral-200 p-2 dark:border-neutral-700" />
                             </div>
-                            <h3 className="hidden text-xl font-bold text-neutral-500 md:block md:pl-20 md:text-5xl dark:text-neutral-500">
+                            <h3 className="text-foreground ml-16 block text-2xl font-bold md:ml-20 md:pl-20 md:text-5xl">
                                 {item.title}
                             </h3>
                         </div>
 
+                        {/* Right side - Content */}
                         <div className="relative w-full pr-4 pl-20 md:pl-4">
-                            <h3 className="mb-4 block text-left text-2xl font-bold text-neutral-500 md:hidden dark:text-neutral-500">
-                                {item.title}
-                            </h3>
-                            {item.content}{' '}
+                            <motion.div
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{
+                                    duration: 0.5,
+                                    delay: index * 0.1,
+                                }}
+                                className="border-border bg-card rounded-2xl border p-8 shadow-lg"
+                            >
+                                {item.content}
+                            </motion.div>
                         </div>
                     </div>
                 ))}
+
+                {/* Vertical Line */}
                 <div
                     style={{
-                        height: height + 'px',
+                        height: '100%',
                     }}
-                    className="absolute top-0 left-8 w-0.5 overflow-hidden bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-0% via-neutral-200 to-transparent to-99% mask-[linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] md:left-8 dark:via-neutral-700"
+                    className="absolute top-0 left-8 w-0.5 overflow-hidden bg-gradient-to-b from-purple-200 via-blue-200 to-transparent md:left-8 dark:from-purple-400 dark:via-blue-400 dark:to-transparent"
                 >
                     <motion.div
                         style={{
                             height: heightTransform,
                             opacity: opacityTransform,
                         }}
-                        className="absolute inset-x-0 top-0 w-0.5 rounded-full bg-linear-to-t from-purple-500 from-0% via-blue-500 via-10% to-transparent"
+                        className="absolute inset-x-0 top-0 w-0.5 rounded-full bg-gradient-to-b from-purple-500 via-pink-500 to-amber-400"
                     />
                 </div>
             </div>
