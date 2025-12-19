@@ -1,7 +1,9 @@
-export default function LeaderPage() {
+import TeamSection from '@/components/ui/team-section';
+
+export default function Home() {
     return (
-        <div>
-            <h1>Hello</h1>
-        </div>
+        <main className="min-h-screen">
+            <TeamSection />
+        </main>
     );
 }
