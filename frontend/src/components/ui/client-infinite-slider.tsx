@@ -30,7 +30,6 @@ export default function ClientsInfiniteSlider({
                 </div>
 
                 <div className="relative mt-16">
-                    {/* fade edges */}
                     <div className="from-background pointer-events-none absolute inset-y-0 left-0 z-10 w-28 bg-linear-to-r to-transparent" />
                     <div className="from-background pointer-events-none absolute inset-y-0 right-0 z-10 w-28 bg-linear-to-l to-transparent" />
 

@@ -42,7 +42,6 @@ function FeatureRow({ feature }: { feature: Feature }) {
                     'lg:grid-cols-12',
                 )}
             >
-                {/* TEXT */}
                 <motion.div
                     style={{ opacity, y: yText }}
                     className={cn(
@@ -83,7 +82,6 @@ function FeatureRow({ feature }: { feature: Feature }) {
                         ))}
                     </ul>
 
-                    {/* Optional CTA nếu có href */}
                     {'href' in feature && (feature as any).href ? (
                         <div className="mt-8">
                             <Link
@@ -102,7 +100,6 @@ function FeatureRow({ feature }: { feature: Feature }) {
                     ) : null}
                 </motion.div>
 
-                {/* IMAGE */}
                 <motion.div
                     style={{ opacity, clipPath: clip as any, y: yImg }}
                     className={cn(
@@ -113,7 +110,6 @@ function FeatureRow({ feature }: { feature: Feature }) {
                     <div className="border-border bg-muted relative overflow-hidden rounded-[28px] border shadow-[0_28px_100px_rgba(0,0,0,0.12)]">
                         <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/35 via-black/10 to-transparent" />
 
-                        {/* Next Image: wrapper có height để fill */}
                         <div className="relative h-80 w-full sm:h-105 lg:h-130">
                             <Image
                                 src={feature.imageUrl}

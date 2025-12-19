@@ -73,7 +73,6 @@ const TestimonialSection = ({
                             variant === 'profile' ? (
                                 <>
                                     <div className="bg-muted relative">
-                                        {/* Image wrapper for fill */}
                                         <div className="relative h-65 w-full sm:h-70">
                                             <Image
                                                 src={t.imageSrc}
