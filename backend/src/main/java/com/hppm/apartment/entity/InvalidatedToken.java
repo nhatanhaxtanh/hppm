@@ -1,10 +1,9 @@
 package com.hppm.apartment.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Setter
 @Getter
@@ -16,5 +15,7 @@ public class InvalidatedToken {
     @Id
     private String id;
 
-    private LocalDateTime expiryTime;
+    @Temporal(TemporalType.DATE)
+    @Column(name = "expiry_time")
+    private Date expiryTime;
 }
