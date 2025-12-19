@@ -18,27 +18,39 @@ import {
     ArrowRight,
 } from 'lucide-react';
 import { Timeline } from '@/components/ui/timeline';
+import Image from 'next/image';
+import { ParallaxScrollSecond } from '@/components/ui/parallax-scroll';
 
-const companyStats = [
+const companyFeatures = [
     {
         label: 'Căn hộ & biệt thự đang phục vụ',
         value: '18.000+',
+        description:
+            'Đơn vị tiên phong trong lĩnh vực quản lý vận hành bất động sản cao cấp',
         icon: Building2,
+        image: '/villa.jpg',
     },
     {
         label: 'Khu đô thị, chung cư, biệt thự',
         value: '45+ dự án',
+        description: 'Phủ sóng các dự án bất động sản hàng đầu tại Việt Nam',
         icon: Target,
+        image: '/building2.jpg',
     },
     {
         label: 'Đội ngũ onsite & kỹ thuật',
         value: '600+ nhân sự',
+        description: 'Đội ngũ chuyên nghiệp, tận tâm phục vụ cư dân 24/7',
         icon: Users,
+        image: '/hr.jpg',
     },
     {
         label: 'Mức độ hài lòng cư dân',
         value: '4.8/5',
+        description:
+            'Cam kết chất lượng dịch vụ vượt trội được cư dân tin tưởng',
         icon: Award,
+        image: '/residents.jpg',
     },
 ];
 
@@ -246,6 +258,34 @@ const contactIconStyles = [
     { wrapper: 'bg-orange-100', icon: 'text-orange-600' },
 ];
 
+const galleryImages = [
+    'https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80',
+    'https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3070&q=80',
+    'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80',
+    'https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80',
+    'https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3070&q=80',
+    'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80',
+    'https://images.unsplash.com/photo-1682686581854-5e71f58e7e3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80',
+    'https://images.unsplash.com/photo-1510784722466-f2aa9c52fff6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80',
+    'https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80',
+    'https://images.unsplash.com/photo-1439853949127-fa647821eba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2640&q=80',
+    'https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80',
+    'https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3070&q=80',
+    'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80',
+    'https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80',
+    'https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3070&q=80',
+    'https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80',
+    'https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3070&q=80',
+    'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80',
+    'https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80',
+    'https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3070&q=80',
+    'https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80',
+    'https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3070&q=80',
+    'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80',
+    'https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80',
+    'https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3070&q=80',
+];
+
 export default function CompanyIntroduction() {
     const [activeService, setActiveService] = useState<number | null>(null);
 
@@ -350,35 +390,60 @@ export default function CompanyIntroduction() {
                         </motion.div>
                     </motion.div>
 
-                    {/* Stats */}
+                    {/* Features */}
                     <motion.div
-                        className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6"
+                        className="grid gap-6 md:grid-cols-2"
                         variants={fadeInUp}
                     >
-                        {companyStats.map((stat, index) => {
+                        {companyFeatures.map((feature, index) => {
                             const colors =
                                 statIconStyles[index % statIconStyles.length];
                             return (
                                 <motion.div
                                     key={index}
-                                    className="group border-border bg-card rounded-2xl border p-6 text-center shadow-md transition-all hover:-translate-y-1 hover:shadow-xl"
-                                    whileHover={{ scale: 1.03 }}
+                                    className="group border-border bg-card overflow-hidden rounded-2xl border shadow-md transition-all hover:-translate-y-1 hover:shadow-xl"
+                                    whileHover={{ scale: 1.02 }}
                                     variants={fadeInUp}
                                 >
-                                    <motion.div
-                                        className={`mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-xl ${colors.wrapper}`}
-                                        whileHover={{ rotate: 360 }}
-                                        transition={{ duration: 0.6 }}
-                                    >
-                                        <stat.icon
-                                            className={`h-7 w-7 ${colors.icon}`}
+                                    {/* Image Section */}
+                                    <div className="relative h-48 overflow-hidden">
+                                        <Image
+                                            src={
+                                                feature.image ||
+                                                '/placeholder.svg'
+                                            }
+                                            alt={feature.label}
+                                            width={800}
+                                            height={400}
+                                            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                                         />
-                                    </motion.div>
-                                    <div className="text-foreground mb-1 text-3xl font-bold">
-                                        {stat.value}
+                                        <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
+
+                                        {/* Icon Badge */}
+                                        <motion.div
+                                            className={`absolute top-4 right-4 flex h-12 w-12 items-center justify-center rounded-xl ${colors.wrapper} shadow-lg`}
+                                            whileHover={{ rotate: 360 }}
+                                            transition={{ duration: 0.6 }}
+                                        >
+                                            <feature.icon
+                                                className={`h-6 w-6 ${colors.icon}`}
+                                            />
+                                        </motion.div>
                                     </div>
-                                    <div className="text-muted-foreground text-sm">
-                                        {stat.label}
+
+                                    {/* Content Section */}
+                                    <div className="p-6">
+                                        <div className="mb-2 flex items-baseline gap-2">
+                                            <div className="text-foreground text-4xl font-bold">
+                                                {feature.value}
+                                            </div>
+                                        </div>
+                                        <h3 className="text-foreground mb-2 text-lg font-semibold">
+                                            {feature.label}
+                                        </h3>
+                                        <p className="text-muted-foreground text-sm leading-relaxed">
+                                            {feature.description}
+                                        </p>
                                     </div>
                                 </motion.div>
                             );
@@ -470,6 +535,28 @@ export default function CompanyIntroduction() {
                     </div>
                 </div>
                 <Timeline data={timelineData} />
+            </section>
+
+            {/* Parallax Scroll Gallery Section */}
+            <section className="bg-background py-24">
+                <motion.div
+                    className="mx-auto max-w-7xl px-6"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                >
+                    <div className="mb-16 text-center">
+                        <h2 className="text-foreground mb-4 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+                            Thư viện dự án
+                        </h2>
+                        <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
+                            Khám phá những dự án tiêu biểu mà chúng tôi đã và
+                            đang quản lý
+                        </p>
+                    </div>
+                </motion.div>
+                <ParallaxScrollSecond images={galleryImages} />
             </section>
 
             {/* Contact Section */}
