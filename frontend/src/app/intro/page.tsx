@@ -315,7 +315,7 @@ export default function CompanyIntroduction() {
     return (
         <main className="bg-background text-foreground min-h-screen">
             {/* Hero Section */}
-            <section className="from-primary/5 via-background to-accent/5 relative overflow-hidden bg-linear-to-br py-24 md:py-32">
+            <section className="from-primary/5 via-background to-accent/5 relative overflow-hidden py-24 md:py-32">
                 <motion.div
                     className="relative z-10 mx-auto max-w-7xl px-6"
                     variants={staggerContainer}
