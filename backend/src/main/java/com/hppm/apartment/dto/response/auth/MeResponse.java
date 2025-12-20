@@ -16,9 +16,7 @@ public class MeResponse {
     UUID id;
     String email;
     String name;
-    boolean isActive;
     LocalDate createdAt;
     String role;
     Set<String> permissions;
 }
-
