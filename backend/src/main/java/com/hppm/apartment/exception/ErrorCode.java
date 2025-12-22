@@ -1,21 +1,20 @@
 package com.hppm.apartment.exception;
 
 import lombok.Getter;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 
 @Getter
 public enum ErrorCode {
-    UNCATEGORY_EXCEPTION(9999, "Uncategory Exception", HttpStatus.INTERNAL_SERVER_ERROR),
-    FORBIDDEN_ACTION(1001, "You do not have enough permission to do this", HttpStatus.UNAUTHORIZED),
-    INVALID_ACCOUNT(1002, "Invalid account", HttpStatus.BAD_REQUEST),
-    UNAUTHENTICATED_EXCEPTION(1003, "Unauthenticated", HttpStatus.BAD_REQUEST),
-    MISSING_REFRESH_TOKEN_COOKIE(1004, "Missing refresh token in cookie", HttpStatus.BAD_REQUEST),
-    INVALID_EMAIL(1005, "Invalid email", HttpStatus.BAD_REQUEST),
-    MISSING_AUTH_HEADER(1006, "Missing token in header", HttpStatus.BAD_REQUEST),
-    INVALID_PASSWORD(1007, "Invalid password", HttpStatus.BAD_REQUEST),
-
-
+    UNCATEGORY_EXCEPTION(9999, "Lỗi hệ thống không xác định", HttpStatus.INTERNAL_SERVER_ERROR),
+    FORBIDDEN_ACTION(1001, "Bạn không có quyền thực hiện hành động này", HttpStatus.UNAUTHORIZED),
+    INVALID_ACCOUNT(1002, "Tài khoản không hợp lệ", HttpStatus.BAD_REQUEST),
+    UNAUTHENTICATED_EXCEPTION(1003, "Bạn chưa đăng nhập", HttpStatus.BAD_REQUEST),
+    MISSING_REFRESH_TOKEN_COOKIE(1004, "Thiếu refresh token trong cookie", HttpStatus.BAD_REQUEST),
+    INVALID_EMAIL(1005, "Email không hợp lệ", HttpStatus.BAD_REQUEST),
+    MISSING_AUTH_HEADER(1006, "Thiếu token xác thực trong header", HttpStatus.BAD_REQUEST),
+    INVALID_PASSWORD(1007, "Mật khẩu không chính xác", HttpStatus.BAD_REQUEST),
     ;
 
     private final int code;

@@ -124,38 +124,61 @@
     }
 }
 
+:root {
+    --toast-info: var(--color-sky-600);
+    --toast-success: var(--color-green-600);
+    --toast-warning: var(--color-amber-600);
+    --toast-error: var(--destructive);
+}
+
+.dark {
+    --toast-info: var(--color-sky-400);
+    --toast-success: var(--color-green-400);
+    --toast-warning: var(--color-amber-400);
+}
+
+[data-sonner-toast] {
+    background: var(--background);
+    color: var(--foreground);
+    border-color: var(--border);
+}
+
 [data-sonner-toast][data-type='info'] {
-    --normal-bg: color-mix(
+    background: color-mix(
         in oklab,
-        light-dark(var(--color-sky-600), var(--color-sky-400)) 10%,
+        var(--toast-info) 10%,
         var(--background)
-    );
-    --normal-text: light-dark(var(--color-sky-600), var(--color-sky-400));
-    --normal-border: light-dark(var(--color-sky-600), var(--color-sky-400));
+    ) !important;
+    color: var(--toast-info) !important;
+    border-color: var(--toast-info) !important;
 }
 
 [data-sonner-toast][data-type='success'] {
-    --normal-bg: color-mix(
+    background: color-mix(
         in oklab,
-        light-dark(var(--color-green-600), var(--color-green-400)) 10%,
+        var(--toast-success) 10%,
         var(--background)
-    );
-    --normal-text: light-dark(var(--color-green-600), var(--color-green-400));
-    --normal-border: light-dark(var(--color-green-600), var(--color-green-400));
+    ) !important;
+    color: var(--toast-success) !important;
+    border-color: var(--toast-success) !important;
 }
 
 [data-sonner-toast][data-type='warning'] {
-    --normal-bg: color-mix(
+    background: color-mix(
         in oklab,
-        light-dark(var(--color-amber-600), var(--color-amber-400)) 10%,
+        var(--toast-warning) 10%,
         var(--background)
-    );
-    --normal-text: light-dark(var(--color-amber-600), var(--color-amber-400));
-    --normal-border: light-dark(var(--color-amber-600), var(--color-amber-400));
+    ) !important;
+    color: var(--toast-warning) !important;
+    border-color: var(--toast-warning) !important;
 }
 
 [data-sonner-toast][data-type='error'] {
-    --normal-bg: color-mix(in oklab, var(--destructive) 10%, var(--background));
-    --normal-text: var(--destructive);
-    --normal-border: var(--destructive);
+    background: color-mix(
+        in oklab,
+        var(--toast-error) 10%,
+        var(--background)
+    ) !important;
+    color: var(--toast-error) !important;
+    border-color: var(--toast-error) !important;
 }
