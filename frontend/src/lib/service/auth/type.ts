@@ -5,7 +5,7 @@ export type LoginPayload = {
     password: string;
 };
 
-export type LoginResponse = {
+export type AuthResponse = {
     authenticated: boolean;
     token: string;
     role: string;

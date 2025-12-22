@@ -1,7 +1,7 @@
 import { useAuthStore } from '@/lib/stores/authStore';
 import { useMutation } from '@tanstack/react-query';
 import { useRouter } from 'next/navigation';
-import { LoginFormValues, LoginResponse, loginSchema } from './type';
+import { LoginFormValues, AuthResponse, loginSchema } from './type';
 import {
     ApiResponse,
     axiosWrapper,
@@ -17,23 +17,24 @@ export const useLogin = () => {
     const setToken = useAuthStore((s) => s.setToken);
     const mutation = useMutation({
         mutationFn: async (values: LoginFormValues) => {
-            const response = await axiosWrapper.post<
-                ApiResponse<LoginResponse>
-            >('/auth/login', values);
+            const response = await axiosWrapper.post<ApiResponse<AuthResponse>>(
+                '/auth/login',
+                values,
+            );
 
             throwIfError(response.data, response.status);
             return {
                 message: response.data.message,
-                result: deserialize<LoginResponse>(response.data),
+                result: deserialize<AuthResponse>(response.data),
             };
         },
         onSuccess: ({ result }) => {
             setToken(result.token);
-            toast.success('Login Successfully');
+            toast.success('Đăng nhập thành công');
             router.push('/admin');
         },
         onError: (err) => {
-            toast.error(err.message);
+            toast.error(err.message ?? 'Đăng nhập thất bại');
         },
     });
 
@@ -49,4 +50,32 @@ export const useLogin = () => {
         form,
         mutation,
     };
+};
+
+export const useRefreshToken = () => {
+    const setToken = useAuthStore((s) => s.setToken);
+    const clear = useAuthStore((s) => s.clear);
+
+    const mutation = useMutation({
+        mutationFn: async () => {
+            const response =
+                await axiosWrapper.post<ApiResponse<AuthResponse>>(
+                    '/auth/refresh',
+                );
+
+            throwIfError(response.data, response.status);
+            return {
+                message: response.data.message,
+                result: deserialize<AuthResponse>(response.data),
+            };
+        },
+        onSuccess: ({ result }) => {
+            setToken(result.token);
+        },
+        onError: (err) => {
+            clear();
+            toast.error(err.message ?? 'Phiên đăng nhập đã hết hạn');
+        },
+    });
+    return { mutation };
 };
