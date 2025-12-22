@@ -81,3 +81,33 @@ export const useRefreshToken = (options?: { toastOnError?: boolean }) => {
     });
     return { mutation };
 };
+
+export const useLogout = () => {
+    const router = useRouter();
+    const clear = useAuthStore((s) => s.clear);
+
+    const mutation = useMutation({
+        mutationFn: async () => {
+            const response =
+                await axiosWrapper.post<ApiResponse<void>>('/auth/logout');
+
+            throwIfError(response.data, response.status);
+            return {
+                message: response.data.message,
+                result: deserialize<void>(response.data),
+            };
+        },
+        onSuccess: () => {
+            clear();
+            toast.success('Đăng xuất thành công');
+            router.replace('/home');
+        },
+        onError: (err) => {
+            clear();
+            toast.error(err?.message ?? 'Đăng xuất thất bại');
+            router.replace('/home');
+        },
+    });
+
+    return { mutation };
+};

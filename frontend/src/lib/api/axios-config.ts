@@ -97,7 +97,11 @@ axiosWrapper.interceptors.response.use(
         originalConfig._retry = true;
 
         const url = String(originalConfig.url ?? '');
-        if (url.includes('/auth/refresh') || url.includes('/auth/login')) {
+        if (
+            url.includes('/auth/refresh') ||
+            url.includes('/auth/login') ||
+            url.includes('/auth/logout')
+        ) {
             useAuthStore.getState().clear();
             return Promise.reject(error);
         }
