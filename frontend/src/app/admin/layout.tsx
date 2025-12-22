@@ -2,7 +2,6 @@
 
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { toast } from 'sonner';
 import { useAuthStore } from '@/lib/stores/authStore';
 
 export default function AdminLayout({
@@ -19,8 +18,7 @@ export default function AdminLayout({
         if (!bootstrapped) return;
 
         if (!isAccessTokenValid()) {
-            toast.info('Bạn cần đăng nhập để vào trang quản trị');
-            router.replace('/login');
+            router.replace('/unauthorized');
         }
     }, [bootstrapped, isAccessTokenValid, router]);
 
