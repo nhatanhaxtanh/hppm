@@ -1,7 +1,7 @@
 import { useAuthStore } from '@/lib/stores/authStore';
-import { useMutation } from '@tanstack/react-query';
+import { useMutation, useQuery } from '@tanstack/react-query';
 import { useRouter } from 'next/navigation';
-import { LoginFormValues, AuthResponse, loginSchema } from './type';
+import { LoginFormValues, AuthResponse, loginSchema, MeRespose } from './type';
 import {
     ApiResponse,
     axiosWrapper,
@@ -11,6 +11,7 @@ import {
 import { toast } from 'sonner';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useEffect } from 'react';
 
 export const useLogin = () => {
     const router = useRouter();
@@ -110,4 +111,28 @@ export const useLogout = () => {
     });
 
     return { mutation };
+};
+
+export const useGetMeProfile = () => {
+    const accessToken = useAuthStore((s) => s.accessToken);
+    const setUser = useAuthStore((s) => s.setUser);
+    const query = useQuery({
+        queryKey: ['me'],
+        enabled: !!accessToken,
+        queryFn: async () => {
+            const response = await axiosWrapper.get('/auth/me');
+            throwIfError(response.data, response.status);
+            return {
+                message: response.data.message,
+                result: deserialize<MeRespose>(response.data),
+            };
+        },
+    });
+    useEffect(() => {
+        if (query.isSuccess && query.data?.result) {
+            setUser(query.data.result);
+        }
+    }, [query.isSuccess, query.data, setUser]);
+
+    return query;
 };
