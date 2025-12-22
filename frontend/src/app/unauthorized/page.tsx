@@ -1,9 +1,9 @@
-import { NotFoundPage } from '@/components/common/not-found';
+import { UnauthorizedPage } from '@/components/common/not-found';
 
-export default function UnauthorizedPage() {
+export default function NotFoundPage() {
     return (
         <div className="w-full">
-            <NotFoundPage />
+            <UnauthorizedPage />
         </div>
     );
 }
