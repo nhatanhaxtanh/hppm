@@ -46,12 +46,9 @@ export const axiosWrapper: AxiosInstance = axios.create({
 axiosWrapper.interceptors.request.use(
     (config) => {
         const token = useAuthStore.getState().accessToken;
-        console.log('Here is the token', token);
-
         if (token) {
             config.headers['Authorization'] = `Bearer ${token}`;
         }
-
         return config;
     },
     (error) => {
