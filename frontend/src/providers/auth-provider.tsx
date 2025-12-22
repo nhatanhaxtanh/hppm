@@ -9,7 +9,7 @@ export default function AuthProvider({
     children: React.ReactNode;
 }) {
     const setBootstrapped = useAuthStore((s) => s.setBootstrapped);
-    const { mutation } = useRefreshToken();
+    const { mutation } = useRefreshToken({ toastOnError: false });
 
     useEffect(() => {
         mutation.mutate(undefined, {

@@ -52,7 +52,7 @@ export const useLogin = () => {
     };
 };
 
-export const useRefreshToken = () => {
+export const useRefreshToken = (options?: { toastOnError?: boolean }) => {
     const setToken = useAuthStore((s) => s.setToken);
     const clear = useAuthStore((s) => s.clear);
 
@@ -74,7 +74,9 @@ export const useRefreshToken = () => {
         },
         onError: (err) => {
             clear();
-            toast.error(err.message ?? 'Phiên đăng nhập đã hết hạn');
+            if (options?.toastOnError) {
+                toast.error(err?.message ?? 'Phiên đăng nhập đã hết hạn');
+            }
         },
     });
     return { mutation };
