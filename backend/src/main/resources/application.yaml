@@ -25,3 +25,12 @@ jwt:
   issuer: ${JWT_ISSUER}
   audience: ${JWT_AUDIENCE}
   clock-skew-seconds: ${JWT_CLOCK_SKEW_SECONDS}
+app:
+  aws:
+    region: ${AWS_REGION}
+    s3:
+      bucket: ${AWS_S3_BUCKET}
+      cloudfront-domain: ${AWS_CLOUDFRONT_DOMAIN}
+      key-prefix: ${AWS_S3_KEY_PREFIX:}
+    presign:
+      put-expire-seconds: ${AWS_PRESIGN_PUT_EXPIRE_SECONDS:300}
