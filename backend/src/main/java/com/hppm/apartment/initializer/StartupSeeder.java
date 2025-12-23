@@ -4,16 +4,17 @@ import com.hppm.apartment.entity.Account;
 import com.hppm.apartment.entity.Role;
 import com.hppm.apartment.repository.AccountRepository;
 import com.hppm.apartment.repository.RoleRepository;
+
 import jakarta.transaction.Transactional;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
-
-import java.security.AuthProvider;
 
 @Component
 @RequiredArgsConstructor
@@ -36,7 +37,10 @@ public class StartupSeeder implements ApplicationRunner {
     }
 
     private void seedAdminAccount() {
-        if (adminEmail == null || adminEmail.isBlank() || adminPassword == null || adminPassword.isBlank()) {
+        if (adminEmail == null
+                || adminEmail.isBlank()
+                || adminPassword == null
+                || adminPassword.isBlank()) {
             log.info("ADMIN_EMAIL or ADMIN_PASSWORD not set — skipping admin creation");
             return;
         }
@@ -64,7 +68,8 @@ public class StartupSeeder implements ApplicationRunner {
             log.info("Admin account updated (password reset): {}", adminEmail);
         }
 
-        if (admin.getRoles() == null || admin.getRoles().stream().noneMatch(r -> "ADMIN".equals(r.getName()))) {
+        if (admin.getRoles() == null
+                || admin.getRoles().stream().noneMatch(r -> "ADMIN".equals(r.getName()))) {
             admin.getRoles().add(adminRole);
             accountRepository.save(admin);
             log.info("Assigned ADMIN role to {}", adminEmail);

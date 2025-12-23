@@ -1,12 +1,14 @@
 package com.hppm.apartment.entity;
 
 import com.hppm.apartment.enumType.BlogPostStatus;
+
 import jakarta.persistence.*;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
@@ -18,21 +20,16 @@ import java.util.UUID;
 @Table(
         name = "blog_post",
         indexes = {
-                @Index(name = "idx_blog_post_status_created_at", columnList = "status, created_at"),
-                @Index(name = "idx_blog_post_author_id", columnList = "author_id"),
-                @Index(name = "idx_blog_post_deleted_at", columnList = "deleted_at")
+            @Index(name = "idx_blog_post_status_created_at", columnList = "status, created_at"),
+            @Index(name = "idx_blog_post_author_id", columnList = "author_id"),
+            @Index(name = "idx_blog_post_deleted_at", columnList = "deleted_at")
         },
-        uniqueConstraints = {
-                @UniqueConstraint(name = "uk_blog_post_slug", columnNames = "slug")
-        }
-)
+        uniqueConstraints = {@UniqueConstraint(name = "uk_blog_post_slug", columnNames = "slug")})
 @Getter
 @Setter
 @ToString
 public class Blog {
-    @Id
-    @GeneratedValue
-    private UUID id;
+    @Id @GeneratedValue private UUID id;
 
     @Column(nullable = false, length = 255)
     private String title;
@@ -72,7 +69,6 @@ public class Blog {
     @JoinTable(
             name = "blog_tag",
             joinColumns = @JoinColumn(name = "post_id", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "tag_id", referencedColumnName = "id")
-    )
+            inverseJoinColumns = @JoinColumn(name = "tag_id", referencedColumnName = "id"))
     private Set<Tag> tags = new HashSet<>();
 }

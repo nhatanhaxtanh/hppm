@@ -4,6 +4,7 @@ import com.hppm.apartment.dto.response.auth.MeResponse;
 import com.hppm.apartment.entity.Account;
 import com.hppm.apartment.entity.Permission;
 import com.hppm.apartment.entity.Role;
+
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 
@@ -17,12 +18,10 @@ public interface ProfileMapper {
     MeResponse toProfile(Account account, String role, Set<String> permissions);
 
     default String getPrimaryRole(Account account) {
-        if (account == null || account.getRoles() == null || account.getRoles().isEmpty()) return null;
+        if (account == null || account.getRoles() == null || account.getRoles().isEmpty())
+            return null;
 
-        return account.getRoles().stream()
-                .findFirst()
-                .map(Role::getName)
-                .orElse(null);
+        return account.getRoles().stream().findFirst().map(Role::getName).orElse(null);
     }
 
     default Set<String> getPermissionNames(Account account) {
@@ -33,5 +32,4 @@ public interface ProfileMapper {
                 .map(Permission::getName)
                 .collect(Collectors.toCollection(LinkedHashSet::new));
     }
-
 }
