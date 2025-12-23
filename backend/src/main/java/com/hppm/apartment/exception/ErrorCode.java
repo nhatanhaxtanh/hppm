@@ -15,6 +15,9 @@ public enum ErrorCode {
     INVALID_EMAIL(1005, "Email không hợp lệ", HttpStatus.BAD_REQUEST),
     MISSING_AUTH_HEADER(1006, "Thiếu token xác thực trong header", HttpStatus.BAD_REQUEST),
     INVALID_PASSWORD(1007, "Mật khẩu không chính xác", HttpStatus.BAD_REQUEST),
+    INVALID_FILE_NAME(1008, "Tên file không hợp lệ", HttpStatus.BAD_REQUEST),
+    INVALID_CONTENT_TYPE(1009, "Loại file không hợp lệ", HttpStatus.BAD_REQUEST),
+    INVALID_UPLOAD_FOLDER(1010, "Thư mục upload không hợp lệ", HttpStatus.BAD_REQUEST),
     ;
 
     private final int code;
