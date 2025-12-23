@@ -1,16 +1,22 @@
 package com.hppm.apartment.validator;
 
-import com.hppm.apartment.exception.AppException;
-import com.hppm.apartment.exception.ErrorCode;
+import java.util.Set;
 
 import org.springframework.stereotype.Component;
 
-import java.util.Set;
+import com.hppm.apartment.exception.AppException;
+import com.hppm.apartment.exception.ErrorCode;
 
 @Component
 public class UploadValidator {
     private static final int MAX_FILE_NAME_LENGTH = 150;
     private static final Set<String> ALLOWED_FOLDERS = Set.of("thumbnail", "content");
+
+    public void validatePresignRequest(String fileName, String contentType, String folder) {
+        validateFileName(fileName);
+        validateContentType(contentType);
+        validateFolder(folder);
+    }
 
     public void validateFileName(String fileName) {
         if (fileName == null) {
