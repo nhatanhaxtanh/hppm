@@ -11,8 +11,12 @@ export const ParallaxScrollSecond = ({ images }: { images: string[] }) => {
     });
 
     const translateFirst = useTransform(scrollYProgress, [0, 1], [0, -200]);
+    const translateFirstX = useTransform(scrollYProgress, [0, 1], [0, -120]);
+    const rotateFirst = useTransform(scrollYProgress, [0, 1], [0, -6]);
     const translateSecond = useTransform(scrollYProgress, [0, 1], [0, 200]);
     const translateThird = useTransform(scrollYProgress, [0, 1], [0, -200]);
+    const translateThirdX = useTransform(scrollYProgress, [0, 1], [0, 120]);
+    const rotateThird = useTransform(scrollYProgress, [0, 1], [0, 6]);
 
     const third = Math.ceil(images.length / 3);
     const firstPart = images.slice(0, third);
@@ -25,7 +29,11 @@ export const ParallaxScrollSecond = ({ images }: { images: string[] }) => {
                 <div className="grid gap-4">
                     {firstPart.map((el, idx) => (
                         <motion.div
-                            style={{ y: translateFirst }}
+                            style={{
+                                x: translateFirstX,
+                                y: translateFirst,
+                                rotateZ: rotateFirst,
+                            }}
                             key={'grid-1' + idx}
                         >
                             <Image
@@ -57,7 +65,11 @@ export const ParallaxScrollSecond = ({ images }: { images: string[] }) => {
                 <div className="grid gap-4">
                     {thirdPart.map((el, idx) => (
                         <motion.div
-                            style={{ y: translateThird }}
+                            style={{
+                                x: translateThirdX,
+                                y: translateThird,
+                                rotateZ: rotateThird,
+                            }}
                             key={'grid-3' + idx}
                         >
                             <Image
