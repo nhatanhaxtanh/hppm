@@ -605,7 +605,7 @@ export default function CompanyIntroduction() {
                 >
                     <div className="mb-16 text-center">
                         <h2 className="text-foreground mb-4 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-                            Thư viện dự án
+                            Hình ảnh Ban Quản Lý tại dự án
                         </h2>
                         <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
                             Khám phá những dự án tiêu biểu mà chúng tôi đã và
