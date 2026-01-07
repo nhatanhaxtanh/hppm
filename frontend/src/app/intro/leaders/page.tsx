@@ -37,7 +37,9 @@ export default function Home() {
     return (
         <main className="min-h-screen">
             <TeamSection />
-            <AnimatedTestimonials testimonials={testimonials} />
+            <div className="-mt-40">
+                <AnimatedTestimonials testimonials={testimonials} />
+            </div>
         </main>
     );
 }

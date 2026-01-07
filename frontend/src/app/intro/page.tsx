@@ -596,7 +596,7 @@ export default function CompanyIntroduction() {
 
             {/* Timeline Section */}
             <section className="bg-background py-24 md:py-32">
-                <div className="mb-16 text-center">
+                <div className="text-center">
                     <h2 className="text-foreground mb-4 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
                         Hành trình phát triển
                     </h2>
