@@ -143,137 +143,152 @@ const services = [
     },
 ];
 
-const timelineData = [
-    {
-        title: '2010',
-        content: (
-            <div>
-                <h3 className="text-foreground mb-3 text-2xl font-bold">
-                    Thành lập công ty
-                </h3>
-                <p className="text-muted-foreground mb-4 text-base leading-relaxed">
-                    Khởi đầu với 5 dự án chung cư tại TP.HCM, đặt nền móng cho
-                    sự phát triển bền vững trong lĩnh vực quản lý bất động sản.
-                </p>
-                <div className="mt-6 grid grid-cols-2 gap-4">
-                    <div className="border-border bg-card rounded-lg border p-4">
-                        <div className="text-primary mb-1 text-2xl font-bold">
-                            5
-                        </div>
-                        <div className="text-muted-foreground text-sm">
-                            Dự án đầu tiên
-                        </div>
-                    </div>
-                    <div className="border-border bg-card rounded-lg border p-4">
-                        <div className="text-primary mb-1 text-2xl font-bold">
-                            50+
-                        </div>
-                        <div className="text-muted-foreground text-sm">
-                            Nhân viên
-                        </div>
-                    </div>
-                </div>
-            </div>
-        ),
-    },
-    {
-        title: '2015',
-        content: (
-            <div>
-                <h3 className="text-foreground mb-3 text-2xl font-bold">
-                    Mở rộng toàn quốc
-                </h3>
-                <p className="text-muted-foreground mb-4 text-base leading-relaxed">
-                    Phục vụ 15 dự án tại Hà Nội, Đà Nẵng và các tỉnh thành.
-                    Khẳng định vị thế trong ngành quản lý tòa nhà chuyên nghiệp.
-                </p>
-                <div className="mt-6 grid grid-cols-2 gap-4">
-                    <div className="border-border bg-card rounded-lg border p-4">
-                        <div className="text-primary mb-1 text-2xl font-bold">
-                            15
-                        </div>
-                        <div className="text-muted-foreground text-sm">
-                            Dự án
-                        </div>
-                    </div>
-                    <div className="border-border bg-card rounded-lg border p-4">
-                        <div className="text-primary mb-1 text-2xl font-bold">
-                            3
-                        </div>
-                        <div className="text-muted-foreground text-sm">
-                            Thành phố lớn
-                        </div>
-                    </div>
-                </div>
-            </div>
-        ),
-    },
-    {
-        title: '2020',
-        content: (
-            <div>
-                <h3 className="text-foreground mb-3 text-2xl font-bold">
-                    Chuyển đổi số
-                </h3>
-                <p className="text-muted-foreground mb-4 text-base leading-relaxed">
-                    Triển khai hệ thống quản lý thông minh trên nền tảng AI, tối
-                    ưu hóa quy trình và nâng cao trải nghiệm cư dân.
-                </p>
-                <div className="mt-6 grid grid-cols-2 gap-4">
-                    <div className="border-border bg-card rounded-lg border p-4">
-                        <div className="text-primary mb-1 text-2xl font-bold">
-                            100%
-                        </div>
-                        <div className="text-muted-foreground text-sm">
-                            Số hóa quy trình
-                        </div>
-                    </div>
-                    <div className="border-border bg-card rounded-lg border p-4">
-                        <div className="text-primary mb-1 text-2xl font-bold">
-                            AI
-                        </div>
-                        <div className="text-muted-foreground text-sm">
-                            Công nghệ tiên tiến
-                        </div>
-                    </div>
-                </div>
-            </div>
-        ),
-    },
+const data = [
     {
         title: '2024',
         content: (
             <div>
-                <h3 className="text-foreground mb-3 text-2xl font-bold">
-                    Dẫn đầu thị trường
-                </h3>
-                <p className="text-muted-foreground mb-4 text-base leading-relaxed">
-                    Quản lý hơn 45 dự án với 18.000+ căn hộ trên cả nước. Trở
-                    thành đơn vị quản lý tòa nhà hàng đầu Việt Nam.
+                <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+                    Built and launched Aceternity UI and Aceternity UI Pro from
+                    scratch
                 </p>
-                <div className="mt-6 grid grid-cols-2 gap-4">
-                    <div className="border-border bg-card rounded-lg border p-4">
-                        <div className="text-primary mb-1 text-2xl font-bold">
-                            45+
-                        </div>
-                        <div className="text-muted-foreground text-sm">
-                            Dự án
-                        </div>
+                <div className="grid grid-cols-2 gap-4">
+                    <Image
+                        src="https://assets.aceternity.com/templates/startup-1.webp"
+                        alt="startup template"
+                        width={500}
+                        height={500}
+                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
+                    />
+                    <Image
+                        src="https://assets.aceternity.com/templates/startup-2.webp"
+                        alt="startup template"
+                        width={500}
+                        height={500}
+                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
+                    />
+                    <Image
+                        src="https://assets.aceternity.com/templates/startup-3.webp"
+                        alt="startup template"
+                        width={500}
+                        height={500}
+                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
+                    />
+                    <Image
+                        src="https://assets.aceternity.com/templates/startup-4.webp"
+                        alt="startup template"
+                        width={500}
+                        height={500}
+                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
+                    />
+                </div>
+            </div>
+        ),
+    },
+    {
+        title: 'Early 2023',
+        content: (
+            <div>
+                <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+                    I usually run out of copy, but when I see content this big,
+                    I try to integrate lorem ipsum.
+                </p>
+                <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+                    Lorem ipsum is for people who are too lazy to write copy.
+                    But we are not. Here are some more example of beautiful
+                    designs I built.
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                    <Image
+                        src="https://assets.aceternity.com/pro/hero-sections.png"
+                        alt="hero template"
+                        width={500}
+                        height={500}
+                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
+                    />
+                    <Image
+                        src="https://assets.aceternity.com/features-section.png"
+                        alt="feature template"
+                        width={500}
+                        height={500}
+                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
+                    />
+                    <Image
+                        src="https://assets.aceternity.com/pro/bento-grids.png"
+                        alt="bento template"
+                        width={500}
+                        height={500}
+                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
+                    />
+                    <Image
+                        src="https://assets.aceternity.com/cards.png"
+                        alt="cards template"
+                        width={500}
+                        height={500}
+                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
+                    />
+                </div>
+            </div>
+        ),
+    },
+    {
+        title: 'Changelog',
+        content: (
+            <div>
+                <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+                    Deployed 5 new components on Aceternity today
+                </p>
+                <div className="mb-8">
+                    <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+                        ✅ Card grid component
                     </div>
-                    <div className="border-border bg-card rounded-lg border p-4">
-                        <div className="text-primary mb-1 text-2xl font-bold">
-                            18K+
-                        </div>
-                        <div className="text-muted-foreground text-sm">
-                            Căn hộ
-                        </div>
+                    <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+                        ✅ Startup template Aceternity
                     </div>
+                    <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+                        ✅ Random file upload lol
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+                        ✅ Himesh Reshammiya Music CD
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+                        ✅ Salman Bhai Fan Club registrations open
+                    </div>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                    <Image
+                        src="https://assets.aceternity.com/pro/hero-sections.png"
+                        alt="hero template"
+                        width={500}
+                        height={500}
+                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
+                    />
+                    <Image
+                        src="https://assets.aceternity.com/features-section.png"
+                        alt="feature template"
+                        width={500}
+                        height={500}
+                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
+                    />
+                    <Image
+                        src="https://assets.aceternity.com/pro/bento-grids.png"
+                        alt="bento template"
+                        width={500}
+                        height={500}
+                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
+                    />
+                    <Image
+                        src="https://assets.aceternity.com/cards.png"
+                        alt="cards template"
+                        width={500}
+                        height={500}
+                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
+                    />
                 </div>
             </div>
         ),
     },
 ];
-
 const contactMethods = [
     {
         icon: Mail,
@@ -580,18 +595,18 @@ export default function CompanyIntroduction() {
             </section>
 
             {/* Timeline Section */}
-            <section className="bg-background">
-                <div className="mx-auto max-w-7xl px-6 py-12">
-                    <div className="mb-8 text-center">
-                        <h2 className="text-foreground mb-4 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-                            Hành trình phát triển
-                        </h2>
-                        <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
-                            14 năm không ngừng đổi mới và phát triển
-                        </p>
-                    </div>
+            <section className="bg-background py-24 md:py-32">
+                <div className="mb-16 text-center">
+                    <h2 className="text-foreground mb-4 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+                        Hành trình phát triển
+                    </h2>
+                    <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
+                        14 năm không ngừng đổi mới và phát triển
+                    </p>
                 </div>
-                <Timeline data={timelineData} />
+                <div className="w-full">
+                    <Timeline data={data} />
+                </div>
             </section>
 
             {/* Parallax Scroll Gallery Section */}
@@ -605,7 +620,7 @@ export default function CompanyIntroduction() {
                 >
                     <div className="mb-16 text-center">
                         <h2 className="text-foreground mb-4 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-                            Thư viện dự án
+                            Hình ảnh Ban Quản Lý tại dự án
                         </h2>
                         <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
                             Khám phá những dự án tiêu biểu mà chúng tôi đã và
