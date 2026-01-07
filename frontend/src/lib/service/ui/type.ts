@@ -24,6 +24,8 @@ export interface Testimonial {
     role: string;
     imageSrc: string;
     imageAlt?: string;
+    href?: string;
+    profileUrl?: string;
 }
 
 export type ServiceItem = {
