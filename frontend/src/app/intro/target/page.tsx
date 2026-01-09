@@ -4,7 +4,6 @@ import * as React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
 import {
     Target,
     TrendingUp,
@@ -15,6 +14,7 @@ import {
     ArrowRight,
     CheckCircle2,
 } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 
 // Animation variants
 const fadeIn = {
@@ -55,53 +55,60 @@ interface Goal {
 interface CompanyGoalsLandingProps {
     companyName?: string;
     tagline?: string;
-    heroTitle?: string;
+    heroTitle?: React.ReactNode;
     heroDescription?: string;
     goals?: Goal[];
 }
 
 function CompanyGoalsLanding({
     tagline = 'Quản lý bất động sản chuyên nghiệp, vận hành hiệu quả',
-    heroTitle = 'Nâng tầm giá trị tài sản & trải nghiệm cư dân',
+    heroTitle = (
+        <>
+            <span className="text-foreground block">Nâng tầm giá trị</span>
+            <span className="block bg-linear-to-r from-fuchsia-500 via-pink-500 to-rose-500 bg-clip-text text-transparent">
+                tài sản & trải nghiệm cư dân
+            </span>
+        </>
+    ),
     heroDescription = 'Chúng tôi cung cấp giải pháp quản lý vận hành bất động sản toàn diện, tối ưu chi phí, đảm bảo an toàn và nâng cao sự hài lòng của cư dân. Mỗi mục tiêu đều hướng đến chất lượng dịch vụ bền vững và giá trị lâu dài.',
     goals = [
         {
-            icon: <Target className="text-primary h-10 w-10" />,
+            icon: <Target className="h-10 w-10 text-rose-500" />,
             title: 'Dẫn đầu dịch vụ quản lý',
             description:
                 'Trở thành đối tác quản lý vận hành đáng tin cậy hàng đầu, đặt chuẩn mực mới về chất lượng và tính minh bạch.',
             metrics: 'Chuẩn hóa 100% quy trình vận hành',
         },
         {
-            icon: <TrendingUp className="text-primary h-10 w-10" />,
+            icon: <TrendingUp className="h-10 w-10 text-emerald-500" />,
             title: 'Tăng trưởng bền vững',
             description:
                 'Mở rộng danh mục dự án quản lý đi cùng tối ưu chi phí vận hành và tiêu chuẩn xanh.',
             metrics: 'Giảm 15% chi phí vận hành mỗi năm',
         },
         {
-            icon: <Users className="text-primary h-10 w-10" />,
+            icon: <Users className="h-10 w-10 text-sky-500" />,
             title: 'Đội ngũ onsite xuất sắc',
             description:
                 'Xây dựng đội ngũ quản lý và kỹ thuật chuyên nghiệp, phản hồi nhanh và phục vụ 24/7.',
             metrics: 'Thời gian xử lý sự cố < 30 phút',
         },
         {
-            icon: <Globe className="text-primary h-10 w-10" />,
+            icon: <Globe className="h-10 w-10 text-indigo-500" />,
             title: 'Mở rộng danh mục dự án',
             description:
                 'Mở rộng quản lý tại nhiều khu đô thị, chung cư và khu biệt thự cao cấp.',
             metrics: '25+ dự án vào năm 2026',
         },
         {
-            icon: <Zap className="text-primary h-10 w-10" />,
+            icon: <Zap className="h-10 w-10 text-amber-500" />,
             title: 'Công nghệ hóa vận hành',
             description:
                 'Ứng dụng nền tảng số để giám sát, báo cáo và nâng cao trải nghiệm cư dân.',
             metrics: '100% tòa nhà kết nối số',
         },
         {
-            icon: <Award className="text-primary h-10 w-10" />,
+            icon: <Award className="h-10 w-10 text-violet-500" />,
             title: 'Hài lòng của cư dân',
             description:
                 'Duy trì mức hài lòng cao nhờ dịch vụ tận tâm và cải tiến liên tục.',
@@ -135,7 +142,7 @@ function CompanyGoalsLanding({
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.7, delay: 0.2 }}
-                                className="max-w-4xl text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl"
+                                className="max-w-4xl text-4xl leading-[1.15] font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl"
                             >
                                 {heroTitle}
                             </motion.h1>
@@ -273,10 +280,10 @@ function CompanyGoalsLanding({
                                     Vận hành chuẩn mực, sống xanh bền vững
                                 </h2>
                                 <p className="text-muted-foreground text-lg">
-                                    Chúng tôi hướng tới hệ sinh thái bất động sản
-                                    được vận hành hiệu quả, minh bạch và thân thiện
-                                    với môi trường, nơi cư dân được phục vụ tốt
-                                    nhất mỗi ngày.
+                                    Chúng tôi hướng tới hệ sinh thái bất động
+                                    sản được vận hành hiệu quả, minh bạch và
+                                    thân thiện với môi trường, nơi cư dân được
+                                    phục vụ tốt nhất mỗi ngày.
                                 </p>
                                 <div className="space-y-4">
                                     {[
@@ -330,10 +337,7 @@ function CompanyGoalsLanding({
                 </section>
 
                 {/* CTA Section */}
-                <section
-                    id="impact"
-                    className="bg-primary text-primary-foreground w-full py-12 md:py-24 lg:py-32"
-                >
+                <section className="bg-muted/30 w-full py-20 md:py-32">
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
@@ -341,24 +345,32 @@ function CompanyGoalsLanding({
                         variants={fadeIn}
                         className="mx-auto w-full max-w-7xl px-4 md:px-6"
                     >
-                        <div className="flex flex-col items-center space-y-8 text-center">
+                        <div className="bg-background mx-auto flex w-full max-w-6xl flex-col items-center rounded-2xl border p-12 text-center shadow-lg md:p-16">
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.5 }}
+                            >
+                                <Badge className="mb-6">Đồng hành cùng bạn</Badge>
+                            </motion.div>
                             <motion.h2
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5 }}
-                                className="max-w-3xl text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
+                                transition={{ duration: 0.5, delay: 0.2 }}
+                                className="mb-6 max-w-3xl text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
                             >
-                                Đồng hành cùng chúng tôi
+                                Tối ưu vận hành, nâng tầm giá trị tài sản
                             </motion.h2>
                             <motion.p
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: 0.2 }}
-                                className="text-primary-foreground/90 max-w-2xl text-lg"
+                                transition={{ duration: 0.5, delay: 0.3 }}
+                                className="text-muted-foreground mb-8 max-w-2xl text-lg"
                             >
-                                Hãy để chúng tôi đồng hành cùng dự án của bạn
-                                trong việc tối ưu vận hành, tiết kiệm chi phí và
-                                nâng cao chất lượng sống.
+                                Chúng tôi cung cấp dịch vụ quản lý vận hành toàn
+                                diện cho chung cư, khu đô thị và bất động sản
+                                thương mại: chuẩn hóa quy trình, tối ưu chi phí,
+                                và nâng cao trải nghiệm cư dân.
                             </motion.p>
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
@@ -366,22 +378,13 @@ function CompanyGoalsLanding({
                                 transition={{ duration: 0.5, delay: 0.4 }}
                                 className="flex flex-col gap-4 sm:flex-row"
                             >
-                                <Button
-                                    size="lg"
-                                    variant="secondary"
-                                    className="group"
-                                >
-                                    Nhận tư vấn
+                                <Button size="lg" className="group">
+                                    Nhận tư vấn giải pháp
                                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                                 </Button>
-                                <div className="flex gap-3">
-                                    <Input
-                                        type="email"
-                                        placeholder="Nhập email của bạn"
-                                        className="bg-background/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/60"
-                                    />
-                                    <Button variant="secondary">Gửi yêu cầu</Button>
-                                </div>
+                                <Button size="lg" variant="outline">
+                                    Xem dịch vụ quản lý
+                                </Button>
                             </motion.div>
                         </div>
                     </motion.div>
