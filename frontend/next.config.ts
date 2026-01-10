@@ -9,6 +9,14 @@ const nextConfig: NextConfig = {
             },
             {
                 protocol: 'https',
+                hostname: 'kxptt4m9j4.ufs.sh',
+            },
+            {
+                protocol: 'https',
+                hostname: 'plus.unsplash.com',
+            },
+            {
+                protocol: 'https',
                 hostname: 'logo.clearbit.com',
             },
             {

@@ -13,6 +13,7 @@ import {
     Award,
     ArrowRight,
     CheckCircle2,
+    Building2,
 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
@@ -41,6 +42,15 @@ const itemFadeIn = {
     visible: {
         opacity: 1,
         y: 0,
+        transition: { duration: 0.5 },
+    },
+};
+
+const badgeIn = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+        opacity: 1,
+        scale: 1,
         transition: { duration: 0.5 },
     },
 };
@@ -130,12 +140,14 @@ function CompanyGoalsLanding({
                             className="flex flex-col items-center space-y-8 text-center"
                         >
                             <motion.div
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.5 }}
-                                className="bg-muted inline-flex items-center rounded-full px-4 py-2 text-sm"
+                                variants={badgeIn}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                whileHover={{ scale: 1.05 }}
+                                className="border-border bg-card/80 mb-6 inline-flex items-center gap-3 rounded-full border px-5 py-2.5 text-sm shadow-sm backdrop-blur-sm"
                             >
-                                <Zap className="mr-2 h-4 w-4" />
+                                <Building2 className="h-5 w-5" />
                                 {tagline}
                             </motion.div>
                             <motion.h1
