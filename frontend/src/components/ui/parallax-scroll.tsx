@@ -11,12 +11,12 @@ export const ParallaxScrollSecond = ({ images }: { images: string[] }) => {
     });
 
     const translateFirst = useTransform(scrollYProgress, [0, 1], [0, -200]);
-    const translateFirstX = useTransform(scrollYProgress, [0, 1], [0, -120]);
-    const rotateFirst = useTransform(scrollYProgress, [0, 1], [0, -6]);
+    const translateFirstX = useTransform(scrollYProgress, [0, 1], [0, 0]);
+    const rotateFirst = useTransform(scrollYProgress, [0, 1], [0, 0]);
     const translateSecond = useTransform(scrollYProgress, [0, 1], [0, 200]);
     const translateThird = useTransform(scrollYProgress, [0, 1], [0, -200]);
-    const translateThirdX = useTransform(scrollYProgress, [0, 1], [0, 120]);
-    const rotateThird = useTransform(scrollYProgress, [0, 1], [0, 6]);
+    const translateThirdX = useTransform(scrollYProgress, [0, 1], [0, 0]);
+    const rotateThird = useTransform(scrollYProgress, [0, 1], [0, 0]);
 
     const third = Math.ceil(images.length / 3);
     const firstPart = images.slice(0, third);
