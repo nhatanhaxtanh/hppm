@@ -66,8 +66,7 @@ const TestimonialSection = ({
                 >
                     {testimonials.map((t) => {
                         const alt = t.imageAlt ?? `${t.name} — ${t.role}`;
-                        const href =
-                            (t as any).href || (t as any).profileUrl || '';
+                        const href = t.href || t.profileUrl || '';
 
                         const CardInner =
                             variant === 'profile' ? (
