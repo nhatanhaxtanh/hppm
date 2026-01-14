@@ -24,58 +24,58 @@ import { TestimonialsColumn } from '@/components/ui/testimonials-column';
 
 const testimonials = [
     {
-        text: 'This ERP revolutionized our operations, streamlining finance and inventory. The cloud-based platform keeps us productive, even remotely.',
+        text: 'Ban quản lý phản hồi nhanh, xử lý sự cố đúng SLA và luôn chủ động cập nhật tiến độ cho cư dân.',
         image: 'https://randomuser.me/api/portraits/women/1.jpg',
-        name: 'Briana Patton',
-        role: 'Operations Manager',
+        name: 'Nguyễn Thị Mai',
+        role: 'Cư dân',
     },
     {
-        text: 'Implementing this ERP was smooth and quick. The customizable, user-friendly interface made team training effortless.',
+        text: 'Chất lượng vệ sinh và an ninh được duy trì ổn định, không gian sống an toàn và sạch sẽ hơn hẳn.',
         image: 'https://randomuser.me/api/portraits/men/2.jpg',
-        name: 'Bilal Ahmed',
-        role: 'IT Manager',
+        name: 'Trần Quốc Hùng',
+        role: 'Cư dân',
     },
     {
-        text: 'The support team is exceptional, guiding us through setup and providing ongoing assistance, ensuring our satisfaction.',
+        text: 'Báo cáo vận hành minh bạch, số liệu rõ ràng giúp chúng tôi dễ dàng kiểm soát chi phí.',
         image: 'https://randomuser.me/api/portraits/women/3.jpg',
-        name: 'Saman Malik',
-        role: 'Customer Support Lead',
+        name: 'Lê Hoàng Nam',
+        role: 'Cư dân',
     },
     {
-        text: "This ERP's seamless integration enhanced our business operations and efficiency. Highly recommend for its intuitive interface.",
+        text: 'Đội kỹ thuật hỗ trợ nhanh, bảo trì định kỳ đúng kế hoạch nên thiết bị hoạt động ổn định.',
         image: 'https://randomuser.me/api/portraits/men/4.jpg',
-        name: 'Omar Raza',
-        role: 'CEO',
+        name: 'Phạm Ngọc Anh',
+        role: 'Cư dân',
     },
     {
-        text: 'Its robust features and quick support have transformed our workflow, making us significantly more efficient.',
+        text: 'Ứng dụng phản ánh của cư dân rất tiện, mọi yêu cầu đều được ghi nhận và xử lý nhanh.',
         image: 'https://randomuser.me/api/portraits/women/5.jpg',
-        name: 'Zainab Hussain',
-        role: 'Project Manager',
+        name: 'Võ Thu Hà',
+        role: 'Cư dân',
     },
     {
-        text: 'The smooth implementation exceeded expectations. It streamlined processes, improving overall business performance.',
+        text: 'Tác phong làm việc chuyên nghiệp, quy trình rõ ràng giúp nâng chất lượng dịch vụ dự án.',
         image: 'https://randomuser.me/api/portraits/women/6.jpg',
-        name: 'Aliza Khan',
-        role: 'Business Analyst',
+        name: 'Đặng Minh Trí',
+        role: 'Cư dân',
     },
     {
-        text: 'Our business functions improved with a user-friendly design and positive customer feedback.',
+        text: 'Chăm sóc cư dân tận tâm, các hoạt động cộng đồng được tổ chức đều đặn và hiệu quả.',
         image: 'https://randomuser.me/api/portraits/men/7.jpg',
-        name: 'Farhan Siddiqui',
-        role: 'Marketing Director',
+        name: 'Bùi Thảo Nguyên',
+        role: 'Cư dân',
     },
     {
-        text: 'They delivered a solution that exceeded expectations, understanding our needs and enhancing our operations.',
+        text: 'Công ty làm việc minh bạch, phối hợp tốt với ban quản trị và luôn lắng nghe góp ý.',
         image: 'https://randomuser.me/api/portraits/women/8.jpg',
-        name: 'Sana Sheikh',
-        role: 'Sales Manager',
+        name: 'Phan Đức Long',
+        role: 'Cư dân',
     },
     {
-        text: 'Using this ERP, our online presence and conversions significantly improved, boosting business performance.',
+        text: 'Dịch vụ vận hành ổn định, cư dân an tâm và tòa nhà luôn được bảo trì đúng chuẩn.',
         image: 'https://randomuser.me/api/portraits/men/9.jpg',
-        name: 'Hassan Ali',
-        role: 'E-commerce Manager',
+        name: 'Hoàng Anh Tuấn',
+        role: 'Cư dân',
     },
 ];
 
@@ -145,12 +145,12 @@ const services = [
 
 const data = [
     {
-        title: '2024',
+        title: '2019',
         content: (
             <div>
                 <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-                    Built and launched Aceternity UI and Aceternity UI Pro from
-                    scratch
+                    Thành lập công ty và triển khai những dự án quản lý bất động
+                    sản đầu tiên, xây nền tảng quy trình vận hành chuẩn.
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                     <Image
@@ -186,17 +186,12 @@ const data = [
         ),
     },
     {
-        title: 'Early 2023',
+        title: '2020 - 2021',
         content: (
             <div>
                 <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-                    I usually run out of copy, but when I see content this big,
-                    I try to integrate lorem ipsum.
-                </p>
-                <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-                    Lorem ipsum is for people who are too lazy to write copy.
-                    But we are not. Here are some more example of beautiful
-                    designs I built.
+                    Mở rộng danh mục quản lý, nâng chuẩn KPI vận hành và chất
+                    lượng dịch vụ cư dân.
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                     <Image
@@ -232,30 +227,19 @@ const data = [
         ),
     },
     {
-        title: 'Changelog',
+        title: '2022',
         content: (
             <div>
                 <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-                    Deployed 5 new components on Aceternity today
+                    Đẩy mạnh chuyển đổi số trong quản lý tài sản và báo cáo vận
+                    hành minh bạch.
                 </p>
-                <div className="mb-8">
-                    <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-                        ✅ Card grid component
-                    </div>
-                    <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-                        ✅ Startup template Aceternity
-                    </div>
-                    <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-                        ✅ Random file upload lol
-                    </div>
-                    <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-                        ✅ Himesh Reshammiya Music CD
-                    </div>
-                    <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-                        ✅ Salman Bhai Fan Club registrations open
-                    </div>
-                </div>
-                <div className="grid grid-cols-2 gap-4">
+                <ul className="space-y-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+                    <li>Dashboard báo cáo tài chính theo thời gian thực.</li>
+                    <li>Ứng dụng quản lý bảo trì, tài sản và SLA sự cố.</li>
+                    <li>Tối ưu năng lượng, giảm OPEX nhờ dữ liệu.</li>
+                </ul>
+                <div className="mt-6 grid grid-cols-2 gap-4">
                     <Image
                         src="https://assets.aceternity.com/pro/hero-sections.png"
                         alt="hero template"
@@ -280,6 +264,52 @@ const data = [
                     <Image
                         src="https://assets.aceternity.com/cards.png"
                         alt="cards template"
+                        width={500}
+                        height={500}
+                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
+                    />
+                </div>
+            </div>
+        ),
+    },
+    {
+        title: '2023 - Nay',
+        content: (
+            <div>
+                <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+                    Phát triển mô hình quản lý bất động sản bền vững, tập trung
+                    trải nghiệm cư dân và chuẩn mực ESG.
+                </p>
+                <ul className="space-y-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+                    <li>Đào tạo định kỳ, chuẩn hóa năng lực quản lý dự án.</li>
+                    <li>Hệ sinh thái dịch vụ cư dân 24/7 đa kênh.</li>
+                    <li>Kiểm soát tuân thủ pháp lý và quản trị rủi ro.</li>
+                </ul>
+                <div className="mt-6 grid grid-cols-2 gap-4">
+                    <Image
+                        src="https://assets.aceternity.com/templates/startup-1.webp"
+                        alt="startup template"
+                        width={500}
+                        height={500}
+                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
+                    />
+                    <Image
+                        src="https://assets.aceternity.com/templates/startup-2.webp"
+                        alt="startup template"
+                        width={500}
+                        height={500}
+                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
+                    />
+                    <Image
+                        src="https://assets.aceternity.com/templates/startup-3.webp"
+                        alt="startup template"
+                        width={500}
+                        height={500}
+                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
+                    />
+                    <Image
+                        src="https://assets.aceternity.com/templates/startup-4.webp"
+                        alt="startup template"
                         width={500}
                         height={500}
                         className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
