@@ -73,7 +73,7 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                             }}
                         >
                             <Link
-                                href="/"
+                                href="/home"
                                 aria-label="HPPM Home"
                                 className="flex items-center md:static md:mr-0 md:translate-x-0"
                             >
@@ -174,7 +174,7 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                                 <div className="flex h-full flex-col">
                                     <div className="from-background to-accent/10 flex items-center justify-between gap-6 border-b bg-linear-to-r p-6">
                                         <Link
-                                            href="/"
+                                            href="/home"
                                             className="flex items-center"
                                             aria-label="HPPM Home"
                                         >
