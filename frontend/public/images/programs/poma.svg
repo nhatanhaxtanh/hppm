@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f59e0b" />
+      <stop offset="1" stop-color="#f97316" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)" />
+  <rect x="140" y="180" width="920" height="440" rx="32" fill="#fff3e0" opacity="0.9" />
+  <rect x="220" y="260" width="260" height="280" rx="20" fill="#ffffff" opacity="0.95" />
+  <rect x="520" y="260" width="260" height="280" rx="20" fill="#fff7ed" opacity="0.95" />
+  <rect x="820" y="260" width="220" height="280" rx="20" fill="#fff0d9" opacity="0.95" />
+  <text x="140" y="120" font-family="Arial, sans-serif" font-size="48" font-weight="700" fill="#ffffff">
+    Poma
+  </text>
+  <text x="140" y="150" font-family="Arial, sans-serif" font-size="24" fill="#fff7e8">
+    Quan ly du an
+  </text>
+</svg>
