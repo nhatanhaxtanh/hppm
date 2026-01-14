@@ -659,7 +659,7 @@ export default function CompanyIntroduction() {
                     <div className="mt-10 flex max-h-185 justify-center gap-6 overflow-hidden mask-[linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]">
                         <TestimonialsColumn
                             testimonials={firstColumn}
-                            className="hidden md:block"
+                            className="md:block"
                             duration={15}
                         />
                         <TestimonialsColumn

@@ -69,7 +69,7 @@ export default function HeroInteractive() {
                         className="text-3xl leading-tight font-semibold tracking-tight text-neutral-800 sm:text-4xl lg:text-5xl dark:text-white"
                     >
                         Vận hành tòa nhà chuẩn mực, minh bạch —{' '}
-                        <Highlight className="text-neutral-900 dark:text-white">
+                        <Highlight className="whitespace-nowrap text-neutral-900 dark:text-white">
                             an tâm từ ngày đầu.
                         </Highlight>
                     </motion.h1>
