@@ -77,7 +77,7 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                                 aria-label="HPPM Home"
                                 className="flex items-center md:static md:mr-0 md:translate-x-0"
                             >
-                                <div className="relative flex h-11 w-45 items-center sm:h-12 sm:w-50 md:h-14 md:w-55">
+                                <div className="relative flex h-10 w-40 items-center sm:h-11 sm:w-45 md:h-12 md:w-50">
                                     <Image
                                         src="/logoHPPM.png"
                                         alt="HPPM"
@@ -85,11 +85,16 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                                         priority
                                         quality={100}
                                         sizes="(max-width: 768px) 220px, 260px"
-                                        className={cn(
-                                            'origin-left object-contain drop-shadow-sm',
-                                            'absolute top-5 right-0.75',
-                                            'scale-x-[1.05] scale-y-[0.85]',
-                                        )}
+                                        className="object-contain drop-shadow-sm dark:hidden"
+                                    />
+                                    <Image
+                                        src="/logoHPPMW.png"
+                                        alt="HPPM"
+                                        fill
+                                        priority
+                                        quality={100}
+                                        sizes="(max-width: 768px) 220px, 260px"
+                                        className="hidden object-contain drop-shadow-sm dark:block"
                                     />
                                 </div>
                             </Link>
@@ -190,6 +195,22 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                                                         'scale-x-[1.05] scale-y-[0.85]',
                                                         'translate-y-px',
                                                         'drop-shadow-sm',
+                                                        'dark:hidden',
+                                                    )}
+                                                />
+                                                <Image
+                                                    src="/logoHPPMW.png"
+                                                    alt="HPPM"
+                                                    fill
+                                                    priority
+                                                    quality={100}
+                                                    sizes="(max-width: 768px) 220px, 260px"
+                                                    className={cn(
+                                                        'origin-left object-contain',
+                                                        'scale-x-[1.05] scale-y-[0.85]',
+                                                        'translate-y-px',
+                                                        'drop-shadow-sm',
+                                                        'hidden dark:block',
                                                     )}
                                                 />
                                             </div>

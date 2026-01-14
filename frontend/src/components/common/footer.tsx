@@ -3,9 +3,9 @@
 import React from 'react';
 import type { ComponentProps, ReactNode } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
+import Image from 'next/image';
 import {
     FacebookIcon,
-    FrameIcon,
     InstagramIcon,
     LinkedinIcon,
     YoutubeIcon,
@@ -70,7 +70,22 @@ export function Footer() {
             <div className="grid w-full gap-8 xl:grid-cols-3 xl:gap-8">
                 {/* Brand */}
                 <AnimatedContainer className="space-y-4">
-                    <FrameIcon className="size-8" />
+                    <Image
+                        src="/logoHPPM.png"
+                        alt="HPPM"
+                        width={270}
+                        height={270}
+                        className="h-12 w-auto object-contain dark:hidden"
+                        priority
+                    />
+                    <Image
+                        src="/logoHPPMW.png"
+                        alt="HPPM"
+                        width={270}
+                        height={270}
+                        className="hidden h-12 w-auto object-contain dark:block"
+                        priority
+                    />
                     <p className="text-muted-foreground mt-8 text-sm md:mt-0">
                         © {new Date().getFullYear()} HPPM. Bảo lưu mọi quyền.
                     </p>
