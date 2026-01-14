@@ -294,22 +294,22 @@ const contactMethods = [
         icon: Mail,
         title: 'Email',
         description: 'Gửi yêu cầu tư vấn qua email',
-        value: 'operation@hppm.com',
-        link: 'mailto:operation@hppm.com',
+        value: 'info@hppm.vn',
+        link: 'mailto:info@hppm.vn',
     },
     {
         icon: Phone,
         title: 'Hotline',
         description: 'Liên hệ qua hotline',
-        value: '1900 6060',
-        link: 'tel:19006060',
+        value: '028 3620 3160',
+        link: 'tel:02836203160',
     },
     {
         icon: MapPin,
         title: 'Địa chỉ',
         description: 'Visit us at our office',
-        value: '123 Đường ABC, TP.HCM',
-        link: 'https://maps.google.com/?q=123+Đường+ABC,+TP.HCM',
+        value: '30D2 Phan Văn Trị, Phường Hạnh Thông, TP. HCM',
+        link: 'https://maps.google.com/?q=30D2+Phan+Văn+Trị,+Phường+Hạnh+Thông,+TP.+HCM',
     },
 ];
 
