@@ -2,7 +2,6 @@
 
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
 import {
     Card,
     CardContent,
@@ -125,13 +124,6 @@ const RealEstateSoftwareShowcase: React.FC = () => {
             ],
             image: '/images/programs/poma.svg',
         },
-    ];
-
-    const stats = [
-        { number: '4+', label: 'Phần mềm chuyên nghiệp' },
-        { number: '100+', label: 'Nhân viên sử dụng' },
-        { number: '10,000+', label: 'Khách hàng được quản lý' },
-        { number: '99.9%', label: 'Thời gian hoạt động' },
     ];
 
     return (
