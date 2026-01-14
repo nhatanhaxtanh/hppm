@@ -171,7 +171,7 @@ const OrganizationLanding: React.FC<OrganizationLandingProps> = ({
             position: 'Tổng Giám đốc',
             department: 'Ban Lãnh đạo',
             avatar: 'NĐT',
-            email: 'thang.nguyen@propertypro.vn',
+            email: 'info@hppm.vn',
             linkedin: '#',
             bio: '20+ năm kinh nghiệm trong lĩnh vực bất động sản, chuyên về quản lý tài sản và phát triển dự án.',
         },
@@ -181,7 +181,7 @@ const OrganizationLanding: React.FC<OrganizationLandingProps> = ({
             position: 'Phó TGĐ Vận hành',
             department: 'Quản lý Vận hành',
             avatar: 'NVM',
-            email: 'minh.nguyen@propertypro.vn',
+            email: 'info@hppm.vn',
             linkedin: '#',
             bio: 'Chuyên gia quản lý vận hành với 15 năm kinh nghiệm quản lý hơn 500 tòa nhà thương mại và dân cư.',
         },
@@ -191,7 +191,7 @@ const OrganizationLanding: React.FC<OrganizationLandingProps> = ({
             position: 'Giám đốc Cho thuê & Kinh doanh',
             department: 'Cho thuê & Kinh doanh',
             avatar: 'TTH',
-            email: 'huong.tran@propertypro.vn',
+            email: 'info@hppm.vn',
             linkedin: '#',
             bio: 'Chuyên gia cho thuê và giao dịch BĐS với thành tích đạt 95% tỷ lệ lấp đầy trong danh mục quản lý.',
         },
@@ -201,7 +201,7 @@ const OrganizationLanding: React.FC<OrganizationLandingProps> = ({
             position: 'Giám đốc Tài chính',
             department: 'Tài chính & Kế toán',
             avatar: 'HAT',
-            email: 'tuan.hoang@propertypro.vn',
+            email: 'info@hppm.vn',
             linkedin: '#',
             bio: 'Chuyên viên tài chính cao cấp với chứng chỉ CPA, chuyên về tối ưu hóa dòng tiền và báo cáo tài chính.',
         },
@@ -584,8 +584,8 @@ const OrganizationLanding: React.FC<OrganizationLandingProps> = ({
                                                 Văn phòng chính
                                             </p>
                                             <p className="text-muted-foreground text-sm">
-                                                Tầng 15, Tòa nhà Vietcombank, 5
-                                                Công Trường Mê Linh, Q.1, TP.HCM
+                                                30D2 Phan Văn Trị, Phường Hạnh
+                                                Thông, TP. HCM
                                             </p>
                                         </div>
                                     </div>
@@ -596,7 +596,7 @@ const OrganizationLanding: React.FC<OrganizationLandingProps> = ({
                                                 Liên hệ
                                             </p>
                                             <p className="text-muted-foreground text-sm">
-                                                +84 28 3829 5555
+                                                028 3620 3160
                                             </p>
                                         </div>
                                     </div>
@@ -605,7 +605,7 @@ const OrganizationLanding: React.FC<OrganizationLandingProps> = ({
                                         <div>
                                             <p className="font-medium">Email</p>
                                             <p className="text-muted-foreground text-sm">
-                                                info@propertypro.vn
+                                                info@hppm.vn
                                             </p>
                                         </div>
                                     </div>
