@@ -26,6 +26,21 @@ export default function LoginPage() {
                                     'origin-left object-contain drop-shadow-sm',
                                     'absolute top-5 right-0.75',
                                     'scale-x-[1.05] scale-y-[0.85]',
+                                    'dark:hidden',
+                                )}
+                            />
+                            <Image
+                                src="/logoHPPMW.png"
+                                alt="HPPM"
+                                fill
+                                priority
+                                quality={100}
+                                sizes="(max-width: 768px) 220px, 260px"
+                                className={cn(
+                                    'origin-left object-contain drop-shadow-sm',
+                                    'absolute top-5 right-0.75',
+                                    'scale-x-[1.05] scale-y-[0.85]',
+                                    'hidden dark:block',
                                 )}
                             />
                         </div>

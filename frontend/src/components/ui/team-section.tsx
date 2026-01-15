@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Users } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from './button';
+import { teamData } from '../../../constant/constant-data';
 
 const MotionImage = motion(Image);
 
@@ -173,6 +174,50 @@ export default function TeamSection() {
                                         </p>
                                     </motion.div>
                                 ))}
+                                =======
+                                {members.map((member, index) => {
+                                    const memberImage =
+                                        teamData[index % teamData.length]
+                                            ?.imageSrc ?? member.avatar;
+                                    return (
+                                        <motion.div
+                                            key={index}
+                                            className="group text-left"
+                                            initial={{ opacity: 0, y: 32 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            transition={{
+                                                duration: 0.7,
+                                                delay: index * 0.1,
+                                                ease: [0.23, 0.86, 0.39, 0.96],
+                                            }}
+                                            viewport={{
+                                                once: true,
+                                                amount: 0.2,
+                                            }}
+                                        >
+                                            <MotionImage
+                                                className="mb-4 aspect-3/4 w-full rounded-lg object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]"
+                                                src={memberImage}
+                                                alt={member.name}
+                                                width="400"
+                                                height="400"
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ duration: 0.8 }}
+                                                viewport={{ once: true }}
+                                            />
+                                            <h3 className="text-foreground text-lg font-semibold">
+                                                {member.name}
+                                            </h3>
+                                            <p className="text-primary mb-2 text-sm font-medium">
+                                                {member.role}
+                                            </p>
+                                            <p className="text-muted-foreground text-sm leading-relaxed">
+                                                {member.bio}
+                                            </p>
+                                        </motion.div>
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>

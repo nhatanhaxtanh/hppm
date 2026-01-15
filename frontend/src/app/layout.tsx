@@ -15,8 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: 'hppm',
-    description: 'hppm department management',
+    title: 'Công ty TNHH Quản Lý Bất Động Sản HPPM',
+    description:
+        'HPPM là đơn vị chuyên nghiệp trong lĩnh vực quản lý và vận hành bất động sản, bao gồm chung cư, khu đô thị, biệt thự và dự án thương mại.',
 };
 
 export default function RootLayout({

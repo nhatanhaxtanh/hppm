@@ -6,6 +6,7 @@ import ServicesAccordion from '@/components/ui/service-accordion';
 import FeaturedProjectsGrid from '@/components/ui/feature-project';
 import InsightsGrid from '@/components/ui/insight-grid';
 import ClientsInfiniteSlider from '@/components/ui/client-infinite-slider';
+import HomeCtaSection from '@/components/ui/home-cta';
 export default function HomePage() {
     return (
         <>
@@ -18,6 +19,7 @@ export default function HomePage() {
                 <FeaturedProjectsGrid />
                 <InsightsGrid />
                 <ClientsInfiniteSlider />
+                <HomeCtaSection />
             </section>
         </>
     );

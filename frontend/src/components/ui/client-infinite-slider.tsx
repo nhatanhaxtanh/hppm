@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import { InfiniteSlider } from '@/components/ui/infinite-slider';
 import { Partner } from '@/lib/service/ui';
 import { partners } from '../../../constant/constant-data';
+import Image from 'next/image';
 
 export default function ClientsInfiniteSlider({
     className,
@@ -34,8 +35,8 @@ export default function ClientsInfiniteSlider({
                     <div className="from-background pointer-events-none absolute inset-y-0 right-0 z-10 w-28 bg-linear-to-l to-transparent" />
 
                     <InfiniteSlider
-                        gap={56}
-                        duration={32}
+                        gap={50}
+                        duration={40}
                         durationOnHover={90}
                         className="w-full"
                     >
@@ -56,18 +57,19 @@ function PartnerImage({ partner }: { partner: Partner }) {
     return (
         <div
             className={cn(
-                'group flex items-center justify-center',
-                'h-27.5 sm:h-32.5 lg:h-37.5',
-                'min-w-65 sm:min-w-75 lg:min-w-85',
+                'group flex shrink-0 items-center justify-center',
+                'h-32.5 sm:h-40 lg:h-48',
                 'transition-all duration-300',
                 'hover:-translate-y-1 hover:scale-[1.02]',
             )}
             title={partner.name}
             aria-label={partner.name}
         >
-            <img
+            <Image
                 src={partner.image}
                 alt={`Hình ảnh đại diện ${partner.name}`}
+                width={320}
+                height={160}
                 className={cn(
                     'h-full w-auto rounded-xl object-cover',
                     'opacity-90 transition-opacity duration-300 group-hover:opacity-100',
