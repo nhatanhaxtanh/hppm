@@ -14,9 +14,7 @@ export default function ClientLayout({
     const pathname = usePathname();
 
     const hideLayout =
-        pathname === '/' ||
-        pathname.startsWith('/admin') ||
-        pathname.startsWith('/login');
+        pathname.startsWith('/admin') || pathname.startsWith('/login');
     return (
         <>
             {!hideLayout && <Header />}
