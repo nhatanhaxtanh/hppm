@@ -105,32 +105,28 @@ export const teamData: Testimonial[] = [
         id: 1,
         name: 'Trần Thị Diễm Hương',
         role: 'Tổng Giám Đốc',
-        imageSrc:
-            'https://images.unsplash.com/photo-1581403341630-a6e0b9d2d257?auto=format&fit=crop&w=1400&q=80',
+        imageSrc: '/team/ceo5.png',
         imageAlt: 'Chân dung Trần Thị Diễm Hương - Tổng Giám Đốc HPPM',
     },
     {
         id: 2,
         name: 'Nguyễn Lê Duy Khánh',
         role: 'Phó Tổng Giám Đốc',
-        imageSrc:
-            'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=80',
+        imageSrc: '/team/ceo4.png',
         imageAlt: 'Chân dung Nguyễn Lê Duy Khánh - Phó Tổng Giám Đốc HPPM',
     },
     {
         id: 3,
         name: 'Nguyễn Tấn Phú',
         role: 'Giám Đốc Dự Án',
-        imageSrc:
-            'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1400&q=80',
+        imageSrc: '/team/ceo7.jpg',
         imageAlt: 'Chân dung Nguyễn Tấn Phú - Giám Đốc Dự Án HPPM',
     },
     {
         id: 4,
         name: 'Lê Nhật Anh',
         role: 'Trợ Lý Tổng Giám Đốc',
-        imageSrc:
-            'https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=1400&q=80',
+        imageSrc: '/team/ceo9.png',
         imageAlt: 'Chân dung Lê Nhật Anh - Trợ Lý Tổng Giám Đốc HPPM',
     },
 ];

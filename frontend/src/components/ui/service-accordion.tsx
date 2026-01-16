@@ -91,7 +91,7 @@ export default function ServicesAccordion({
                         <div className="border-border bg-muted relative overflow-hidden rounded-[28px] border shadow-[0_22px_80px_rgba(0,0,0,0.12)]">
                             <div className="relative h-80 w-full sm:h-105 lg:h-130">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1800&q=80"
+                                    src="/ecoxuan/ECOXUAN-154.jpg"
                                     alt="Hình ảnh minh hoạ dự án bất động sản và vận hành tòa nhà"
                                     fill
                                     sizes="(max-width: 1024px) 100vw, 50vw"
