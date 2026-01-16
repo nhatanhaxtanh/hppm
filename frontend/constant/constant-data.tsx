@@ -63,7 +63,7 @@ export const features: Feature[] = [
             'Báo cáo theo tuần/tháng, dễ audit',
             'Giảm “mất dấu” công việc khi chuyển ca / thay người',
         ],
-        imageUrl: '/imperial/imperial-08.jpg',
+        imageUrl: '/ecoxuan/ECOXUAN-129.jpg',
         icon: <ClipboardCheck className="text-primary h-5 w-5" />,
         reverse: false,
     },
