@@ -21,31 +21,31 @@ export const options: Option[] = [
     {
         title: 'Giải pháp vận hành',
         description: 'Chuẩn quy trình, giảm lỗi, tăng trải nghiệm cư dân',
-        image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80',
+        image: '/imperial/imperial-78.jpg',
         icon: <FaCampground size={24} className="text-white" />,
     },
     {
         title: 'Bảo trì định kỳ',
         description: 'Lên lịch thông minh, theo dõi minh bạch',
-        image: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1600&q=80',
+        image: '/ecoxuan/ECOXUAN-051.jpg',
         icon: <FaFire size={24} className="text-white" />,
     },
     {
         title: 'An toàn hệ thống',
         description: 'Giám sát rủi ro – xử lý sự cố đúng chuẩn',
-        image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80',
+        image: '/imperial/imperial-20.jpg',
         icon: <FaTint size={24} className="text-white" />,
     },
     {
         title: 'Tiện ích & dịch vụ',
         description: 'Tối ưu vận hành, nâng chuẩn chất lượng',
-        image: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1600&q=80',
+        image: '/ecoxuan/ECOXUAN-177.jpg',
         icon: <FaHotTub size={24} className="text-white" />,
     },
     {
         title: 'Hỗ trợ chuyên gia',
         description: 'Đồng hành triển khai – đào tạo – bàn giao',
-        image: 'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1600&q=80',
+        image: '/imperial/imperial-48.jpg',
         icon: <FaHiking size={24} className="text-white" />,
     },
 ];
@@ -63,8 +63,7 @@ export const features: Feature[] = [
             'Báo cáo theo tuần/tháng, dễ audit',
             'Giảm “mất dấu” công việc khi chuyển ca / thay người',
         ],
-        imageUrl:
-            'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80',
+        imageUrl: '/imperial/imperial-08.jpg',
         icon: <ClipboardCheck className="text-primary h-5 w-5" />,
         reverse: false,
     },
@@ -79,8 +78,7 @@ export const features: Feature[] = [
             'Theo dõi tiến độ & lịch sử xử lý',
             'Ưu tiên hạng mục ảnh hưởng an toàn/vận hành',
         ],
-        imageUrl:
-            'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1800&q=80',
+        imageUrl: '/ecoxuan/ECOXUAN-022.jpg',
         icon: <Wrench className="text-primary h-5 w-5" />,
         reverse: true,
     },
@@ -95,8 +93,7 @@ export const features: Feature[] = [
             'Quy trình xử lý sự cố rõ ràng',
             'Tăng tính sẵn sàng của hệ thống quan trọng',
         ],
-        imageUrl:
-            'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1800&q=80',
+        imageUrl: '/rc/RC-55.jpg',
         icon: <ShieldCheck className="text-primary h-5 w-5" />,
         reverse: false,
     },
