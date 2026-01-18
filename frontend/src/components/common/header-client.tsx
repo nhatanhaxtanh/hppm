@@ -73,7 +73,7 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                             }}
                         >
                             <Link
-                                href="/home"
+                                href="/"
                                 aria-label="HPPM Home"
                                 className="flex items-center md:static md:mr-0 md:translate-x-0"
                             >
