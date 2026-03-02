@@ -182,72 +182,63 @@ export const projects: Project[] = [
         title: 'Khu dân cư Lavela Garden',
         category: 'Khu dân cư',
         href: '/du-an/lavela-garden',
-        imageUrl:
-            'https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1800&q=80',
+        imageUrl: '/lavela.jpg',
         imageAlt: 'Ảnh minh hoạ dự án Khu dân cư Lavela Garden',
     },
     {
         title: 'Cụm chung cư Sky Residences',
         category: 'Chung cư',
         href: '/du-an/sky-residences',
-        imageUrl:
-            'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80',
+        imageUrl: '/skyresidence.jpg',
         imageAlt: 'Ảnh minh hoạ dự án Cụm chung cư Sky Residences',
     },
     {
         title: 'Khu biệt thự Riviera Cove',
         category: 'Biệt thự',
         href: '/du-an/riviera-cove',
-        imageUrl:
-            'https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1800&q=80',
+        imageUrl: '/cove.jpg',
         imageAlt: 'Ảnh minh hoạ dự án Khu biệt thự Riviera Cove',
     },
     {
-        title: 'Chung cư Eden Riverside',
+        title: 'Chung cư Imperial Place',
         category: 'Chung cư',
-        href: '/du-an/eden-riverside',
-        imageUrl:
-            'https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1800&q=80',
-        imageAlt: 'Ảnh minh hoạ dự án Chung cư Eden Riverside',
+        href: '/du-an/imperial-place',
+        imageUrl: '/imperial.jpg',
+        imageAlt: 'Ảnh minh hoạ dự án Chung cư Imperial Place',
     },
     {
         title: 'Khu biệt thự Holm Residences',
         category: 'Biệt thự',
         href: '/du-an/holm-residences',
-        imageUrl:
-            'https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1800&q=80',
+        imageUrl: '/holm.jpg',
         imageAlt: 'Ảnh minh hoạ dự án Khu biệt thự Holm Residences',
     },
     {
         title: 'Chung cư Giai Việt',
         category: 'Chung cư',
         href: '/du-an/giai-viet',
-        imageUrl:
-            'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1800&q=80',
+        imageUrl: '/giaiviet.jpg',
         imageAlt: 'Ảnh minh hoạ dự án Chung cư Giai Việt',
     },
     {
-        title: 'Cụm nhà chung cư Vision-1',
+        title: 'Chung cư Bình Trị Đông B',
         category: 'Chung cư',
-        href: '/du-an/vision-1',
-        imageUrl:
-            'https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1800&q=80',
-        imageAlt: 'Ảnh minh hoạ dự án Cụm nhà chung cư Vision-1',
+        href: '/du-an/btd',
+        imageUrl: '/btd.jpg',
+        imageAlt: 'Ảnh minh hoạ dự án chung cư Bình Trị Đông B',
     },
     {
-        title: 'Chung cư Vĩnh Tường',
+        title: 'Chung cư Vision-1',
         category: 'Chung cư',
-        href: '/du-an/vinh-tuong',
-        imageUrl:
-            'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1800&q=80',
+        href: '/du-an/vision',
+        imageUrl: '/vision.jpg',
         imageAlt: 'Ảnh minh hoạ dự án Chung cư Vĩnh Tường',
     },
     {
         title: 'Cụm nhà chung cư An Lạc',
         category: 'Chung cư',
         href: '/du-an/an-lac',
-        imageUrl:
-            'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1800&q=80',
+        imageUrl: '/anlac.jpg',
         imageAlt: 'Ảnh minh hoạ dự án Cụm nhà chung cư An Lạc',
     },
 ];

@@ -56,8 +56,7 @@ export default function FeaturedProjectsGrid({
                         id={descId}
                         className="text-muted-foreground mx-auto mt-4 max-w-2xl text-base sm:text-lg"
                     >
-                        Lựa chọn dự án để xem chi tiết. Bố cục tối giản, rõ ràng
-                        và tối ưu trải nghiệm.
+                        Những dự án tiêu biểu HPPM Quản lý - Vận hành
                     </p>
                 </header>
 
