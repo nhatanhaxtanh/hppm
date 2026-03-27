@@ -7,6 +7,7 @@ import FeaturedProjectsGrid from '@/components/ui/feature-project';
 import InsightsGrid from '@/components/ui/insight-grid';
 import ClientsInfiniteSlider from '@/components/ui/client-infinite-slider';
 import HomeCtaSection from '@/components/ui/home-cta';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 export default function HomePage() {
     return (
         <>
@@ -20,6 +21,7 @@ export default function HomePage() {
                 <InsightsGrid />
                 <ClientsInfiniteSlider />
                 <HomeCtaSection />
+                <SpeedInsights />
             </section>
         </>
     );
