@@ -170,37 +170,37 @@ const OrganizationLanding: React.FC<OrganizationLandingProps> = ({
             name: 'Trần Thị Diễm Hương',
             position: 'Tổng Giám đốc',
             department: 'Ban Lãnh đạo',
-            avatar: 'NĐT',
+            avatar: 'TTDH',
             email: 'info@hppm.vn',
             linkedin: '#',
             bio: '20+ năm kinh nghiệm trong lĩnh vực bất động sản, chuyên về quản lý tài sản và phát triển dự án.',
         },
         {
             id: 2,
-            name: 'Nguyễn Văn Minh',
-            position: 'Phó TGĐ Vận hành',
-            department: 'Quản lý Vận hành',
-            avatar: 'NVM',
+            name: 'Nguyễn Lê Duy Khánh',
+            position: 'Phó Tổng Giám Đốc',
+            department: 'Ban Lãnh đạo',
+            avatar: 'NLDK',
             email: 'info@hppm.vn',
             linkedin: '#',
             bio: 'Chuyên gia quản lý vận hành với 15 năm kinh nghiệm quản lý hơn 500 tòa nhà thương mại và dân cư.',
         },
         {
             id: 3,
-            name: 'Trần Thị Hương',
-            position: 'Giám đốc Cho thuê & Kinh doanh',
-            department: 'Cho thuê & Kinh doanh',
-            avatar: 'TTH',
+            name: 'Nguyễn Tấn Phú',
+            position: 'Giám đốc dự án',
+            department: 'Quản lý vận hành',
+            avatar: 'NTP',
             email: 'info@hppm.vn',
             linkedin: '#',
             bio: 'Chuyên gia cho thuê và giao dịch BĐS với thành tích đạt 95% tỷ lệ lấp đầy trong danh mục quản lý.',
         },
         {
             id: 4,
-            name: 'Hoàng Anh Tuấn',
-            position: 'Giám đốc Tài chính',
-            department: 'Tài chính & Kế toán',
-            avatar: 'HAT',
+            name: 'Lê Nhật Anh',
+            position: 'Trợ lý Tổng Giám đốc',
+            department: 'Quản lý vận hành',
+            avatar: 'LNA',
             email: 'info@hppm.vn',
             linkedin: '#',
             bio: 'Chuyên viên tài chính cao cấp với chứng chỉ CPA, chuyên về tối ưu hóa dòng tiền và báo cáo tài chính.',
@@ -316,7 +316,7 @@ const OrganizationLanding: React.FC<OrganizationLandingProps> = ({
                                         Tổng Giám đốc
                                     </CardTitle>
                                     <CardDescription className="text-sm">
-                                        Nguyễn Đức Thắng
+                                        Trần Thị Diễm Hương
                                     </CardDescription>
                                     <Badge
                                         variant="secondary"
@@ -336,21 +336,21 @@ const OrganizationLanding: React.FC<OrganizationLandingProps> = ({
                             <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-3">
                                 {[
                                     {
-                                        title: 'Phó TGĐ Vận hành',
-                                        name: 'Nguyễn Văn Minh',
+                                        title: 'Phó Tổng Giám Đốc',
+                                        name: 'Nguyễn Lê Duy Khánh',
                                         dept: 'Quản lý Vận hành',
                                         color: 'purple',
                                     },
                                     {
-                                        title: 'GĐ Cho thuê',
-                                        name: 'Trần Thị Hương',
-                                        dept: 'Cho thuê',
+                                        title: 'Giám Đốc Dự Án',
+                                        name: 'Nguyễn Tấn Phú',
+                                        dept: 'Quản lý vận hành',
                                         color: 'pink',
                                     },
                                     {
-                                        title: 'GĐ Tài chính',
-                                        name: 'Hoàng Anh Tuấn',
-                                        dept: 'Tài chính',
+                                        title: 'Trợ lý Tổng Giám Đốc',
+                                        name: 'Lê Nhật Anh',
+                                        dept: 'Quản lý vận hành',
                                         color: 'green',
                                     },
                                 ].map((exec, index) => (
