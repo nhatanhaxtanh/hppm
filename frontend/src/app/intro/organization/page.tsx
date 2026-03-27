@@ -167,7 +167,7 @@ const OrganizationLanding: React.FC<OrganizationLandingProps> = ({
     leadership = [
         {
             id: 1,
-            name: 'Nguyễn Đức Thắng',
+            name: 'Trần Thị Diễm Hương',
             position: 'Tổng Giám đốc',
             department: 'Ban Lãnh đạo',
             avatar: 'NĐT',
