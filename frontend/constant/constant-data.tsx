@@ -105,7 +105,7 @@ export const teamData: Testimonial[] = [
         id: 1,
         name: 'Trần Thị Diễm Hương',
         role: 'Tổng Giám Đốc',
-        imageSrc: '/team/ceo5.png',
+        imageSrc: '/team/ceo11.JPG',
         imageAlt: 'Chân dung Trần Thị Diễm Hương - Tổng Giám Đốc HPPM',
     },
     {
@@ -117,16 +117,16 @@ export const teamData: Testimonial[] = [
     },
     {
         id: 3,
-        name: 'Nguyễn Tấn Phú',
+        name: 'Nguyễn Hoàng Thiên Phúc',
         role: 'Giám Đốc Dự Án',
-        imageSrc: '/team/ceo7.jpg',
-        imageAlt: 'Chân dung Nguyễn Tấn Phú - Giám Đốc Dự Án HPPM',
+        imageSrc: '/team/ceo10.jpg',
+        imageAlt: 'Chân dung Nguyễn Hoàng Thiên Phúc - Giám Đốc Dự Án HPPM',
     },
     {
         id: 4,
         name: 'Lê Nhật Anh',
         role: 'Trợ Lý Tổng Giám Đốc',
-        imageSrc: '/team/ceo9.png',
+        imageSrc: '/team/ceo12.jpg',
         imageAlt: 'Chân dung Lê Nhật Anh - Trợ Lý Tổng Giám Đốc HPPM',
     },
 ];

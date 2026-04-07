@@ -187,10 +187,10 @@ const OrganizationLanding: React.FC<OrganizationLandingProps> = ({
         },
         {
             id: 3,
-            name: 'Nguyễn Tấn Phú',
+            name: 'Nguyễn Hoàng Thiên Phúc',
             position: 'Giám đốc dự án',
             department: 'Quản lý vận hành',
-            avatar: 'NTP',
+            avatar: 'NHTP',
             email: 'info@hppm.vn',
             linkedin: '#',
             bio: 'Chuyên gia cho thuê và giao dịch BĐS với thành tích đạt 95% tỷ lệ lấp đầy trong danh mục quản lý.',
@@ -343,7 +343,7 @@ const OrganizationLanding: React.FC<OrganizationLandingProps> = ({
                                     },
                                     {
                                         title: 'Giám Đốc Dự Án',
-                                        name: 'Nguyễn Tấn Phú',
+                                        name: 'Nguyễn Hoàng Thiên Phúc',
                                         dept: 'Quản lý vận hành',
                                         color: 'pink',
                                     },
