@@ -3,6 +3,10 @@
 import { motion } from 'framer-motion';
 import { Users } from 'lucide-react';
 import Image from 'next/image';
+import {
+    getLeadersTeamSectionCropStyle,
+    teamImageCropClassName,
+} from '@/lib/team-image-crop';
 import { Button } from './button';
 import { teamData } from '../../../constant/constant-data';
 
@@ -127,13 +131,6 @@ export default function TeamSection() {
                                     const memberImage =
                                         teamData[index % teamData.length]
                                             ?.imageSrc;
-                                    const isHuongPortrait =
-                                        member.name === 'Trần Thị Diễm Hương';
-                                    const isPhucPortrait =
-                                        member.name ===
-                                        'Nguyễn Hoàng Thiên Phúc';
-                                    const isNhatAnhPortrait =
-                                        member.name === 'Lê Nhật Anh';
                                     return (
                                         <motion.div
                                             key={index}
@@ -153,9 +150,12 @@ export default function TeamSection() {
                                             <div className="mb-4 aspect-3/4 w-full overflow-hidden rounded-lg">
                                                 <div className="h-full w-full transition-transform duration-300 group-hover:scale-[1.03]">
                                                     <MotionImage
-                                                        className={`h-full w-full object-cover object-top ${isHuongPortrait ? 'translate-x-3 -translate-y-5 scale-115 object-center' : ''} ${isPhucPortrait ? '-translate-x-3 -translate-y-12 scale-145 object-center' : ''} ${isNhatAnhPortrait ? 'scale-125 object-center' : ''}`}
+                                                        className={`h-full w-full ${teamImageCropClassName}`}
                                                         src={memberImage}
                                                         alt={member.name}
+                                                        style={getLeadersTeamSectionCropStyle(
+                                                            member.name,
+                                                        )}
                                                         width={400}
                                                         height={400}
                                                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
@@ -167,7 +167,9 @@ export default function TeamSection() {
                                                         transition={{
                                                             duration: 0.8,
                                                         }}
-                                                        viewport={{ once: true }}
+                                                        viewport={{
+                                                            once: true,
+                                                        }}
                                                     />
                                                 </div>
                                             </div>

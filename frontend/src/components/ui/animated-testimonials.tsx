@@ -4,7 +4,10 @@ import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react';
 import { AnimatePresence, motion } from 'motion/react';
 import Image from 'next/image';
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { cn } from '@/lib/utils';
+import {
+    getAnimatedTestimonialsCropStyle,
+    teamImageCropClassName,
+} from '@/lib/team-image-crop';
 
 type Testimonial = {
     quote: string;
@@ -12,16 +15,6 @@ type Testimonial = {
     designation: string;
     src: string;
     alt?: string;
-};
-
-const imageCropByName: Record<string, string> = {
-    'Trần Thị Diễm Hương':
-        'translate-x-3 translate-y-12 scale-185 object-center',
-    'Nguyễn Lê Duy Khánh':
-        'translate-x-3 translate-y-12 scale-145 object-center',
-    'Nguyễn Hoàng Thiên Phúc':
-        '-translate-x-3 -translate-y-5 scale-185 object-center',
-    'Lê Nhật Anh': 'translate-x-3 translate-y-15 scale-185 object-center',
 };
 
 const rotationFromSeed = (seed: string) => {
@@ -122,11 +115,9 @@ export const AnimatedTestimonials = ({
                                             priority={isActive(index)}
                                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 45vw, 420px"
                                             quality={80}
-                                            className={cn(
-                                                'object-contain object-center',
-                                                imageCropByName[
-                                                    testimonial.name
-                                                ],
+                                            className={teamImageCropClassName}
+                                            style={getAnimatedTestimonialsCropStyle(
+                                                testimonial.name,
                                             )}
                                         />
                                     </div>

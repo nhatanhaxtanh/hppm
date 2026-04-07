@@ -7,6 +7,10 @@ import { Quote } from 'lucide-react';
 
 import { teamData } from '../../../constant/constant-data';
 import type { Testimonial } from '@/lib/service/ui';
+import {
+    getHomeTestimonialsCropStyle,
+    teamImageCropClassName,
+} from '@/lib/team-image-crop';
 import { cn } from '@/lib/utils';
 
 export interface TestimonialSectionProps {
@@ -67,28 +71,25 @@ const TestimonialSection = ({
                     {testimonials.map((t) => {
                         const alt = t.imageAlt ?? `${t.name} — ${t.role}`;
                         const href = t.href || t.profileUrl || '';
-                        const isPhucPortrait =
-                            t.name === 'Nguyễn Hoàng Thiên Phúc';
-                        const isNhatAnh = t.name === 'Lê Nhật Anh';
                         const imageClassName = cn(
-                            'object-cover transition-transform duration-300',
-                            isPhucPortrait &&
-                                'scale-135 -translate-x-5 -translate-y-3 object-center',
-                            isNhatAnh &&
-                                'scale-100 -translate-x-0 object-center',
+                            teamImageCropClassName,
+                            'transition-transform duration-300',
                         );
 
                         const CardInner =
                             variant === 'profile' ? (
                                 <>
                                     <div className="bg-muted relative">
-                                        <div className="relative h-65 w-full overflow-hidden sm:h-70">
+                                        <div className="relative h-78 w-full overflow-hidden sm:h-70">
                                             <Image
                                                 src={t.imageSrc}
                                                 alt={alt}
                                                 fill
                                                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                                                 className={imageClassName}
+                                                style={getHomeTestimonialsCropStyle(
+                                                    t.name,
+                                                )}
                                                 quality={85}
                                                 priority={false}
                                             />
@@ -120,6 +121,9 @@ const TestimonialSection = ({
                                                 fill
                                                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                                                 className={imageClassName}
+                                                style={getHomeTestimonialsCropStyle(
+                                                    t.name,
+                                                )}
                                                 quality={85}
                                                 priority={false}
                                             />
