@@ -32,20 +32,20 @@ export const teamImageCropClassName =
 
 export const homeTestimonialsCropConfig: Record<string, CropConfig> = {
     'Trần Thị Diễm Hương': {
-        mobile: { x: 0, y: 0, scale: 1, objectPosition: 'center' },
-        desktop: { x: 0, y: 0, scale: 1, objectPosition: 'center' },
+        mobile: { x: 20, y: 110, scale: 2.45, objectPosition: 'center' },
+        desktop: { x: 10, y: 10, scale: 1.5, objectPosition: 'center' },
     },
     'Nguyễn Lê Duy Khánh': {
-        mobile: { x: 0, y: 0, scale: 1, objectPosition: 'center' },
-        desktop: { x: 0, y: 0, scale: 1, objectPosition: 'center' },
+        mobile: { x: 0, y: 70, scale: 1.75, objectPosition: 'center' },
+        desktop: { x: 0, y: 0, scale: 1.15, objectPosition: 'center' },
     },
     'Nguyễn Hoàng Thiên Phúc': {
-        mobile: { x: 0, y: 0, scale: 1, objectPosition: 'center' },
-        desktop: { x: 0, y: 0, scale: 1, objectPosition: 'center' },
+        mobile: { x: -30, y: 30, scale: 2.55, objectPosition: 'center' },
+        desktop: { x: -15, y: -20, scale: 1.8, objectPosition: 'center' },
     },
     'Lê Nhật Anh': {
-        mobile: { x: 0, y: 0, scale: 1, objectPosition: 'center' },
-        desktop: { x: 0, y: 0, scale: 1, objectPosition: 'center' },
+        mobile: { x: 0, y: 115, scale: 2.3, objectPosition: 'center' },
+        desktop: { x: 0, y: 20, scale: 1.5, objectPosition: 'center' },
     },
 };
 
