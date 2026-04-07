@@ -187,7 +187,7 @@ const TestimonialSection = ({
 export default function TeamSection() {
     return (
         <TestimonialSection
-            title="Đội ngũ HPPM"
+            title="Ban lãnh đạo HPPM"
             subtitle="Nhân sự nòng cốt đồng hành cùng chủ đầu tư và cư dân trong quản lý – vận hành bất động sản."
             testimonials={teamData}
             variant="profile"

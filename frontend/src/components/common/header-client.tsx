@@ -83,7 +83,6 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                                         alt="HPPM"
                                         fill
                                         priority
-                                        quality={100}
                                         sizes="(max-width: 768px) 220px, 260px"
                                         className="object-contain drop-shadow-sm dark:hidden"
                                     />
@@ -92,7 +91,6 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                                         alt="HPPM"
                                         fill
                                         priority
-                                        quality={100}
                                         sizes="(max-width: 768px) 220px, 260px"
                                         className="hidden object-contain drop-shadow-sm dark:block"
                                     />
@@ -188,7 +186,6 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                                                     alt="HPPM"
                                                     fill
                                                     priority
-                                                    quality={100}
                                                     sizes="(max-width: 768px) 220px, 260px"
                                                     className={cn(
                                                         'origin-left object-contain',
@@ -203,7 +200,6 @@ export default function HeaderClient({ navItems }: { navItems: NavItem[] }) {
                                                     alt="HPPM"
                                                     fill
                                                     priority
-                                                    quality={100}
                                                     sizes="(max-width: 768px) 220px, 260px"
                                                     className={cn(
                                                         'origin-left object-contain',

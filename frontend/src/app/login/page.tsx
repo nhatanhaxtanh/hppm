@@ -20,7 +20,6 @@ export default function LoginPage() {
                                 alt="HPPM"
                                 fill
                                 priority
-                                quality={100}
                                 sizes="(max-width: 768px) 220px, 260px"
                                 className={cn(
                                     'origin-left object-contain drop-shadow-sm',
@@ -34,7 +33,6 @@ export default function LoginPage() {
                                 alt="HPPM"
                                 fill
                                 priority
-                                quality={100}
                                 sizes="(max-width: 768px) 220px, 260px"
                                 className={cn(
                                     'origin-left object-contain drop-shadow-sm',
@@ -55,6 +53,8 @@ export default function LoginPage() {
                     src="/login-image.jpg"
                     alt="Image"
                     fill
+                    quality={70}
+                    sizes="50vw"
                     className="object-cover dark:brightness-[0.2] dark:grayscale"
                 />
             </div>

@@ -4,12 +4,24 @@ import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react';
 import { AnimatePresence, motion } from 'motion/react';
 import Image from 'next/image';
 import { useCallback, useEffect, useMemo, useState } from 'react';
+import { cn } from '@/lib/utils';
 
 type Testimonial = {
     quote: string;
     name: string;
     designation: string;
     src: string;
+    alt?: string;
+};
+
+const imageCropByName: Record<string, string> = {
+    'Trần Thị Diễm Hương':
+        'translate-x-3 translate-y-12 scale-185 object-center',
+    'Nguyễn Lê Duy Khánh':
+        'translate-x-3 translate-y-12 scale-145 object-center',
+    'Nguyễn Hoàng Thiên Phúc':
+        '-translate-x-3 -translate-y-5 scale-185 object-center',
+    'Lê Nhật Anh': 'translate-x-3 translate-y-15 scale-185 object-center',
 };
 
 const rotationFromSeed = (seed: string) => {
@@ -98,15 +110,24 @@ export const AnimatedTestimonials = ({
                                     }}
                                     className="absolute inset-0 origin-bottom"
                                 >
-                                    <div className="relative h-full w-full">
+                                    <div className="relative h-full w-full overflow-hidden rounded-3xl bg-white">
                                         <Image
                                             fill
                                             src={testimonial.src}
-                                            alt={testimonial.name}
+                                            alt={
+                                                testimonial.alt ??
+                                                testimonial.name
+                                            }
                                             draggable={false}
                                             priority={isActive(index)}
-                                            sizes="(max-width: 768px) 100vw, 50vw"
-                                            className="rounded-3xl object-cover object-center"
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 45vw, 420px"
+                                            quality={80}
+                                            className={cn(
+                                                'object-contain object-center',
+                                                imageCropByName[
+                                                    testimonial.name
+                                                ],
+                                            )}
                                         />
                                     </div>
                                 </motion.div>

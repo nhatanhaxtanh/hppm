@@ -10,45 +10,27 @@ const MotionImage = motion(Image);
 
 const members = [
     {
-        name: 'Liam Brown',
-        role: 'Founder - CEO',
-        avatar: 'https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80',
-        bio: 'Former co-founder of Opendoor. Early staff at Spotify and Clearbit.',
+        name: 'Trần Thị Diễm Hương',
+        role: 'Tổng Giám Đốc',
+        bio: 'Điều hành chiến lược phát triển và định hướng vận hành tổng thể của HPPM.',
         link: '#',
     },
     {
-        name: 'Elijah Jones',
-        role: 'Co-Founder - CTO',
-        avatar: 'https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80',
-        bio: 'Lead engineering teams at Figma, Pitch, and Protocol Labs.',
+        name: 'Nguyễn Lê Duy Khánh',
+        role: 'Phó Tổng Giám Đốc',
+        bio: 'Phụ trách điều phối vận hành và tối ưu hiệu quả quản trị tại các dự án.',
         link: '#',
     },
     {
-        name: 'Isabella Garcia',
-        role: 'Sales Manager',
-        avatar: 'https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80',
-        bio: 'Former PM for Linear, Lambda School, and On Deck.',
+        name: 'Nguyễn Hoàng Thiên Phúc',
+        role: 'Giám Đốc Dự Án',
+        bio: 'Trực tiếp triển khai, giám sát và đảm bảo chất lượng vận hành tại dự án.',
         link: '#',
     },
     {
-        name: 'Henry Lee',
-        role: 'UX Engineer',
-        avatar: 'https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80',
-        bio: 'Former frontend dev for Linear, Coinbase, and Postscript.',
-        link: '#',
-    },
-    {
-        name: 'Ava Williams',
-        role: 'Interaction Designer',
-        avatar: 'https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80',
-        bio: 'Former frontend dev for Linear, Coinbase, and Postscript.',
-        link: '#',
-    },
-    {
-        name: 'Olivia Miller',
-        role: 'Visual Designer',
-        avatar: 'https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80',
-        bio: 'Former frontend dev for Linear, Coinbase, and Postscript.',
+        name: 'Lê Nhật Anh',
+        role: 'Trợ Lý Tổng Giám Đốc',
+        bio: 'Hỗ trợ điều phối công việc điều hành và kết nối các bộ phận trong hệ thống.',
         link: '#',
     },
 ];
@@ -85,12 +67,14 @@ export default function TeamSection() {
                         >
                             <Users className="text-primary h-5 w-5" />
                             <span className="text-sm font-medium">
-                                Đội ngũ chuyên nghiệp
+                                Ban lãnh đạo
                             </span>
                         </motion.div>
 
                         <h1 className="mb-6 text-5xl font-bold tracking-tight text-balance sm:text-6xl md:text-7xl lg:text-8xl">
-                            <span className="text-foreground">Đội ngũ của</span>
+                            <span className="text-foreground">
+                                Ban lãnh đạo
+                            </span>
                             <br />
                             <motion.span
                                 className="bg-linear-to-r from-emerald-300 via-teal-500 to-cyan-600 bg-clip-text text-transparent"
@@ -138,11 +122,18 @@ export default function TeamSection() {
                 <motion.div className="mb-16 text-center" variants={fadeInUp}>
                     <div className="mx-auto w-full max-w-6xl">
                         <div className="mt-12 px-6 md:mt-24">
-                            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
                                 {members.map((member, index) => {
                                     const memberImage =
                                         teamData[index % teamData.length]
-                                            ?.imageSrc ?? member.avatar;
+                                            ?.imageSrc;
+                                    const isHuongPortrait =
+                                        member.name === 'Trần Thị Diễm Hương';
+                                    const isPhucPortrait =
+                                        member.name ===
+                                        'Nguyễn Hoàng Thiên Phúc';
+                                    const isNhatAnhPortrait =
+                                        member.name === 'Lê Nhật Anh';
                                     return (
                                         <motion.div
                                             key={index}
@@ -154,19 +145,32 @@ export default function TeamSection() {
                                                 delay: index * 0.1,
                                                 ease: [0.23, 0.86, 0.39, 0.96],
                                             }}
-                                            viewport={{ once: true, amount: 0.2 }}
+                                            viewport={{
+                                                once: true,
+                                                amount: 0.2,
+                                            }}
                                         >
-                                            <MotionImage
-                                                className="mb-4 aspect-3/4 w-full rounded-lg object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]"
-                                                src={memberImage}
-                                                alt={member.name}
-                                                width="400"
-                                                height="400"
-                                                initial={{ opacity: 0 }}
-                                                whileInView={{ opacity: 1 }}
-                                                transition={{ duration: 0.8 }}
-                                                viewport={{ once: true }}
-                                            />
+                                            <div className="mb-4 aspect-3/4 w-full overflow-hidden rounded-lg">
+                                                <div className="h-full w-full transition-transform duration-300 group-hover:scale-[1.03]">
+                                                    <MotionImage
+                                                        className={`h-full w-full object-cover object-top ${isHuongPortrait ? 'translate-x-3 -translate-y-5 scale-115 object-center' : ''} ${isPhucPortrait ? '-translate-x-3 -translate-y-12 scale-145 object-center' : ''} ${isNhatAnhPortrait ? 'scale-125 object-center' : ''}`}
+                                                        src={memberImage}
+                                                        alt={member.name}
+                                                        width={400}
+                                                        height={400}
+                                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                                                        quality={80}
+                                                        initial={{ opacity: 0 }}
+                                                        whileInView={{
+                                                            opacity: 1,
+                                                        }}
+                                                        transition={{
+                                                            duration: 0.8,
+                                                        }}
+                                                        viewport={{ once: true }}
+                                                    />
+                                                </div>
+                                            </div>
                                             <h3 className="text-foreground text-lg font-semibold">
                                                 {member.name}
                                             </h3>
