@@ -40,7 +40,7 @@ export const homeTestimonialsCropConfig: Record<string, CropConfig> = {
         desktop: { x: 0, y: 0, scale: 1.15, objectPosition: 'center' },
     },
     'Phan Thị Như Giang': {
-        mobile: { x: -30, y: 30, scale: 2.55, objectPosition: 'center' },
+        mobile: { x: -30, y: 230, scale: 2.8, objectPosition: 'center' },
         desktop: { x: -30, y: 160, scale: 2.4, objectPosition: 'center' },
     },
     'Lê Nhật Anh': {

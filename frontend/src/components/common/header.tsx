@@ -162,7 +162,7 @@ export const NAV_ITEMS: NavItem[] = [
                         label: 'Các dự án thực hiện',
                         description: 'Những dự án tiêu biểu HPPM đã triển khai',
                         icon: FolderKanban,
-                        href: '/projects',
+                        href: '/du-an',
                         iconBg: 'bg-fuchsia-50',
                         iconColor: 'text-fuchsia-700',
                     },
