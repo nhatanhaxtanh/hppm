@@ -24,7 +24,7 @@ const contactMethods = [
     {
         icon: Mail,
         title: 'Email ban quản lý',
-        description: 'Nhận đề xuất vận hành khu dân cư',
+        description: 'Nhận đề xuất quản lý vận hành bất động sản',
         value: 'info@hppm.vn',
         link: 'mailto:info@hppm.vn',
         gradient: 'from-sky-500/30 to-blue-500/30',
@@ -32,7 +32,7 @@ const contactMethods = [
     },
     {
         icon: Phone,
-        title: 'Hotline cư dân & chủ đầu tư',
+        title: 'Hotline Công ty HPPM',
         description: 'Tiếp nhận yêu cầu 24/7 cho mọi dự án',
         value: '028 3620 3160',
         link: 'tel:02836203160',
@@ -42,7 +42,7 @@ const contactMethods = [
     {
         icon: MapPin,
         title: 'Trung tâm điều hành',
-        description: 'Gặp đội ngũ quản lý khu đô thị',
+        description: 'Trụ sở chính Công ty HPPM',
         value: '30D2 Phan Văn Trị, Phường Hạnh Thông, TP. HCM',
         link: '#office',
         gradient: 'from-amber-500/30 to-orange-500/30',

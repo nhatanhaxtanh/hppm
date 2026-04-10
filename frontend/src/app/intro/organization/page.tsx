@@ -9,7 +9,6 @@ import {
     Target,
     Network,
     Mail,
-    Linkedin,
     ArrowRight,
     Phone,
     MapPin,
@@ -162,48 +161,6 @@ const OrganizationLanding: React.FC<OrganizationLandingProps> = ({
             bgColor: 'bg-red-50 dark:bg-red-950',
             headCount: 25,
             teamLead: 'Giám đốc - Vũ Thanh Hà',
-        },
-    ],
-    leadership = [
-        {
-            id: 1,
-            name: 'Trần Thị Diễm Hương',
-            position: 'Tổng Giám đốc',
-            department: 'Ban Lãnh đạo',
-            avatar: 'TTDH',
-            email: 'info@hppm.vn',
-            linkedin: '#',
-            bio: '20+ năm kinh nghiệm trong lĩnh vực bất động sản, chuyên về quản lý tài sản và phát triển dự án.',
-        },
-        {
-            id: 2,
-            name: 'Nguyễn Lê Duy Khánh',
-            position: 'Phó Tổng Giám Đốc',
-            department: 'Ban Lãnh đạo',
-            avatar: 'NLDK',
-            email: 'info@hppm.vn',
-            linkedin: '#',
-            bio: 'Chuyên gia quản lý vận hành với 15 năm kinh nghiệm quản lý hơn 500 tòa nhà thương mại và dân cư.',
-        },
-        {
-            id: 3,
-            name: 'Phan Thị Như Giang',
-            position: 'Giám đốc dự án',
-            department: 'Quản lý vận hành',
-            avatar: 'NHTP',
-            email: 'info@hppm.vn',
-            linkedin: '#',
-            bio: 'Chuyên gia cho thuê và giao dịch BĐS với thành tích đạt 95% tỷ lệ lấp đầy trong danh mục quản lý.',
-        },
-        {
-            id: 4,
-            name: 'Lê Nhật Anh',
-            position: 'Trợ lý Tổng Giám đốc',
-            department: 'Quản lý vận hành',
-            avatar: 'LNA',
-            email: 'info@hppm.vn',
-            linkedin: '#',
-            bio: 'Chuyên viên tài chính cao cấp với chứng chỉ CPA, chuyên về tối ưu hóa dòng tiền và báo cáo tài chính.',
         },
     ],
 }) => {
@@ -450,96 +407,6 @@ const OrganizationLanding: React.FC<OrganizationLandingProps> = ({
                         ))}
                     </motion.div>
                 </motion.div>
-            </section>
-
-            {/* Leadership Team Section */}
-            <section className="bg-background border-border border-y">
-                <div className="container mx-auto px-4 py-16 md:py-24">
-                    <motion.div
-                        className="mx-auto max-w-7xl"
-                        variants={staggerContainer}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                    >
-                        <motion.div
-                            className="mb-16 space-y-4 text-center"
-                            variants={fadeInUp}
-                        >
-                            <Badge variant="outline" className="mb-2">
-                                <UserCircle2 className="mr-1 h-3 w-3" />
-                                Đội ngũ lãnh đạo
-                            </Badge>
-                            <h2 className="text-foreground text-3xl font-bold md:text-4xl">
-                                Gặp gỡ lãnh đạo
-                            </h2>
-                            <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
-                                Đội ngũ lãnh đạo giàu kinh nghiệm dẫn dắt tầm
-                                nhìn và chiến lược phát triển công ty.
-                            </p>
-                        </motion.div>
-
-                        <motion.div
-                            className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4"
-                            variants={staggerContainer}
-                        >
-                            {leadership.map((member) => (
-                                <motion.div
-                                    key={member.id}
-                                    variants={fadeInUp}
-                                    whileHover={{ y: -6 }}
-                                    transition={{
-                                        type: 'spring',
-                                        stiffness: 280,
-                                    }}
-                                >
-                                    <Card className="group transition-all duration-300 hover:shadow-xl">
-                                        <CardHeader className="pb-4 text-center">
-                                            <div className="bg-primary/10 text-primary mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-full text-2xl font-bold transition-transform duration-300 group-hover:scale-110">
-                                                {member.avatar}
-                                            </div>
-                                            <CardTitle className="text-lg">
-                                                {member.name}
-                                            </CardTitle>
-                                            <CardDescription className="text-sm font-medium">
-                                                {member.position}
-                                            </CardDescription>
-                                            <Badge
-                                                variant="secondary"
-                                                className="mx-auto mt-2 w-fit text-xs"
-                                            >
-                                                {member.department}
-                                            </Badge>
-                                        </CardHeader>
-                                        <CardContent className="space-y-4">
-                                            <p className="text-muted-foreground text-center text-sm leading-relaxed">
-                                                {member.bio}
-                                            </p>
-                                            <div className="border-border flex justify-center gap-3 border-t pt-3">
-                                                <Button
-                                                    variant="ghost"
-                                                    size="sm"
-                                                    className="h-8 w-8 p-0"
-                                                >
-                                                    <Mail className="h-4 w-4" />
-                                                </Button>
-                                                {member.linkedin && (
-                                                    <Button
-                                                        variant="ghost"
-                                                        size="sm"
-                                                        className="h-8 w-8 p-0"
-                                                    >
-                                                        <Linkedin className="h-4 w-4" />
-                                                    </Button>
-                                                )}
-                                            </div>
-                                        </CardContent>
-                                    </Card>
-                                </motion.div>
-                            ))}
-                        </motion.div>
-                    </motion.div>
-                </div>
             </section>
 
             {/* Company Info Section */}
