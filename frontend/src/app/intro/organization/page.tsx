@@ -187,7 +187,7 @@ const OrganizationLanding: React.FC<OrganizationLandingProps> = ({
         },
         {
             id: 3,
-            name: 'Nguyễn Hoàng Thiên Phúc',
+            name: 'Phan Thị Như Giang',
             position: 'Giám đốc dự án',
             department: 'Quản lý vận hành',
             avatar: 'NHTP',
@@ -343,7 +343,7 @@ const OrganizationLanding: React.FC<OrganizationLandingProps> = ({
                                     },
                                     {
                                         title: 'Giám Đốc Dự Án',
-                                        name: 'Nguyễn Hoàng Thiên Phúc',
+                                        name: 'Phan Thị Như Giang',
                                         dept: 'Quản lý vận hành',
                                         color: 'pink',
                                     },

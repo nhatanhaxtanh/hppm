@@ -26,7 +26,7 @@ const members = [
         link: '#',
     },
     {
-        name: 'Nguyễn Hoàng Thiên Phúc',
+        name: 'Phan Thị Như Giang',
         role: 'Giám Đốc Dự Án',
         bio: 'Trực tiếp triển khai, giám sát và đảm bảo chất lượng vận hành tại dự án.',
         link: '#',

@@ -32,16 +32,16 @@ export const teamImageCropClassName =
 
 export const homeTestimonialsCropConfig: Record<string, CropConfig> = {
     'Trần Thị Diễm Hương': {
-        mobile: { x: 20, y: 110, scale: 2.45, objectPosition: 'center' },
-        desktop: { x: 10, y: 10, scale: 1.5, objectPosition: 'center' },
+        mobile: { x: 2, y: 110, scale: 2.3, objectPosition: 'center' },
+        desktop: { x: 2, y: 10, scale: 1.4, objectPosition: 'center' },
     },
     'Nguyễn Lê Duy Khánh': {
         mobile: { x: 0, y: 70, scale: 1.75, objectPosition: 'center' },
         desktop: { x: 0, y: 0, scale: 1.15, objectPosition: 'center' },
     },
-    'Nguyễn Hoàng Thiên Phúc': {
+    'Phan Thị Như Giang': {
         mobile: { x: -30, y: 30, scale: 2.55, objectPosition: 'center' },
-        desktop: { x: -15, y: -20, scale: 1.8, objectPosition: 'center' },
+        desktop: { x: -30, y: 160, scale: 2.4, objectPosition: 'center' },
     },
     'Lê Nhật Anh': {
         mobile: { x: 0, y: 115, scale: 2.3, objectPosition: 'center' },
@@ -58,7 +58,7 @@ export const leadersTeamSectionCropConfig: Record<string, CropConfig> = {
         mobile: { x: 0, y: 0, scale: 1.2, objectPosition: 'center' },
         desktop: { x: 12, y: 0, scale: 1.3, objectPosition: 'center' },
     },
-    'Nguyễn Hoàng Thiên Phúc': {
+    'Phan Thị Như Giang': {
         mobile: { x: -15, y: 0, scale: 1.2, objectPosition: 'center' },
         desktop: { x: -22, y: -10, scale: 2, objectPosition: 'center' },
     },
@@ -77,7 +77,7 @@ export const animatedTestimonialsCropConfig: Record<string, CropConfig> = {
         mobile: { x: 0, y: 30, scale: 1.4, objectPosition: 'center' },
         desktop: { x: 0, y: 30, scale: 1.4, objectPosition: 'center' },
     },
-    'Nguyễn Hoàng Thiên Phúc': {
+    'Phan Thị Như Giang': {
         mobile: { x: -20, y: -20, scale: 1.9, objectPosition: 'center' },
         desktop: { x: -20, y: -20, scale: 1.9, objectPosition: 'center' },
     },
