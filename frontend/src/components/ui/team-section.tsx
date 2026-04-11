@@ -26,9 +26,9 @@ const members = [
         link: '#',
     },
     {
-        name: 'Phan Thị Như Giang',
-        role: 'Giám Đốc Dự Án',
-        bio: 'Trực tiếp triển khai, giám sát và đảm bảo chất lượng vận hành tại dự án.',
+        name: 'Châu Thị Kiều Tiên',
+        role: 'Kế Toán Trưởng',
+        bio: 'Phụ trách công tác kế toán, kiểm soát tài chính và đảm bảo tính minh bạch trong báo cáo.',
         link: '#',
     },
     {

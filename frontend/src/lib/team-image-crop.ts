@@ -39,9 +39,9 @@ export const homeTestimonialsCropConfig: Record<string, CropConfig> = {
         mobile: { x: 0, y: 70, scale: 1.75, objectPosition: 'center' },
         desktop: { x: 0, y: 0, scale: 1.15, objectPosition: 'center' },
     },
-    'Phan Thị Như Giang': {
-        mobile: { x: -30, y: 230, scale: 2.8, objectPosition: 'center' },
-        desktop: { x: -30, y: 160, scale: 2.4, objectPosition: 'center' },
+    'Châu Thị Kiều Tiên': {
+        mobile: { x: 0, y: 90, scale: 2.5, objectPosition: 'center' },
+        desktop: { x: 0, y: 0, scale: 1.6, objectPosition: 'center' },
     },
     'Lê Nhật Anh': {
         mobile: { x: 0, y: 115, scale: 2.3, objectPosition: 'center' },
@@ -58,9 +58,9 @@ export const leadersTeamSectionCropConfig: Record<string, CropConfig> = {
         mobile: { x: 0, y: 0, scale: 1.2, objectPosition: 'center' },
         desktop: { x: 12, y: 0, scale: 1.3, objectPosition: 'center' },
     },
-    'Phan Thị Như Giang': {
-        mobile: { x: -15, y: 20, scale: 1.2, objectPosition: 'center' },
-        desktop: { x: -22, y: 130, scale: 2, objectPosition: 'center' },
+    'Châu Thị Kiều Tiên': {
+        mobile: { x: -15, y: 0, scale: 1.2, objectPosition: 'center' },
+        desktop: { x: 0, y: -10, scale: 1.5, objectPosition: 'center' },
     },
     'Lê Nhật Anh': {
         mobile: { x: 0, y: 0, scale: 1.2, objectPosition: 'center' },
@@ -77,9 +77,9 @@ export const animatedTestimonialsCropConfig: Record<string, CropConfig> = {
         mobile: { x: 0, y: 30, scale: 1.4, objectPosition: 'center' },
         desktop: { x: 0, y: 30, scale: 1.4, objectPosition: 'center' },
     },
-    'Phan Thị Như Giang': {
-        mobile: { x: -20, y: -20, scale: 1.9, objectPosition: 'center' },
-        desktop: { x: -20, y: 110, scale: 1.9, objectPosition: 'center' },
+    'Châu Thị Kiều Tiên': {
+        mobile: { x: -20, y: 20, scale: 1.9, objectPosition: 'center' },
+        desktop: { x: -20, y: 30, scale: 1.9, objectPosition: 'center' },
     },
     'Lê Nhật Anh': {
         mobile: { x: 0, y: 40, scale: 1.7, objectPosition: 'center' },

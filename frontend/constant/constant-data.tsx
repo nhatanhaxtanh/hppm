@@ -117,10 +117,10 @@ export const teamData: Testimonial[] = [
     },
     {
         id: 3,
-        name: 'Phan Thị Như Giang',
-        role: 'Giám Đốc Dự Án',
-        imageSrc: '/team/ceo3.png',
-        imageAlt: 'Chân dung Phan Thị Như Giang - Giám Đốc Dự Án HPPM',
+        name: 'Châu Thị Kiều Tiên',
+        role: 'Kế Toán Trưởng',
+        imageSrc: '/team/ceo3.png?v=20260411',
+        imageAlt: 'Chân dung Châu Thị Kiều Tiên - Kế Toán Trưởng HPPM',
     },
     {
         id: 4,

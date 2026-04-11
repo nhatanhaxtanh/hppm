@@ -299,8 +299,8 @@ const OrganizationLanding: React.FC<OrganizationLandingProps> = ({
                                         color: 'purple',
                                     },
                                     {
-                                        title: 'Giám Đốc Dự Án',
-                                        name: 'Phan Thị Như Giang',
+                                        title: 'Kế Toán Trưởng',
+                                        name: 'Châu Thị Kiều Tiên',
                                         dept: 'Quản lý vận hành',
                                         color: 'pink',
                                     },
