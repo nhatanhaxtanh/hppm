@@ -6,6 +6,9 @@ import { ArrowLeft } from 'lucide-react';
 
 import { getAllProjectSlugs, getProjectBySlug } from '@/lib/content';
 
+const imageBlurDataUrl =
+    'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDE2IDkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2Y1ZjFmMCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2Q2ZGRkNiIvPjwvbGluZWFyR3JhZGllbnQ+PHJlY3QgZmlsbD0idXJsKCNhKSIgd2lkdGg9IjE2IiBoZWlnaHQ9IjkiLz48L3N2Zz4=';
+
 type ProjectPageProps = {
     params: Promise<{ slug: string }>;
 };
@@ -73,8 +76,11 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                         alt={project.imageAlt}
                         fill
                         priority
+                        quality={75}
+                        placeholder="blur"
+                        blurDataURL={imageBlurDataUrl}
                         className="object-cover"
-                        sizes="100vw"
+                        sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1024px) calc(100vw - 48px), 896px"
                     />
                 </div>
             </article>
