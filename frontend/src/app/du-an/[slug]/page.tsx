@@ -25,7 +25,7 @@ export async function generateMetadata({
 
     if (!project) {
         return {
-            title: 'Du an khong ton tai',
+            title: 'Dự án không tồn tại',
         };
     }
 

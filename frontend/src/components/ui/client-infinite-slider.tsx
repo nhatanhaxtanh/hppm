@@ -25,8 +25,8 @@ export default function ClientsInfiniteSlider({
                         Được tin tưởng đồng hành
                     </h2>
                     <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-base sm:text-lg">
-                        Một số khách hàng và đối tác tiêu biểu trong quá trình
-                        vận hành và triển khai dự án.
+                        Những mô hình bất động sản HPPM đồng hành quản lý, vận
+                        hành và duy trì chất lượng dịch vụ hằng ngày.
                     </p>
                 </div>
 

@@ -37,7 +37,7 @@ const projectDetails: ProjectDetail[] = [
     {
         slug: 'lavela-garden',
         overview:
-            'HPPM tham gia chuan hoa quy trinh van hanh, phoi hop ky thuat va nang cao trai nghiem cu dan cho khu dan cu Lavela Garden. Trong qua trinh trien khai, doi ngu tap trung vao viec xay dung cach van hanh ro rang, de kiem soat chat luong dich vu hang ngay, dong thoi giu su phoi hop on dinh giua ban quan ly, nha thau va cac bo phan lien quan trong du an.',
+            'HPPM tham gia chuẩn hóa quy trình vận hành, phối hợp kỹ thuật và nâng cao trải nghiệm cư dân cho khu dân cư Lavela Garden. Trong quá trình triển khai, đội ngũ tập trung vào việc xây dựng cách vận hành rõ ràng, dễ kiểm soát chất lượng dịch vụ hằng ngày, đồng thời giữ sự phối hợp ổn định giữa ban quản lý, nhà thầu và các bộ phận liên quan trong dự án.',
         date: '08/04/2024',
         author: 'HPPM',
         location: 'TP. Ho Chi Minh',
@@ -68,7 +68,7 @@ const projectDetails: ProjectDetail[] = [
     {
         slug: 'sky-residences',
         overview:
-            'Du an yeu cau mot mo hinh quan ly phu hop cho cum chung cu co mat do su dung cao va nhiem vu phoi hop lien bo phan chat che. HPPM dinh huong van hanh theo huong gon quy trinh, ro dau viec va tang toc do phan hoi, giup qua trinh tiep nhan, xu ly va theo doi cac van de phat sinh trong sinh hoat hang ngay duoc minh bach hon.',
+            'Dự án yêu cầu một mô hình quản lý phù hợp cho cụm chung cư có mật độ sử dụng cao và nhiệm vụ phối hợp liên bộ phận chặt chẽ. HPPM định hướng vận hành theo hướng gọn quy trình, rõ đầu việc và tăng tốc độ phản hồi, giúp quá trình tiếp nhận, xử lý và theo dõi các vấn đề phát sinh trong sinh hoạt hằng ngày được minh bạch hơn.',
         date: '14/04/2024',
         author: 'HPPM',
         location: 'Binh Duong',
@@ -99,7 +99,7 @@ const projectDetails: ProjectDetail[] = [
     {
         slug: 'riviera-cove',
         overview:
-            'Riviera Cove yeu cau tieu chuan van hanh phu hop cho mo hinh khu biet thu, trong do canh quan, an ninh va trai nghiem song cua cong dong cu dan la nhung yeu to duoc uu tien. HPPM tiep can du an theo huong duy tri su dong bo trong hinh anh, chat luong dich vu va tinh san sang cua doi ngu van hanh de giu moi truong song on dinh va chi tiet.',
+            'Riviera Cove yêu cầu tiêu chuẩn vận hành phù hợp cho mô hình khu biệt thự, trong đó cảnh quan, an ninh và trải nghiệm sống của cộng đồng cư dân là những yếu tố được ưu tiên. HPPM tiếp cận dự án theo hướng duy trì sự đồng bộ trong hình ảnh, chất lượng dịch vụ và tính sẵn sàng của đội ngũ vận hành để giữ môi trường sống ổn định và chỉn chu.',
         date: '21/04/2024',
         author: 'HPPM',
         location: 'Dong Nai',
@@ -130,7 +130,7 @@ const projectDetails: ProjectDetail[] = [
     {
         slug: 'imperial-place',
         overview:
-            'Imperial Place can nang cao nang luc giam sat van hanh ky thuat, bao tri va bao cao cho mo hinh chung cu quy mo lon. HPPM tap trung vao viec theo sat cac he thong thiet yeu, chuan hoa cach van hanh hang ngay va giup qua trinh danh gia hien trang, lap lich bao tri va theo doi su co tro nen ro rang, de uu tien xu ly dung hang muc can thiet.',
+            'Imperial Place cần nâng cao năng lực giám sát vận hành kỹ thuật, bảo trì và báo cáo cho mô hình chung cư quy mô lớn. HPPM tập trung vào việc theo sát các hệ thống thiết yếu, chuẩn hóa cách vận hành hằng ngày và giúp quá trình đánh giá hiện trạng, lập lịch bảo trì và theo dõi sự cố trở nên rõ ràng, dễ ưu tiên xử lý đúng hạng mục cần thiết.',
         date: '28/04/2024',
         author: 'HPPM',
         location: 'TP. Ho Chi Minh',
@@ -161,7 +161,7 @@ const projectDetails: ProjectDetail[] = [
     {
         slug: 'holm-residences',
         overview:
-            'Holm Residences duoc dinh huong van hanh theo tieu chuan dich vu o phan khuc cao cap, trong do trai nghiem cu dan la trong tam. HPPM tham gia voi muc tieu duy tri tinh nhat quan trong cach phuc vu, nang cao kha nang phan hoi va kiem soat chat luong cac dich vu lien quan den khong gian chung, nha thau va yeu cau phat sinh trong qua trinh sinh song tai du an.',
+            'Holm Residences được định hướng vận hành theo tiêu chuẩn dịch vụ ở phân khúc cao cấp, trong đó trải nghiệm cư dân là trọng tâm. HPPM tham gia với mục tiêu duy trì tính nhất quán trong cách phục vụ, nâng cao khả năng phản hồi và kiểm soát chất lượng các dịch vụ liên quan đến không gian chung, nhà thầu và yêu cầu phát sinh trong quá trình sinh sống tại dự án.',
         date: '05/05/2024',
         author: 'HPPM',
         location: 'TP. Thu Duc',
@@ -192,7 +192,7 @@ const projectDetails: ProjectDetail[] = [
     {
         slug: 'giai-viet',
         overview:
-            'Du an tap trung vao su on dinh van hanh hang ngay va nang cao hieu qua phoi hop giua bo phan ky thuat va cham soc cu dan. HPPM dinh huong xay dung quy trinh lam viec de theo doi de hon, giam bo sot trong van hanh va giup thong tin duoc luan chuyen ro rang hon giua cac dau moi, tu do cai thien kha nang phan hoi voi cu dan va ban quan ly.',
+            'Dự án tập trung vào sự ổn định vận hành hằng ngày và nâng cao hiệu quả phối hợp giữa bộ phận kỹ thuật và chăm sóc cư dân. HPPM định hướng xây dựng quy trình làm việc để theo dõi dễ hơn, giảm bỏ sót trong vận hành và giúp thông tin được luân chuyển rõ ràng hơn giữa các đầu mối, từ đó cải thiện khả năng phản hồi với cư dân và ban quản lý.',
         date: '12/05/2024',
         author: 'HPPM',
         location: 'Quan 8, TP. Ho Chi Minh',
@@ -223,7 +223,7 @@ const projectDetails: ProjectDetail[] = [
     {
         slug: 'btd',
         overview:
-            'Chung cu Binh Tri Dong B duoc quan ly theo huong toi uu chi phi van hanh nhung van giu chat luong dich vu cot loi. Trong qua trinh trien khai, HPPM chu trong can bang giua yeu cau ngan sach, chat luong nha thau va muc do san sang cua cac he thong thiet yeu, de dam bao du an van duy tri duoc nen van hanh on dinh va de giai trinh.',
+            'Chung cư Bình Trị Đông B được quản lý theo hướng tối ưu chi phí vận hành nhưng vẫn giữ chất lượng dịch vụ cốt lõi. Trong quá trình triển khai, HPPM chú trọng cân bằng giữa yêu cầu ngân sách, chất lượng nhà thầu và mức độ sẵn sàng của các hệ thống thiết yếu, để đảm bảo dự án vẫn duy trì được nền vận hành ổn định và dễ giải trình.',
         date: '19/05/2024',
         author: 'HPPM',
         location: 'Binh Tan, TP. Ho Chi Minh',
@@ -254,7 +254,7 @@ const projectDetails: ProjectDetail[] = [
     {
         slug: 'vision',
         overview:
-            'Vision-1 can mo hinh van hanh chung cu co tinh linh hoat, de kiem soat chat luong dich vu va xu ly nhanh cac su co phat sinh. HPPM xay dung cach tiep can dua tren viec ro dau moi tiep nhan, theo doi trang thai xu ly va tang cuong kiem tra hien truong, nham giup ban quan ly de nam duoc tinh hinh van hanh va cai thien trai nghiem cu dan theo tung giai doan.',
+            'Vision-1 cần mô hình vận hành chung cư có tính linh hoạt, dễ kiểm soát chất lượng dịch vụ và xử lý nhanh các sự cố phát sinh. HPPM xây dựng cách tiếp cận dựa trên việc rõ đầu mối tiếp nhận, theo dõi trạng thái xử lý và tăng cường kiểm tra hiện trường, nhằm giúp ban quản lý dễ nắm được tình hình vận hành và cải thiện trải nghiệm cư dân theo từng giai đoạn.',
         date: '26/05/2024',
         author: 'HPPM',
         location: 'Binh Tan, TP. Ho Chi Minh',
@@ -285,7 +285,7 @@ const projectDetails: ProjectDetail[] = [
     {
         slug: 'an-lac',
         overview:
-            'Cum nha chung cu An Lac duoc to chuc van hanh theo huong on dinh he thong, chuan quy trinh va tang tinh san sang cua doi ngu. HPPM tap trung vao viec tao nen mot cach van hanh ben vung hon, de dao tao, de ban giao va de duy tri chat luong khi khoi luong cong viec thay doi, dong thoi giup cac bo phan phoi hop voi nhau mach lac hon trong thuc te.',
+            'Cụm nhà chung cư An Lạc được tổ chức vận hành theo hướng ổn định hệ thống, chuẩn quy trình và tăng tính sẵn sàng của đội ngũ. HPPM tập trung vào việc tạo nên một cách vận hành bền vững hơn, dễ đào tạo, dễ bàn giao và dễ duy trì chất lượng khi khối lượng công việc thay đổi, đồng thời giúp các bộ phận phối hợp với nhau mạch lạc hơn trong thực tế.',
         date: '02/06/2024',
         author: 'HPPM',
         location: 'Binh Tan, TP. Ho Chi Minh',
