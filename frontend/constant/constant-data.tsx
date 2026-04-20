@@ -112,14 +112,14 @@ export const teamData: Testimonial[] = [
         id: 2,
         name: 'Nguyễn Lê Duy Khánh',
         role: 'Phó Tổng Giám Đốc',
-        imageSrc: '/team/ceo2.png',
+        imageSrc: '/team/ceo2.jpg',
         imageAlt: 'Chân dung Nguyễn Lê Duy Khánh - Phó Tổng Giám Đốc HPPM',
     },
     {
         id: 3,
         name: 'Châu Thị Kiều Tiên',
         role: 'Kế Toán Trưởng',
-        imageSrc: '/team/ceo3.png?v=20260411',
+        imageSrc: '/team/ceo3.jpg?v=20260411',
         imageAlt: 'Chân dung Châu Thị Kiều Tiên - Kế Toán Trưởng HPPM',
     },
     {
