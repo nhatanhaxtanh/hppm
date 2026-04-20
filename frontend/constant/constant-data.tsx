@@ -21,7 +21,7 @@ export const options: Option[] = [
     {
         title: 'Giải pháp vận hành',
         description: 'Chuẩn quy trình, giảm lỗi, tăng trải nghiệm cư dân',
-        image: '/imperial/imperial-78.jpg',
+        image: '/giaiviet/GIAVIET-041.jpg',
         icon: <FaCampground size={24} className="text-white" />,
     },
     {
