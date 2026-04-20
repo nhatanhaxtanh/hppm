@@ -33,7 +33,7 @@ export const options: Option[] = [
     {
         title: 'An toàn hệ thống',
         description: 'Giám sát rủi ro – xử lý sự cố đúng chuẩn',
-        image: '/imperial/imperial-20.jpg',
+        image: '/POSI0985.JPG',
         icon: <FaTint size={24} className="text-white" />,
     },
     {
